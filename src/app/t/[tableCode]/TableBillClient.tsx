@@ -203,7 +203,10 @@ export default function TableBillClient({
               </button>
               <Elements
                 stripe={getStripe()}
-                options={{ clientSecret, locale: "uk" }}
+                options={{
+                  clientSecret,
+                  locale: "uk" as import("@stripe/stripe-js").StripeElementLocale,
+                }}
               >
                 <PaymentSection
                   orderId={payingOrderId!}

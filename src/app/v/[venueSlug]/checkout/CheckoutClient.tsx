@@ -311,7 +311,7 @@ export function CheckoutClient({ venueId, venueSlug, venueName, accentColor }: P
               options={{
                 clientSecret,
                 appearance: STRIPE_APPEARANCE(accentColor),
-                locale: "uk",
+                locale: "uk" as import("@stripe/stripe-js").StripeElementLocale,
               }}
             >
               <PaymentSection
