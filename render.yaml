@@ -1,0 +1,27 @@
+# Render Blueprint — dryleaf
+# Подключается автоматически, если создавать сервис через "New → Blueprint"
+services:
+  - type: web
+    name: dryleaf
+    runtime: node
+    plan: free
+    buildCommand: npm install && npx prisma db push && npm run build
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: DATABASE_URL
+        sync: false # вставить строку из Neon вручную
+      - key: NEXTAUTH_SECRET
+        generateValue: true
+      - key: NEXTAUTH_URL
+        sync: false # https://<имя>.onrender.com
+      - key: NEXT_PUBLIC_APP_URL
+        sync: false # тот же URL
+      - key: SEED_ADMIN_EMAIL
+        sync: false
+      - key: SEED_ADMIN_PASSWORD
+        sync: false
+      # Stripe не обязателен: без ключей работает режим "оплата на месте"
+      # - key: STRIPE_SECRET_KEY
+      # - key: NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
+      # - key: STRIPE_WEBHOOK_SECRET

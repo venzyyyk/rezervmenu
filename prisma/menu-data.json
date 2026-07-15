@@ -1,0 +1,3340 @@
+{
+  "venues": [
+    {
+      "slug": "dry-leaf",
+      "name": "Dry Leaf",
+      "address": "Проспект Героїв Харкова 74",
+      "tagline": "Кухня та бар",
+      "accentColor": "#A8B89A",
+      "heroImageUrl": "/dryleaf-hero.png",
+      "categories": [
+        {
+          "title": "Перші страви",
+          "group": "Кухня",
+          "dishes": [
+            {
+              "name": "Борщ",
+              "description": "Традиційний український борщ",
+              "size": "400г",
+              "priceCents": 13000,
+              "imageUrl": "https://images.unian.net/photos/2022_09/thumb_files/1200_0_1662892107-3846.jpg"
+            },
+            {
+              "name": "Окрошка",
+              "description": "Холодний літній суп",
+              "size": "400г",
+              "priceCents": 15000,
+              "imageUrl": "https://img-recipes.zakaz.ua/380818-560-output1%20(65)%20(1)%20(1).png"
+            },
+            {
+              "name": "Солянка",
+              "description": "Насичений м'ясний суп",
+              "size": "400г",
+              "priceCents": 21000,
+              "imageUrl": "https://img.tsn.ua/cached/896/tsn-6fc5c486b67f33b84a28d75a8717b561/thumbs/1200x630/3f/2c/04b3ccc2a69cfafbb299a7cc31e52c3f.jpeg"
+            },
+            {
+              "name": "Курячий суп з локшиною",
+              "description": "Легкий поживний суп",
+              "size": "400г",
+              "priceCents": 15000,
+              "imageUrl": "https://i.obozrevatel.com/food/recipemain/2019/3/2/yiv.jpg"
+            }
+          ]
+        },
+        {
+          "title": "Другі страви",
+          "group": "Кухня",
+          "dishes": [
+            {
+              "name": "Вареники з картоплею",
+              "description": "Домашні вареники",
+              "size": "300г",
+              "priceCents": 14000,
+              "imageUrl": "https://i.ytimg.com/vi/0FFOCBWZRGc/maxresdefault.jpg"
+            },
+            {
+              "name": "Вареники з полуницею",
+              "description": "Солодкі вареники",
+              "size": "300г",
+              "priceCents": 17000,
+              "imageUrl": "https://tasty.com.ua/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Ftasty-recipes%2F683f44f486d11fd33d5c0227%2Frecipe-XQz4Yt5.jpg&w=1920&q=75"
+            },
+            {
+              "name": "Вареники з картоплею та печерицями",
+              "description": "З грибами",
+              "size": "300г",
+              "priceCents": 17000,
+              "imageUrl": "https://baluvanagalya.com.ua/wp-content/uploads/2021/01/P1470095.jpg"
+            },
+            {
+              "name": "Млинці з куркою та грибами",
+              "description": "Млинці",
+              "size": "220г",
+              "priceCents": 12600,
+              "imageUrl": "https://img.postershop.me/12691/Products/3403467_1688824614.4749_original.jpg"
+            },
+            {
+              "name": "Омлет з сосисками",
+              "description": "Омлет",
+              "size": "200г",
+              "priceCents": 9500,
+              "imageUrl": "https://shuba.life/static/content/thumbs/660x440/8/25/e4iqah---c3x2x50px50p-up--fd7c29923ea28f2c33be266abc4bd258.jpg"
+            },
+            {
+              "name": "Пельмені з куркою",
+              "description": "Пельмені",
+              "size": "300г",
+              "priceCents": 12000,
+              "imageUrl": "https://misyvo.com/wp-content/uploads/2021/01/Paolla2049-scaled.jpg"
+            },
+            {
+              "name": "Оселедець з картоплею та цибулею",
+              "description": "Оселедець",
+              "size": "300г",
+              "priceCents": 27000,
+              "imageUrl": "https://pizzalife.ua/files/images/112/2/%D1%81%D0%B5%D0%BB%D1%8C%D0%B4%D1%8C%20%D1%81%20%D0%BA%D0%B0%D1%80%D1%82%D0%BE%D1%84%D0%B5%D0%BB%D0%B5%D0%BC.jpg"
+            },
+            {
+              "name": "Пельмені з телятиною",
+              "description": "Пельмені",
+              "size": "300г",
+              "priceCents": 17000,
+              "imageUrl": "https://galya-baluvana.kiev.ua/wp-content/uploads/2020/11/dumplings-veal-3.jpg"
+            },
+            {
+              "name": "Пельмені зі свининою",
+              "description": "Пельмені",
+              "size": "300г",
+              "priceCents": 12000,
+              "imageUrl": "https://baluvanagalya.com.ua/wp-content/uploads/2017/01/P1510118.jpg"
+            },
+            {
+              "name": "Пельмені по-царськи",
+              "description": "Пельмені",
+              "size": "300г",
+              "priceCents": 20000,
+              "imageUrl": "https://saltov-family.com.ua/wp-content/uploads/2023/06/pelmeni-po-tsarski.jpg"
+            },
+            {
+              "name": "Млинці з карамеллю",
+              "description": "Млинці",
+              "size": "120г",
+              "priceCents": 7200,
+              "imageUrl": "https://zprz.city/uploads/news/1200x675/h220tgfawlnf7vvu6dn5c6txdlyqynbg.jpg"
+            },
+            {
+              "name": "Млинці з полуницею",
+              "description": "Млинці",
+              "size": "120г",
+              "priceCents": 7200,
+              "imageUrl": "https://s0.tchkcdn.com/g-6DwN95CZxejllyfzk1745w/13/232910/660x480/f/0/19306df65518e3495e0703ae2331f85d_shutterstock_125081399.jpg"
+            },
+            {
+              "name": "Млинці з шоколадом",
+              "description": "Млинці",
+              "size": "120г",
+              "priceCents": 7200,
+              "imageUrl": "https://simple.mk.ua/wp-content/uploads/2019/11/n23.jpg"
+            }
+          ]
+        },
+        {
+          "title": "М'ясні страви",
+          "group": "Кухня",
+          "dishes": [
+            {
+              "name": "Котлета по-домашньому",
+              "description": "Соковита котлета",
+              "size": "120г",
+              "priceCents": 9000,
+              "imageUrl": "https://kuldim.com/wa-data/public/shop/products/12/00/12/images/54502/54502.970.jpg"
+            },
+            {
+              "name": "Відбивна зі свинини",
+              "description": "Соковита свинина",
+              "size": "180г",
+              "priceCents": 15000,
+              "imageUrl": "https://i.obozrevatel.com/food/recipemain/2019/1/8/avchich.jpg?size=636x424"
+            },
+            {
+              "name": "Куряча відбивна",
+              "description": "Ніжна курятина",
+              "size": "180г",
+              "priceCents": 11000,
+              "imageUrl": "https://mistercat.com.ua/wp-content/uploads/2026/06/shynka-kuryacha.jpg"
+            },
+            {
+              "name": "Гуляш зі свинини",
+              "description": "Гуляш",
+              "size": "180г",
+              "priceCents": 14500,
+              "imageUrl": "https://img.tsn.ua/cached/816/tsn-d7721072f5f1787fa1f16a6df613a75f/thumbs/1200x630/33/2e/cf701e68da7404374d8904877ff12e33.jpeg"
+            },
+            {
+              "name": "Жарке зі свинини",
+              "description": "Жарке",
+              "size": "300г",
+              "priceCents": 23000,
+              "imageUrl": "https://myastoriya.com.ua/upload/medialibrary/a74/nbhg9j8tczxpyg70i0f3obmlzn6ag04b.jpg"
+            },
+            {
+              "name": "Котлета по-київськи",
+              "description": "Котлета",
+              "size": "140г",
+              "priceCents": 19500,
+              "imageUrl": "https://rud.ua/uploads/under_recipe/02_600x300_5f686cb1bd6ca.jpg"
+            }
+          ]
+        },
+        {
+          "title": "Гарніри",
+          "group": "Кухня",
+          "dishes": [
+            {
+              "name": "Гречка",
+              "description": "Розсипчаста гречка",
+              "size": "220г",
+              "priceCents": 7000,
+              "imageUrl": "https://images.unian.net/photos/2022_08/thumb_files/400_0_1661694654-1836.jpg?r=816174"
+            },
+            {
+              "name": "Паста карбонара",
+              "description": "Паста з беконом",
+              "size": "280г",
+              "priceCents": 27000,
+              "imageUrl": "https://images.unian.net/photos/2021_03/thumb_files/1000_545_1615387932-9078.jpg"
+            },
+            {
+              "name": "Картопля відварна з маслом та зеленю",
+              "description": "Картопля",
+              "size": "220г",
+              "priceCents": 10000,
+              "imageUrl": "https://assets.dots.live/misteram-public/e6494f8ad11e8533a60a708ebaae8ae8-826x0.png"
+            },
+            {
+              "name": "Картопля по-креольскі",
+              "description": "Картопля",
+              "size": "220г",
+              "priceCents": 10500,
+              "imageUrl": "https://shuba.life/static/content/thumbs/1824x912/b/58/yrzphv---c2x1x50px50p-up--5c8c87a94deca63acecb6232861e758b.jpg"
+            },
+            {
+              "name": "Картопля по-домашньому",
+              "description": "Картопля",
+              "size": "220г",
+              "priceCents": 11500,
+              "imageUrl": "https://img.postershop.me/1102/9c42778a-6630-404e-985e-b3b116fb0a89_image.jpeg"
+            },
+            {
+              "name": "Пюре",
+              "description": "Картопляне пюре",
+              "size": "220г",
+              "priceCents": 11500,
+              "imageUrl": "https://img.tsn.ua/cached/919/tsn-671b840e81dae5015bc4c6345e63d1d0/thumbs/1200x630/49/11/bcb4400cc9416f6a22c16bd930a21149.jpeg"
+            },
+            {
+              "name": "Різотто",
+              "description": "Різотто",
+              "size": "240г",
+              "priceCents": 10000,
+              "imageUrl": "https://i.obozrevatel.com/food/recipemain/2019/2/20/if.jpg?size=636x424"
+            },
+            {
+              "name": "Рис",
+              "description": "Відварний рис",
+              "size": "220г",
+              "priceCents": 7000,
+              "imageUrl": "https://www.rbc.ua/static/img/_/z/_z_ovochami_foto_freepik_480x270.jpg"
+            },
+            {
+              "name": "Макарони з сиром",
+              "description": "Макарони",
+              "size": "220г",
+              "priceCents": 10000,
+              "imageUrl": "https://ua-vestnik.com/wp-content/uploads/2024/01/pasta-1.jpg"
+            }
+          ]
+        },
+        {
+          "title": "Салати",
+          "group": "Кухня",
+          "dishes": [
+            {
+              "name": "Весняний",
+              "description": "Свіжий салат",
+              "size": "200г",
+              "priceCents": 8000,
+              "imageUrl": "https://shefkuhar.com.ua/uploads/posts/2022-05/1653147375_vesnjanij-salat-z-rediskoju.jpg"
+            },
+            {
+              "name": "Овочевий",
+              "description": "Овочевий салат",
+              "size": "200г",
+              "priceCents": 8000,
+              "imageUrl": "https://ilona-product.com/assets/ckeditor/kcfinder/upload/images/3%20%D0%BB%D1%96%D1%82%D0%BD%D1%96%D1%85%20%D1%81%D0%B0%D0%BB%D0%B0%D1%82%D0%B8%20%D0%B2%D1%96%D0%B4%20%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%B8%20%D0%86%D0%BB%D0%BE%D0%BD%D0%B0.jpg"
+            },
+            {
+              "name": "Грецький",
+              "description": "Грецький салат",
+              "size": "300г",
+              "priceCents": 15500,
+              "imageUrl": "https://smachno.ua/wp-content/uploads/2009/10/03/Depositphotos_7299284_m-2015.jpg"
+            },
+            {
+              "name": "Олів'є",
+              "description": "Олів'є",
+              "size": "300г",
+              "priceCents": 16000,
+              "imageUrl": "https://kor.ill.in.ua/m/1200x0/2085448.jpg"
+            },
+            {
+              "name": "Лісова була",
+              "description": "Салат",
+              "size": "300г",
+              "priceCents": 20000,
+              "imageUrl": "https://img2.zakaz.ua/src.1654453444.ad72436478c_2022-06-20_Aliona/src.1654453444.SNCPSG10.obj.0.1.jpg.oe.jpg.pf.jpg.350nowm.jpg.350x.jpg"
+            },
+            {
+              "name": "Оселедець під шубою",
+              "description": "Салат",
+              "size": "300г",
+              "priceCents": 15500,
+              "imageUrl": "https://images.unian.net/photos/2020_12/thumb_files/1200_0_1608630254-5243.jpg"
+            },
+            {
+              "name": "Олів'є з язиком",
+              "description": "Салат",
+              "size": "300г",
+              "priceCents": 16000,
+              "imageUrl": "https://glamour.kyiv.ua/wp-content/uploads/2023/07/recipe_d0643bab-784c-443d-afa4-89ab6c430cda_w450.jpg"
+            },
+            {
+              "name": "Цезар з куркою",
+              "description": "Салат",
+              "size": "300г",
+              "priceCents": 25000,
+              "imageUrl": "https://images.unian.net/photos/2019_12/thumb_files/1200_0_1577182092-7643.jpg"
+            },
+            {
+              "name": "Цезар з креветкою",
+              "description": "Салат",
+              "size": "300г",
+              "priceCents": 25000,
+              "imageUrl": "https://pizza-sushi.com.ua/sites/default/files/styles/wm_style/public/content/blyudo/blyudo-preview-images/xsalat-cezar-s-krevetkami-irpen-bucha-zakaz-dostavka-edy.jpg,qitok=ZIVcjqyq.pagespeed.ic.6cOFMQ3Obw.jpg"
+            }
+          ]
+        },
+        {
+          "title": "Закуски",
+          "group": "Кухня",
+          "dishes": [
+            {
+              "name": "Брускетта з бужениною",
+              "description": "Брускетта",
+              "size": "2шт",
+              "priceCents": 8500,
+              "imageUrl": "https://85fe2b2fabd5e574b10af8f2e122907c.cdn.bubble.io/cdn-cgi/image/w=512,h=382,f=auto,dpr=2.5,fit=contain/f1701082254453x418269521022236500/SO_02841.jpg"
+            },
+            {
+              "name": "Брускетта з сьомгою",
+              "description": "Брускетта",
+              "size": "2шт",
+              "priceCents": 15500,
+              "imageUrl": "https://kanape-catering.kiev.ua/wp-content/uploads/2024/04/brusketta-s-lososem-scaled.jpg"
+            },
+            {
+              "name": "Бутерброд з ікрою",
+              "description": "Бутерброд",
+              "size": "2шт",
+              "priceCents": 11500,
+              "imageUrl": "https://cdn.vkusnoo.com.ua/images/15767/15767-07.jpg"
+            },
+            {
+              "name": "Бутерброд з сьомгою",
+              "description": "Бутерброд",
+              "size": "2шт",
+              "priceCents": 13000,
+              "imageUrl": "https://book-cook.net/wp-content/uploads/2023/12/image3-18.jpg"
+            },
+            {
+              "name": "Бутерброд з ковбасою",
+              "description": "Бутерброд",
+              "size": "2шт",
+              "priceCents": 4500,
+              "imageUrl": "https://cdn.smak.menu/images/maxone/25945/25945-b45e14d7b349df3ab55ed7a4a558f7ea.jpg"
+            },
+            {
+              "name": "Бутерброд із сиром",
+              "description": "Бутерброд",
+              "size": "2шт",
+              "priceCents": 4500,
+              "imageUrl": "https://radioclub.ua/upload/editor/00/2024/dd/51/6705391db0545_osnovnoe-buter.JPG"
+            },
+            {
+              "name": "Гарячий бутерброд із сиром та ковбасою",
+              "description": "Бутерброд",
+              "size": "2шт",
+              "priceCents": 11000,
+              "imageUrl": "https://cdn.smak.menu/images/maxone/21415/21415-8ee9810a252a47368c9f5ad8883ef293.jpg"
+            },
+            {
+              "name": "Бутерброд із сиром та ковбасою",
+              "description": "Бутерброд",
+              "size": "2шт",
+              "priceCents": 5500,
+              "imageUrl": "https://bestrecept.kyiv.ua/uploads/posts/2019/4/korm-26933.jpg"
+            },
+            {
+              "name": "Пивна тарілка",
+              "description": "нагітси, картопля фрі, сир сулугуні, грінки, кальмар",
+              "size": "600г",
+              "priceCents": 49000,
+              "imageUrl": "https://ladyindress.com.ua/wp-content/uploads/2024/07/rszcayertvg.jpg"
+            },
+            {
+              "name": "Велика тарілка",
+              "description": "Нагетси, Картопля фрі, Лукові кільця, Сир сулугуні, Крильця, Сирні палички, Грінки, Охотничи ковбаски",
+              "size": "1200г",
+              "priceCents": 89000,
+              "imageUrl": "https://domaltbier.com.ua/wp-content/uploads/2017/11/20220218_185203-4.jpg"
+            }
+          ]
+        },
+        {
+          "title": "Снеки",
+          "group": "Кухня",
+          "dishes": [
+            {
+              "name": "Джеркі курячі",
+              "description": "Джеркі",
+              "size": "100г",
+              "priceCents": 20000,
+              "imageUrl": "https://www.stovpynski-kovbasy.com.ua/wp-content/uploads/2025/03/dsc_6389.jpg"
+            },
+            {
+              "name": "Чіпси Lay's Великі",
+              "description": "Чіпси",
+              "size": "120г",
+              "priceCents": 10700,
+              "imageUrl": "https://src.zakaz.atbmarket.com/cache/photos/74021/catalog_product_gal_mob_74021.jpg"
+            },
+            {
+              "name": "Чіпси Lay's Середні",
+              "description": "Чіпси",
+              "size": "60г",
+              "priceCents": 8700,
+              "imageUrl": "https://market.rukavychka.ua/image/catalog/products/0802010857/0802010857.jpg"
+            },
+            {
+              "name": "Кабаноси",
+              "description": "Кабаноси",
+              "size": "50г",
+              "priceCents": 9700,
+              "imageUrl": "https://rodynna-kovbaska.ua/upload/product/photo/bg/photo_b624683d-65ee-11ee-ab06-02a81c372244.jpg"
+            },
+            {
+              "name": "Грінки зі смаком сметани та цибулі",
+              "description": "Грінки",
+              "size": "50г",
+              "priceCents": 5200,
+              "imageUrl": "https://img.auchan.ua/rx/q_90,ofmt_webp,w_460,h_460/auchan.ua/media/catalog/product/f/c/fc24ca4835c2954837a26698157f7874ec0578e64bc7a216b45ab847370d2c88.jpeg"
+            },
+            {
+              "name": "Арахіс зі смаком сиру",
+              "description": "Арахіс",
+              "size": "50г",
+              "priceCents": 5200,
+              "imageUrl": "https://pekar-konditer.com.ua/image/cache/catalog/0018/arahis-syr-900.jpg"
+            },
+            {
+              "name": "Арахіс зі смаком васабі",
+              "description": "Арахіс",
+              "size": "50г",
+              "priceCents": 5200,
+              "imageUrl": "https://pekar-konditer.com.ua/image/cache/catalog/0018/arahis-vasabi-900.jpg"
+            },
+            {
+              "name": "Арахіс солоний",
+              "description": "Арахіс",
+              "size": "50г",
+              "priceCents": 5200,
+              "imageUrl": "https://foodmarket.com.ua/2061-large_default/arakhis-smazhenij-solonij-1kg.jpg"
+            },
+            {
+              "name": "Горішки",
+              "description": "Горішки",
+              "size": "50г",
+              "priceCents": 5200,
+              "imageUrl": "https://almond.ua/wp-content/uploads/2026/02/Osnovni-ryzyky-pid-chas-zakupivli-gorihiv.jpg"
+            },
+            {
+              "name": "Грінки хвилясті зі смаком часнику",
+              "description": "Грінки",
+              "size": "50г",
+              "priceCents": 5200,
+              "imageUrl": "https://images.avrora.ua/images/detailed/185/133121_01.jpg"
+            }
+          ]
+        },
+        {
+          "title": "Нарізки",
+          "group": "Кухня",
+          "dishes": [
+            {
+              "name": "Овочева нарізка",
+              "description": "Огірок, помідор, редис, чері, мікрозелень",
+              "size": "500г",
+              "priceCents": 52800,
+              "imageUrl": "https://zori.ua/storage/item-files/fb4d735c-1b4a-4fbe-96be-8f7b269b805c.jpg"
+            },
+            {
+              "name": "М'ясна нарізка",
+              "description": "Балик, бастурма, буженина, ковбаса сирокопчена, шинка",
+              "size": "500г",
+              "priceCents": 97500,
+              "imageUrl": "https://ternopil-vichirnij.menu.in.ua/wp-content/uploads/2021/04/bez-ymeny-1.jpg"
+            },
+            {
+              "name": "Сальна нарізка",
+              "description": "Підчеревина, зелена цибуля, сало звичайне, огірок солоний, сальний рулет з часником, цибуля ріпчаста",
+              "size": "500г",
+              "priceCents": 49500,
+              "imageUrl": "https://delmar.net.ua/image/cache/catalog/delmar/382570-900x600.jpg"
+            },
+            {
+              "name": "Сирна нарізка",
+              "description": "Гауда, дорблю, ементаль, пармезан, фета",
+              "size": "500г",
+              "priceCents": 95000,
+              "imageUrl": "https://fainemisto.com/media/products_iiko/b70e3227-bd02-40a5-9d83-e40ea2765051.jpg"
+            },
+            {
+              "name": "Соління",
+              "description": "Капуста пелюстка, огірок солоний, помідор, капуста квашена, морква по-корейськи",
+              "size": "600г",
+              "priceCents": 45600,
+              "imageUrl": "https://kanape-catering.kiev.ua/wp-content/uploads/2021/12/228.jpg"
+            }
+          ]
+        },
+        {
+          "title": "Фастфуд",
+          "group": "Кухня",
+          "dishes": [
+            {
+              "name": "Картопля фрі",
+              "description": "Хрустка картопля",
+              "size": "200г",
+              "priceCents": 11000,
+              "imageUrl": "https://ambar.net.ua/image/data/zakuski/1057.jpg"
+            },
+            {
+              "name": "Піца з куркою і ананасом",
+              "description": "Піца з куркою та ананасом",
+              "size": null,
+              "priceCents": 23000,
+              "imageUrl": "https://citypizza.com.ua/wp-content/uploads/2020/01/IMG-6856-1.jpg"
+            },
+            {
+              "name": "Піца з куркою та грибами",
+              "description": "Піца з куркою та грибами",
+              "size": null,
+              "priceCents": 22000,
+              "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/91/Pizza-3007395.jpg"
+            },
+            {
+              "name": "Піца з салямі",
+              "description": "Піца з салямі",
+              "size": null,
+              "priceCents": 23000,
+              "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Supreme_pizza.jpg"
+            },
+            {
+              "name": "Сирні палички",
+              "description": "Смажені сирні палички",
+              "size": "200г",
+              "priceCents": 12000,
+              "imageUrl": "https://rondo-pizza.kiev.ua/wp-content/uploads/2024/06/syrni-palychky.png"
+            },
+            {
+              "name": "Хот-дог",
+              "description": "Класичний хот-дог",
+              "size": null,
+              "priceCents": 9500,
+              "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Hot_dog_with_mustard.png"
+            },
+            {
+              "name": "Хачапурі з сиром та грибами",
+              "description": "Хачапурі з сиром і грибами",
+              "size": null,
+              "priceCents": 14000,
+              "imageUrl": "https://myasogor.com.ua/assets/images/products/311/59328240-341195419806463-7693561985178271744-n.jpg"
+            },
+            {
+              "name": "Хачапурі з сиром",
+              "description": "Класичне хачапурі з сиром",
+              "size": null,
+              "priceCents": 12500,
+              "imageUrl": "https://www.rbc.ua/static/img/3/3/335_caption_1300x820.jpg"
+            },
+            {
+              "name": "Хачапурі з куркою, грибами та сиром",
+              "description": "Хачапурі з куркою, грибами та сиром",
+              "size": null,
+              "priceCents": 15000,
+              "imageUrl": "https://myasogor.com.ua/assets/images/products/540/size540/hachapuri-s-kartoshkoy.jpg"
+            },
+            {
+              "name": "Хот-дог XL",
+              "description": "Великий хот-дог",
+              "size": null,
+              "priceCents": 13500,
+              "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Hot_dog_with_mustard.png"
+            }
+          ]
+        },
+        {
+          "title": "Солодощі",
+          "group": "Кухня",
+          "dishes": [
+            {
+              "name": "Сирники",
+              "description": "З сметаною",
+              "size": null,
+              "priceCents": 9600,
+              "imageUrl": "https://i.obozrevatel.com/food/recipemain/2019/5/31/rf.jpg?size=636x424"
+            },
+            {
+              "name": "Тертий пиріг",
+              "description": "Пиріг",
+              "size": null,
+              "priceCents": 4600,
+              "imageUrl": "https://lviv.media/static/content/thumbs/420x484/5/ac/5hhcpg---c420x484x50px50p-up--6f8a2dd71be42ae3a4ee424b774bbac5.jpg"
+            },
+            {
+              "name": "Торт «Медовик»",
+              "description": "Торт",
+              "size": null,
+              "priceCents": 11600,
+              "imageUrl": "https://dimmedu.com.ua/image/catalog/Statti/medovik.jpg"
+            },
+            {
+              "name": "Торт «Наполеон»",
+              "description": "Торт",
+              "size": null,
+              "priceCents": 11600,
+              "imageUrl": "https://vatsak.com.ua/image/cache/catalog/products/Tortu/VAGOV%D0%86/Napoleon/napoleon%20gallery%201-562x429.jpg"
+            },
+            {
+              "name": "Торт шоколадний",
+              "description": "Торт",
+              "size": null,
+              "priceCents": 10600,
+              "imageUrl": "https://shuba.life/static/content/thumbs/1824x912/8/fe/tpt7oq---c2x1x50px50p-up--c696e71554f3a9e6e2f23fab9d3d0fe8.jpg"
+            },
+            {
+              "name": "Білий пломбір з добавками",
+              "description": "Морозиво",
+              "size": "250г",
+              "priceCents": 14000,
+              "imageUrl": "https://duflu.org.ua/wp-content/uploads/2026/04/krem-plombir-reczept.jpg"
+            }
+          ]
+        },
+        {
+          "title": "Гарячі напої",
+          "group": "Бар",
+          "dishes": [
+            {
+              "name": "Флет-вайт",
+              "description": "Еспресо з молоком та вершками",
+              "size": null,
+              "priceCents": 11500,
+              "imageUrl": "https://luxcafe.com.ua/upload/resize_cache/iblock/f99/600_600_1/agy0n6xyu15mb1g8h4zgzlpn058rqt73.jpg"
+            },
+            {
+              "name": "Допіо",
+              "description": "Еспресо з молоком",
+              "size": null,
+              "priceCents": 10000,
+              "imageUrl": "https://fastivnews.city/upload/article/o_1hrlh13of2jqgip124obv215bd2p.jpg"
+            },
+            {
+              "name": "Лате",
+              "description": "Еспресо з молоком",
+              "size": null,
+              "priceCents": 8500,
+              "imageUrl": "https://ua2.jura.com/-/media/global/images/coffee-recipes/images-redesign-2020/latte_macchiato_2000x1400px.jpg"
+            },
+            {
+              "name": "Еспресо з вершками",
+              "description": "Еспресо",
+              "size": null,
+              "priceCents": 6500,
+              "imageUrl": "https://img.postershop.me/12427/4c03b91e-4404-4d1c-bebc-95f9fb17836e_image.jpeg"
+            },
+            {
+              "name": "Капучино",
+              "description": "Еспресо з молоком",
+              "size": null,
+              "priceCents": 6500,
+              "imageUrl": "https://gemini.ua/wp-content/uploads/2024/06/chomu-zrobiti-kapuchino-garyachishe-ce-nepravilnij-zapit-do-barista.jpg"
+            },
+            {
+              "name": "Американо з молоком",
+              "description": "Американо",
+              "size": null,
+              "priceCents": 6000,
+              "imageUrl": "https://luxcafe.com.ua/upload/resize_cache/iblock/f51/600_600_1/5fptijvd0d4jbf0wzs9sx6v0vxhue6k1.jpg"
+            },
+            {
+              "name": "Лунго",
+              "description": "Еспресо",
+              "size": null,
+              "priceCents": 6000,
+              "imageUrl": "https://zavari.ua/wp-content/uploads/2025/03/kofe-ristretto.jpg"
+            },
+            {
+              "name": "Американо",
+              "description": "Американо",
+              "size": null,
+              "priceCents": 5000,
+              "imageUrl": "https://coffee-lux.com.ua/image/cache/catalog/blog/americano-1200x900.jpg"
+            },
+            {
+              "name": "Еспресо",
+              "description": "Еспресо",
+              "size": null,
+              "priceCents": 5000,
+              "imageUrl": "https://westcupgroup.com/wp-content/uploads/2020/06/1_4FzJWow3qJOV_O-3iKgBOw.jpeg"
+            },
+            {
+              "name": "Чай (асортимент) Чайник",
+              "description": "Чай",
+              "size": "600мл",
+              "priceCents": 10000,
+              "imageUrl": "https://teaisland.com.ua/wp-content/uploads/2017/04/chaynyk_greckyy_1-300x300.jpg"
+            },
+            {
+              "name": "Чай (асортимент) Чашка",
+              "description": "Чай",
+              "size": null,
+              "priceCents": 4500,
+              "imageUrl": "https://www.zavarka.net.ua/image/cache/catalog/posuda-iz-stekla/chashka-400ml/18746232_3-800x800.jpg"
+            },
+            {
+              "name": "Глінтвейн",
+              "description": "Гарячий напій",
+              "size": "150г",
+              "priceCents": 10000,
+              "imageUrl": "https://i.obozrevatel.com/food/recipemain/2019/7/31/shutterstock483814006.jpg?size=636x424"
+            }
+          ]
+        },
+        {
+          "title": "Безалкогольні напої",
+          "group": "Бар",
+          "dishes": [
+            {
+              "name": "Coca-cola",
+              "description": "Напій",
+              "size": "0.5л",
+              "priceCents": 7000,
+              "imageUrl": "https://aquamarket.ua/90902-large_default/coca-cola-05-l-napitok-gazirovannyj-koka-kola-pet.jpg"
+            },
+            {
+              "name": "Coca-cola",
+              "description": "Ж/б",
+              "size": "0.33л",
+              "priceCents": 4700,
+              "imageUrl": "https://mrgrill.ua/storage/products/images/medium/SCwjafdOw1lt91BnGBD6vks9lYFEy9PrzzP89uXl.jpg?v=1722513508"
+            },
+            {
+              "name": "Fanta",
+              "description": "Ж/б",
+              "size": "0.33л",
+              "priceCents": 4700,
+              "imageUrl": "https://mrgrill.ua/storage/products/images/medium/bZtoaaFVQQUyFf4K4vYYnlecH3BBTllNI7B4nkih.jpg?v=1722513221"
+            },
+            {
+              "name": "Coca-cola zero",
+              "description": "Напій",
+              "size": "0.5л",
+              "priceCents": 7000,
+              "imageUrl": "https://amici.pl.ua/content/images/7/480x480l50nn0/koka-kola-zero-voda-solodka-plastykova-butilka-05-l-34811901028718.jpg"
+            },
+            {
+              "name": "Fanta",
+              "description": "Напій",
+              "size": "0.5л",
+              "priceCents": 7000,
+              "imageUrl": "https://pizzaplace.com.ua/wp-content/uploads/2021/04/fanta-05.jpg"
+            },
+            {
+              "name": "Coca-cola",
+              "description": "Скло",
+              "size": "250мл",
+              "priceCents": 8000,
+              "imageUrl": "https://pizza-leonardo.com.ua/wp-content/uploads/2017/01/coca-cola-800x800.jpg"
+            },
+            {
+              "name": "Burn",
+              "description": "Енергетик ж/б",
+              "size": "0.25л",
+              "priceCents": 13000,
+              "imageUrl": "https://aquamarket.ua/94622-large_default/burn-original-05-l-napitok-energeticheskij-byorn-oridzhinal.jpg"
+            },
+            {
+              "name": "Mirinda",
+              "description": "Напій",
+              "size": "0.5л",
+              "priceCents": 7000,
+              "imageUrl": "https://images.prom.ua/7192495032_w1280_h640_7192495032.jpg"
+            },
+            {
+              "name": "Pepsi",
+              "description": "Напій",
+              "size": "0.5л",
+              "priceCents": 7000,
+              "imageUrl": "https://hophey.ua/upload/iblock/bbc/waxnlf7r1oz20bdzxeopqdzuqllt4ihf/napitok-pepsi-cola-bezalkogolnyy-silnogazirovannyy-0-5l.jpg"
+            },
+            {
+              "name": "Pepsi zero",
+              "description": "Напій",
+              "size": "0.5л",
+              "priceCents": 7000,
+              "imageUrl": "https://trademaster.ua/im/pics/3502271-pepsi.jpg"
+            },
+            {
+              "name": "Sprite",
+              "description": "Напій",
+              "size": "0.5л",
+              "priceCents": 7000,
+              "imageUrl": "https://mrgrill.ua/storage/products/images/big/RzGlX70VYBkKMqTzFiMuXKv0KrrctxPm9Sr6Hfi5.jpg?v=1722513502"
+            },
+            {
+              "name": "Schweppes",
+              "description": "Ж/б",
+              "size": "0.33л",
+              "priceCents": 8000,
+              "imageUrl": "https://okwine.ua/files/product/61b345346ebb0c2d53db5d6d/94eff110-11f3-11eb-9c76-b10d7e4f3d92.jpg.jpg"
+            },
+            {
+              "name": "Pepsi",
+              "description": "Ж/б",
+              "size": "0.33л",
+              "priceCents": 4700,
+              "imageUrl": "https://market.rukavychka.ua/image/cache/catalog/products/0204010410/0204010410-700x500.jpg"
+            },
+            {
+              "name": "Sprite",
+              "description": "Ж/б",
+              "size": "0.33л",
+              "priceCents": 4700,
+              "imageUrl": "https://mrgrill.ua/storage/products/images/big/h5a5L3k9Gefjl9hAhSirxIEuEfe86bV04gyteiUF.jpg?v=1722513312"
+            },
+            {
+              "name": "Red Bull",
+              "description": "Енергетик ж/б",
+              "size": "0.25л",
+              "priceCents": 13000,
+              "imageUrl": "https://content.okwine.ua/files/product/61b345366ebb0c2d53db63af/350x470/energeticheski-napitok-red-bull-red-bull-0355l_1.jpg"
+            },
+            {
+              "name": "Pit Bull",
+              "description": "Енергетик ж/б",
+              "size": "0.25л",
+              "priceCents": 7000,
+              "imageUrl": "https://market.rukavychka.ua/image/catalog/products/0207000032/0207000032.jpg"
+            },
+            {
+              "name": "Боржомі",
+              "description": "Вода скло",
+              "size": "0.5л",
+              "priceCents": 13500,
+              "imageUrl": "https://aquamarket.ua/98905-large_default/borjomi-voda-mineralnaya-silnogazirovannaya-033-l-steklo.jpg"
+            },
+            {
+              "name": "Вода Detox",
+              "description": "Детокс вода",
+              "size": "0.33л",
+              "priceCents": 10800,
+              "imageUrl": "https://bi.ua/uploaded-images/products/size_650/622416_1.jpg"
+            },
+            {
+              "name": "Вода Detox",
+              "description": "Детокс вода",
+              "size": "0.5л",
+              "priceCents": 12000,
+              "imageUrl": "https://aquamarket.ua/99084-large_default/detox-aqua-mirgorod-05-l-detoks-akva-voda-mineralnaya-silnogazirovannaya-lechebno-stolovaya-pet.jpg"
+            },
+            {
+              "name": "Вода Detox",
+              "description": "Детокс вода",
+              "size": "1л",
+              "priceCents": 18000,
+              "imageUrl": "https://producto.com.ua/image/cache/catalog/Aqua%20%D0%9C%D0%B8%D1%80%D0%B3%D0%BE%D1%80%D0%BE%D0%B4/Detox%204820010772607-1000x1000.jpg"
+            },
+            {
+              "name": "Живчик",
+              "description": "Напій",
+              "size": "0.5л",
+              "priceCents": 5600,
+              "imageUrl": "https://market.rukavychka.ua/image/cache/catalog/products/0204010133/0204010133-700x500.jpg"
+            },
+            {
+              "name": "Вода Збручанська",
+              "description": "Вода мінеральна",
+              "size": "0.5л",
+              "priceCents": 6500,
+              "imageUrl": "https://aquamarket.ua/94781-large_default/zbruchanska-77-voda-mineralnaya-gazovana-likuvalno-stolova-05-l-sklo.jpg"
+            },
+            {
+              "name": "Квас тарас білий",
+              "description": "Квас",
+              "size": "0.5л",
+              "priceCents": 8500,
+              "imageUrl": "https://aquamarket.ua/77512-large_default/kvas-taras-05-l-kvas-khlibnij-bilij-zh-b.jpg"
+            },
+            {
+              "name": "Квас тарас чорний",
+              "description": "Квас",
+              "size": "0.5л",
+              "priceCents": 8500,
+              "imageUrl": "https://images.silpo.ua/v2/products/500x500/origin/153be7ff-ffe5-47ee-bb9b-655532bfb9f4.jpg"
+            },
+            {
+              "name": "Морс ягідний",
+              "description": "Морс",
+              "size": "0.2л",
+              "priceCents": 3500,
+              "imageUrl": "https://pizzadicasa.com.ua/upload/products/fbcb22b490304ad3533f10a91608e9e7.jpg"
+            },
+            {
+              "name": "Морс ягідний",
+              "description": "Морс",
+              "size": "0.5л",
+              "priceCents": 5200,
+              "imageUrl": "https://e-mis.com.ua/wp-content/uploads/2026/05/mors-%E2%80%94-cze.jpg"
+            },
+            {
+              "name": "Миргородська",
+              "description": "Вода газована",
+              "size": "0.5л",
+              "priceCents": 4600,
+              "imageUrl": "https://aquamarket.ua/5807-large_default/mirgorodska-05-l-voda-negazovana-mineralna-lagidna-sport-pet.jpg"
+            },
+            {
+              "name": "Моршинська Газована",
+              "description": "Вода газована",
+              "size": "0.5л",
+              "priceCents": 4600,
+              "imageUrl": "https://aquamarket.ua/78056-large_default/morshinska-voda-mineralna-slabogazovana-05-l.jpg"
+            },
+            {
+              "name": "Моршинська Негазована",
+              "description": "Вода негазована",
+              "size": "0.5л",
+              "priceCents": 4600,
+              "imageUrl": "https://aquamarket.ua/78052-large_default/morshinska-voda-mineralna-negazovana-05-l.jpg"
+            },
+            {
+              "name": "Мохіто",
+              "description": "Напій",
+              "size": "0.3л",
+              "priceCents": 3000,
+              "imageUrl": "https://img3.zakaz.ua/upload.8f1137c7affa21ebb2b51e41bfa44376.350x350.jpg"
+            },
+            {
+              "name": "Мохіто",
+              "description": "Напій",
+              "size": "0.5л",
+              "priceCents": 5000,
+              "imageUrl": "https://aquamarket.ua/6675-large_default/mohito-biola-0-5l.jpg"
+            },
+            {
+              "name": "Склянка води",
+              "description": "Вода",
+              "size": null,
+              "priceCents": 800,
+              "imageUrl": "https://ukr.media/static/ba/aimg/4/3/7/437862_1.jpg"
+            },
+            {
+              "name": "Lipton",
+              "description": "Холодний чай",
+              "size": "0.5л",
+              "priceCents": 7000,
+              "imageUrl": "https://aquamarket.ua/97321-large_default/lipton-05-l-chaj-kholodnyj-chernyj-limon-lipton-pet.jpg"
+            },
+            {
+              "name": "Поляна квасова",
+              "description": "Вода мінеральна",
+              "size": "0.5л",
+              "priceCents": 14000,
+              "imageUrl": "https://aquamarket.ua/46413-large_default/polyana-kvasova-voda-mineralnaya-silnogazirovannaya-05-l.jpg"
+            },
+            {
+              "name": "Тархун Tarragon",
+              "description": "Напій",
+              "size": "0.5л",
+              "priceCents": 10100,
+              "imageUrl": "https://aquamarket.ua/27130-large_default/gruzinskij-buket-upakovka-12-sht-kh-05-l-napitok-gazirovannyj-tarkhun-steklo.jpg"
+            },
+            {
+              "name": "Узвар",
+              "description": "Узвар",
+              "size": "0.2л",
+              "priceCents": 3000,
+              "imageUrl": "https://img.cookorama.net/uploads/images/02/47/02/2018/11/12/ce7e92_780x.jpg"
+            },
+            {
+              "name": "Узвар",
+              "description": "Узвар",
+              "size": "0.5л",
+              "priceCents": 4600,
+              "imageUrl": "https://i.obozrevatel.com/food/recipemain/2019/3/11/zdb.jpg?size=636x424"
+            }
+          ]
+        },
+        {
+          "title": "Коктейлі та шоти",
+          "group": "Бар",
+          "dishes": [
+            {
+              "name": "Сінгапурський Слінг",
+              "description": "Коктейль",
+              "size": null,
+              "priceCents": 26000,
+              "imageUrl": "https://cocktailbox.com.ua/wp-content/uploads/2021/03/singapore-sling.jpg"
+            },
+            {
+              "name": "Май Тай",
+              "description": "Коктейль",
+              "size": null,
+              "priceCents": 26000,
+              "imageUrl": "https://bartenders.com.ua/wp-content/uploads/2025/05/nov%D1%8Bj-proekt-9-1200x1500.jpg"
+            },
+            {
+              "name": "Секс на Пляжі",
+              "description": "Коктейль",
+              "size": null,
+              "priceCents": 26000,
+              "imageUrl": "https://alcomag.ua/upload/iblock/7ba/nrlrr0sok7be1wnqb3by3c79o5th4n2r.jpg"
+            },
+            {
+              "name": "Горіхова Колада",
+              "description": "Коктейль",
+              "size": null,
+              "priceCents": 26000,
+              "imageUrl": "https://img.tsn.ua/cached/545/tsn-135859377404ec64163c97d964721c31/thumbs/1200x630/a4/ec/ed22a8b9905e858afacab41c3bfeeca4.jpeg"
+            },
+            {
+              "name": "Джанг Джус",
+              "description": "Коктейль",
+              "size": null,
+              "priceCents": 26000,
+              "imageUrl": "https://cocktailbox.com.ua/wp-content/uploads/2021/03/sex-on-the-beach-300x225.jpg"
+            },
+            {
+              "name": "Піна Колада",
+              "description": "Коктейль",
+              "size": null,
+              "priceCents": 26000,
+              "imageUrl": "https://simaris.shop/images/cp_blog_post/22/5160d9efdda3bd8587bdf72a7d183b38.jpg"
+            },
+            {
+              "name": "Харрікейн",
+              "description": "Коктейль",
+              "size": null,
+              "priceCents": 26000,
+              "imageUrl": "https://content2.rozetka.com.ua/goods/images/big/428502055.jpg"
+            },
+            {
+              "name": "Блакитна Лагуна",
+              "description": "Коктейль",
+              "size": null,
+              "priceCents": 26000,
+              "imageUrl": "https://cdn.smak.menu/images/maxone/28536/28536-2deccb6cfb2fff85c443ebaf35597866.jpg"
+            },
+            {
+              "name": "Лонг Айленд Айс Ті",
+              "description": "Коктейль",
+              "size": null,
+              "priceCents": 26000,
+              "imageUrl": "https://dailynews.kyiv.ua/wp-content/uploads/2023/11/e6cb15c8f912c95bb2068483589454e8.jpg"
+            },
+            {
+              "name": "Снукер",
+              "description": "Коктейль",
+              "size": null,
+              "priceCents": 26000,
+              "imageUrl": "https://bartenders.com.ua/wp-content/uploads/2025/02/new-york-sour-1200x1500.jpg"
+            },
+            {
+              "name": "Сайдкар",
+              "description": "Коктейль",
+              "size": null,
+              "priceCents": 21000,
+              "imageUrl": "https://ua.inshaker.com/uploads/cocktail/promo/59/medium_1629733252-%D0%A1%D0%B0%D0%B8%CC%86%D0%B4%D0%BA%D0%B0%D1%80.jpg"
+            },
+            {
+              "name": "Полуничний Дайкірі",
+              "description": "Коктейль",
+              "size": null,
+              "priceCents": 21000,
+              "imageUrl": "https://ua.inshaker.com/uploads/cocktail/hires/1386/1556628013-Strawberry_daiquiry_800.jpg"
+            },
+            {
+              "name": "Голден Дрім",
+              "description": "Коктейль",
+              "size": null,
+              "priceCents": 21000,
+              "imageUrl": "https://www.liquor.com/thmb/VEOUvbCu7S3aXNUcGKzT3-MK9UY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/golden-dream-720x720-primary-daf1cbf380ae4f0d8f55f05530948e91.jpg"
+            },
+            {
+              "name": "Парадайз",
+              "description": "Коктейль",
+              "size": null,
+              "priceCents": 21000,
+              "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Paradise_cocktail.jpg"
+            },
+            {
+              "name": "Жовтий Птах",
+              "description": "Шот",
+              "size": null,
+              "priceCents": 15000,
+              "imageUrl": "https://shuba.life/static/content/thumbs/1200x630/c/f2/zqzttx---c40x21x50px50p-up--03320714cab152087ee7df539d7b8f2c.jpg"
+            },
+            {
+              "name": "Брендбар",
+              "description": "Шот",
+              "size": null,
+              "priceCents": 15000,
+              "imageUrl": "https://img2.zakaz.ua/upload.version_1.0.ab4321c5a9643e2af58fb117d4372981.350x350.jpeg"
+            },
+            {
+              "name": "B-52",
+              "description": "Шот",
+              "size": null,
+              "priceCents": 15000,
+              "imageUrl": "https://cocktailbox.com.ua/wp-content/uploads/2021/03/b-52.jpg"
+            },
+            {
+              "name": "B-53",
+              "description": "Шот",
+              "size": null,
+              "priceCents": 15000,
+              "imageUrl": "https://roomzarechny.qrboss.com.ua/uploads/c73/086/c73086c8838a159c697d6707ca6103ba.jpeg"
+            },
+            {
+              "name": "Лагуна",
+              "description": "Шот",
+              "size": null,
+              "priceCents": 15000,
+              "imageUrl": "https://coffeeynya.ua/image/cache/catalog/Recipes/blue-lagoon-e1562426217742-1200x900.jpg"
+            },
+            {
+              "name": "Казантип",
+              "description": "Шот",
+              "size": null,
+              "priceCents": 15000,
+              "imageUrl": "https://showbar.com.ua/wp-content/uploads/2018/01/toss-off-caasantle.jpg"
+            },
+            {
+              "name": "Хіросіма",
+              "description": "Шот",
+              "size": null,
+              "priceCents": 15000,
+              "imageUrl": "https://shuba.life/static/content/thumbs/1200x630/d/dd/mm2fqz---c1613x846x138sx436s-up--7c3f18a7fe34c1fa39885432e36d8ddd.jpg"
+            },
+            {
+              "name": "Хмари",
+              "description": "Шот",
+              "size": null,
+              "priceCents": 15000,
+              "imageUrl": "https://ua.inshaker.com/uploads/cocktail/hires/660/1556798230-Clouds-highres.jpg"
+            },
+            {
+              "name": "Зелений Мексиканець",
+              "description": "Шот",
+              "size": null,
+              "priceCents": 15000,
+              "imageUrl": "https://cocktailbox.com.ua/wp-content/uploads/2020/12/green-mexican-01.jpg"
+            }
+          ]
+        },
+        {
+          "title": "Безалкогольні коктейлі",
+          "group": "Бар",
+          "dishes": [
+            {
+              "name": "Піна-кола",
+              "description": "Освіжаючий коктейль",
+              "size": null,
+              "priceCents": 11500,
+              "imageUrl": "https://alcomag.ua/upload/iblock/c84/m4dh4gukv2kynjdk5sufnqg940lmc9c3.jpg"
+            },
+            {
+              "name": "Фруточино грейпфрутовий",
+              "description": "Грейпфрутовий коктейль",
+              "size": null,
+              "priceCents": 11500,
+              "imageUrl": "https://ua.inshaker.com/uploads/cocktail/promo/924/medium_1542205516-Grapefruit-Frutochino-_promo.jpg"
+            },
+            {
+              "name": "Джміль",
+              "description": "Кавовий коктейль",
+              "size": null,
+              "priceCents": 11500,
+              "imageUrl": "https://ua.inshaker.com/uploads/cocktail/hires/969/1537757361-Bumblebee__highres.jpg"
+            },
+            {
+              "name": "Мохіто",
+              "description": "Безалкогольний мохіто",
+              "size": null,
+              "priceCents": 10000,
+              "imageUrl": "https://ua.inshaker.com/uploads/cocktail/hires/679/1557242757-Mojito-image-final.jpg"
+            },
+            {
+              "name": "Лимонад",
+              "description": "Домашній лимонад",
+              "size": null,
+              "priceCents": 10000,
+              "imageUrl": "https://lasunka.com/s143-1.jpg"
+            },
+            {
+              "name": "Кава-Аршат",
+              "description": "Холодна кава",
+              "size": null,
+              "priceCents": 11500,
+              "imageUrl": "https://ua.inshaker.com/uploads/cocktail/hires/933/1556113577-Almond-Coffee__highres.jpg"
+            },
+            {
+              "name": "Айс-лате",
+              "description": "Холодний лате",
+              "size": null,
+              "priceCents": 11500,
+              "imageUrl": "https://redpost.com.ua/content/documents/12710/1270950/thumb-big-420x305-94a8.jpg"
+            },
+            {
+              "name": "Айс-капучіно",
+              "description": "Холодний капучино",
+              "size": null,
+              "priceCents": 10500,
+              "imageUrl": "https://shuba.life/static/content/thumbs/1824x912/4/1a/jmupbk---c2x1x50px50p-up--3fef9a4858228db69a29423ea1de01a4.jpg"
+            }
+          ]
+        },
+        {
+          "title": "Фреші",
+          "group": "Бар",
+          "dishes": [
+            {
+              "name": "Апельсиновий фреш",
+              "description": "Свіжовичавлений",
+              "size": "250мл",
+              "priceCents": 13000,
+              "imageUrl": "https://i.obozrevatel.com/food/recipemain/2019/9/11/apelsinovyj-sok5-1.jpg?size=636x424"
+            },
+            {
+              "name": "Лаймовий фреш",
+              "description": "Свіжовичавлений",
+              "size": "250мл",
+              "priceCents": 13000,
+              "imageUrl": "https://freshmart.com.ua/storage/web/cache/product/590/laymoviy-sok-fresh-05l.jpeg?w=1024&h=768&fit=resize&q=80&fm=pjpg&t=1571622277&s=487a8b12b24e2c5eb81884070706893b"
+            },
+            {
+              "name": "Яблучно-морквяний фреш",
+              "description": "Свіжовичавлений",
+              "size": "250мл",
+              "priceCents": 12500,
+              "imageUrl": "https://briscola.com.ua/wp-content/uploads/2021/07/yablochno-morkovnyj3-1024x683.jpg"
+            },
+            {
+              "name": "Яблучний фреш",
+              "description": "Свіжовичавлений",
+              "size": "250мл",
+              "priceCents": 11000,
+              "imageUrl": "https://pizzadicasa.com.ua/upload/products/90a81afb5538a2557587c34f7725481a.jpg"
+            },
+            {
+              "name": "Яблуко-ківі",
+              "description": "Свіжовичавлений",
+              "size": "250мл",
+              "priceCents": 8000,
+              "imageUrl": "https://pesto-italy.com.ua/image/cache/catalog/products/u31481-700x700.jpg"
+            },
+            {
+              "name": "Лимонний фреш",
+              "description": "Свіжовичавлений",
+              "size": "250мл",
+              "priceCents": 7000,
+              "imageUrl": "https://freshmart.com.ua/storage/web/cache/product/566/limonniy-sok-fresh-05l.jpeg?w=1024&h=768&fit=resize&q=80&fm=pjpg&t=1571622274&s=dda9e801effb99895c1e91b5c552217a"
+            }
+          ]
+        },
+        {
+          "title": "Соки",
+          "group": "Бар",
+          "dishes": [
+            {
+              "name": "Cappy Exzotik",
+              "description": "Сік",
+              "size": null,
+              "priceCents": 5500,
+              "imageUrl": "https://aquamarket.ua/102017-large_default/cappy-exotic-1-l-kappi-nektar-ekzotik.jpg"
+            },
+            {
+              "name": "Cappy Яблуко",
+              "description": "Сік",
+              "size": null,
+              "priceCents": 5500,
+              "imageUrl": "https://content2.rozetka.com.ua/goods/images/big/531907425.jpg"
+            },
+            {
+              "name": "Cappy Апельсин",
+              "description": "Сік",
+              "size": null,
+              "priceCents": 5500,
+              "imageUrl": "https://img3.zakaz.ua/fb2026269d2a423a94ffb0591ded8375/1751433929-s350x350.jpg"
+            },
+            {
+              "name": "Cappy Томат",
+              "description": "Сік",
+              "size": null,
+              "priceCents": 5500,
+              "imageUrl": "https://img3.zakaz.ua/84de7f2f96014634bfedfeeac5954615/1751433929-s1350x1350.jpg"
+            },
+            {
+              "name": "Sandora Бананово-яблучно-полуничний",
+              "description": "Сік",
+              "size": null,
+              "priceCents": 5600,
+              "imageUrl": "https://img3.zakaz.ua/6ea342a24234408ba9ad0040a07a8888/1777023912-s1350x1350.jpg"
+            },
+            {
+              "name": "Sandora Ананас",
+              "description": "Сік",
+              "size": null,
+              "priceCents": 5500,
+              "imageUrl": "https://img2.zakaz.ua/upload.version_1.0.ae7b4dc2703832d6fb5e3724d78370cb.1350x1350.jpeg"
+            },
+            {
+              "name": "Sandora Latina America",
+              "description": "Сік",
+              "size": null,
+              "priceCents": 6600,
+              "imageUrl": "https://img2.zakaz.ua/ce3d919208df40b88193567eb970853f/1777023912-s1350x1350.jpg"
+            },
+            {
+              "name": "Sandora Банан",
+              "description": "Сік",
+              "size": null,
+              "priceCents": 5500,
+              "imageUrl": "https://img2.zakaz.ua/12.1672222817.ad72436478c_2022-12-28_Yulia_T/12.1672222817.SNCPSG10.obj.0.1.jpg.oe.jpg.pf.jpg.1350nowm.jpg.1350x.jpg"
+            },
+            {
+              "name": "Sandora Виноград",
+              "description": "Сік",
+              "size": null,
+              "priceCents": 5500,
+              "imageUrl": "https://img3.zakaz.ua/eeee1a768e7e4193bd632a4eeb02cfc5/1777023912-s1350x1350.jpg"
+            },
+            {
+              "name": "Sandora Вишня",
+              "description": "Сік",
+              "size": null,
+              "priceCents": 5500,
+              "imageUrl": "https://img3.zakaz.ua/3751db9d004146a89f690178ad162646/1777023912-s1350x1350.jpg"
+            },
+            {
+              "name": "Sandora Гранат",
+              "description": "Сік",
+              "size": null,
+              "priceCents": 5500,
+              "imageUrl": "https://img2.zakaz.ua/2.1613032001.ad72436478c_2021-02-11_Tatyana_L/2.1613032001.SNCPSG10.obj.0.1.jpg.oe.jpg.pf.jpg.1350nowm.jpg.1350x.jpg"
+            },
+            {
+              "name": "Sandora Грейпфрут",
+              "description": "Сік",
+              "size": null,
+              "priceCents": 5600,
+              "imageUrl": "https://img3.zakaz.ua/07a10080a7f5438ca064e3d8fd44be4b/1777023912-s1350x1350.jpg"
+            },
+            {
+              "name": "Sandora Манго",
+              "description": "Сік",
+              "size": null,
+              "priceCents": 5600,
+              "imageUrl": "https://img2.zakaz.ua/2.1633536792.ad72436478c_2021-10-07_Tatyana_L/2.1633536792.SNCPSG10.obj.0.1.jpg.oe.jpg.pf.jpg.1350nowm.jpg.1350x.jpg"
+            },
+            {
+              "name": "Sandora Мультифрукт",
+              "description": "Сік",
+              "size": null,
+              "priceCents": 5500,
+              "imageUrl": "https://img2.zakaz.ua/05092022.1662313529.ad72436478c_2022-09-05_Tatyana_L/05092022.1662313529.SNCPSG10.obj.0.1.jpg.oe.jpg.pf.jpg.1350nowm.jpg.1350x.jpg"
+            },
+            {
+              "name": "Sandora Сицилійський апельсин",
+              "description": "Сік",
+              "size": null,
+              "priceCents": 5600,
+              "imageUrl": "https://img2.zakaz.ua/0d40972205c34539a2f673862c73adb5/1777023912-s1350x1350.jpg"
+            },
+            {
+              "name": "Sandora Персик",
+              "description": "Сік",
+              "size": null,
+              "priceCents": 5500,
+              "imageUrl": "https://safari-cafe.com.ua/uploads/position/safari_779534287.jpg"
+            },
+            {
+              "name": "Sandora Яблуко-виноград",
+              "description": "Сік",
+              "size": null,
+              "priceCents": 5500,
+              "imageUrl": "https://content2.rozetka.com.ua/goods/images/big/11084632.jpg"
+            },
+            {
+              "name": "Сік прямого віджиму",
+              "description": "Сік",
+              "size": null,
+              "priceCents": 6500,
+              "imageUrl": "https://shumer.club/wp-content/uploads/2023/02/Sok-yshodnyk-1.jpg"
+            }
+          ]
+        },
+        {
+          "title": "Алкогольні напої",
+          "group": "Бар",
+          "dishes": [
+            {
+              "name": "True TEQILA",
+              "description": "Міцний напій",
+              "size": "50г",
+              "priceCents": 12000,
+              "imageUrl": "https://content.okwine.ua/files/product/61b345396ebb0c2d53db6959/350x470/74268300-7cc3-11eb-b239-9bfb8ed4b036.jpg"
+            },
+            {
+              "name": "Абсент Brandbar Vincent",
+              "description": "Міцний напій",
+              "size": "50г",
+              "priceCents": 12000,
+              "imageUrl": "https://img2.zakaz.ua/08112021.1636380648.ad72436478c_2021-11-08_Tatyana_L/08112021.1636380648.SNCPSG10.obj.0.1.jpg.oe.jpg.pf.jpg.1350nowm.jpg.1350x.jpg"
+            },
+            {
+              "name": "Metaxa",
+              "description": "Міцний напій",
+              "size": "50г",
+              "priceCents": 10500,
+              "imageUrl": "https://winetime.com.ua/uploads/symlink/44000-45000/1581932560_55567.jpg"
+            },
+            {
+              "name": "Вермут Marengo bianco",
+              "description": "Вермут",
+              "size": "50г",
+              "priceCents": 4500,
+              "imageUrl": "https://img2.zakaz.ua/f9842f39464e4ddfbd0e855d55bfaa60/1749463506-s1350x1350.jpg"
+            },
+            {
+              "name": "Віскі Glenmorangie (12 років)",
+              "description": "Віскі",
+              "size": "50г",
+              "priceCents": 35000,
+              "imageUrl": "https://content1.rozetka.com.ua/goods/images/big/295206478.jpg"
+            },
+            {
+              "name": "Віскі Penderyn",
+              "description": "Віскі",
+              "size": "50г",
+              "priceCents": 32000,
+              "imageUrl": "https://alcoprostir.ua/7229-thickbox_default/kupit-viski-penderyn-madeira-07l-korobka2-stakana.jpg"
+            },
+            {
+              "name": "Віскі Johnie Walker 'Black label'",
+              "description": "Віскі",
+              "size": "50г",
+              "priceCents": 24500,
+              "imageUrl": "https://content.okwine.ua/files/product/61b345396ebb0c2d53db69ad/500x666/20e0056c-60ba-42f6-802c-d1bb76852caa.viski-blek-lejbl-johnnie-walker-black-label-0-5l-blend.jpg"
+            },
+            {
+              "name": "Віскі Monkey",
+              "description": "Віскі",
+              "size": "50г",
+              "priceCents": 23000,
+              "imageUrl": "https://content.okwine.ua/files/product/61b3452f6ebb0c2d53db43ae/500x666/0c09a2e0-2739-11ec-aaf0-9fc19ebaf324.jpg"
+            },
+            {
+              "name": "Віскі Kinahan's",
+              "description": "Віскі",
+              "size": "50г",
+              "priceCents": 13000,
+              "imageUrl": "https://shop.wineworld.com.ua/image/cache/catalog/art/%D0%AF00107756-500x500.jpg"
+            },
+            {
+              "name": "Віскі Jack Daniel's Honey",
+              "description": "Віскі",
+              "size": "50г",
+              "priceCents": 14000,
+              "imageUrl": "https://content.okwine.ua/files/product/61b345376ebb0c2d53db65aa/500x666/viski-dzhek-deniels-tennessi-khani-jack-daniels-tennessee-honey-35-0-7l_65.jpg"
+            },
+            {
+              "name": "Віскі Chivas original",
+              "description": "Віскі",
+              "size": "50г",
+              "priceCents": 18000,
+              "imageUrl": "https://image.maudau.com.ua/webp/size/xl/products/66/dc/2c/66dc2cbed1ded97bb25fbcc2dec56c70.jpghttps://image.maudau.com.ua/webp/size/xl/products/66/dc/2c/66dc2cbed1ded97bb25fbcc2dec56c70.jpg"
+            },
+            {
+              "name": "Віскі Hankey Bannister",
+              "description": "Віскі",
+              "size": "50г",
+              "priceCents": 14000,
+              "imageUrl": "https://img3.zakaz.ua/6776abdaed994d3cb1dacead9e3645d4/1723305033-s1350x1350.jpg"
+            },
+            {
+              "name": "Віскі Johnie Walker 'Red label'",
+              "description": "Віскі",
+              "size": "50г",
+              "priceCents": 10500,
+              "imageUrl": "https://img3.zakaz.ua/7c2f44e71d9f4f278434f44369ae6f8e/1723305113-s1350x1350.jpg"
+            },
+            {
+              "name": "Віскі Red Label",
+              "description": "Віскі",
+              "size": "50г",
+              "priceCents": 12000,
+              "imageUrl": "https://content.okwine.ua/files/product/61b3453d6ebb0c2d53db743f/500x666/b72728d0-559f-11eb-beb5-9da5f17bf4af.jpg.jpg"
+            },
+            {
+              "name": "Віскі Jameson",
+              "description": "Віскі",
+              "size": "50г",
+              "priceCents": 12500,
+              "imageUrl": "https://shop.wineworld.com.ua/image/cache/catalog/art/F0003006-470x470.jpg"
+            },
+            {
+              "name": "Віскі Jack Daniel's",
+              "description": "Віскі",
+              "size": "50г",
+              "priceCents": 12000,
+              "imageUrl": "https://okwine.ua/files/product/61b345376ebb0c2d53db64f1/viski-dzhek-deniels-jack-daniels-40-0-0-7l_18.jpg"
+            },
+            {
+              "name": "Горілка Absolut",
+              "description": "Горілка",
+              "size": "50г",
+              "priceCents": 8000,
+              "imageUrl": "https://market.rukavychka.ua/image/cache/catalog/products/0101030103/0101030103-700x500.jpg"
+            },
+            {
+              "name": "Віскі Sir Edward's",
+              "description": "Віскі",
+              "size": "50г",
+              "priceCents": 7000,
+              "imageUrl": "https://okwine.ua/files/product/61b345306ebb0c2d53db5214/4a8eb900-af3f-11eb-b90b-f96e2602f068.jpg"
+            },
+            {
+              "name": "Віскі Lauder's Finest",
+              "description": "Віскі",
+              "size": "50г",
+              "priceCents": 10500,
+              "imageUrl": "https://img3.zakaz.ua/a6390a6e587b4636a65e4d53a1ae7245/1723305033-s1350x1350.jpg"
+            },
+            {
+              "name": "Віскі Scented London Dry",
+              "description": "Віскі",
+              "size": "50г",
+              "priceCents": 10000,
+              "imageUrl": "https://img2.zakaz.ua/c40e316ebd09434baa12d4384c5f3baf/1752377580-s1350x1350.jpg"
+            },
+            {
+              "name": "Горілка Nemiroff",
+              "description": "Горілка",
+              "size": "50г",
+              "priceCents": 6000,
+              "imageUrl": "https://img2.zakaz.ua/8c57d5232bb841888e028b709d56bcfe/1767696130-s1350x1350.jpg"
+            },
+            {
+              "name": "Горілка Lvivska",
+              "description": "Горілка",
+              "size": "50г",
+              "priceCents": 6500,
+              "imageUrl": "https://img2.zakaz.ua/828f21205d824ffb8f025741445277d6/1698845866-s1350x1350.jpg"
+            },
+            {
+              "name": "Горілка Finlandia",
+              "description": "Горілка",
+              "size": "50г",
+              "priceCents": 7000,
+              "imageUrl": "https://alcomag.ua/upload/iblock/ab2/43o333rqnef2dpu68whg9hptans70hu3.jpeg"
+            },
+            {
+              "name": "Горілка GoyGol",
+              "description": "Горілка",
+              "size": "50г",
+              "priceCents": 7000,
+              "imageUrl": "https://img3.zakaz.ua/e30e0c22cd1841b592a5a6604a48ab95/1768980783-s1350x1350.jpg"
+            },
+            {
+              "name": "Коньяк Martell",
+              "description": "Коньяк",
+              "size": "50г",
+              "priceCents": 25000,
+              "imageUrl": "https://winetime.com.ua/storage/da9b582a0e2ff2ee9d6ad4c11d20e443.jpeg"
+            },
+            {
+              "name": "Коньяк Napoleon",
+              "description": "Коньяк",
+              "size": "50г",
+              "priceCents": 24000,
+              "imageUrl": "https://winetime.com.ua/uploads/symlink/46000-47000/70054.jpg"
+            },
+            {
+              "name": "Коньяк Kvint 10 years",
+              "description": "Коньяк",
+              "size": "50г",
+              "priceCents": 19600,
+              "imageUrl": "https://shop.wineworld.com.ua/image/cache/catalog/art/%D0%AF00060404-500x500.jpg"
+            },
+            {
+              "name": "Коньяк Frapin VSOP",
+              "description": "Коньяк",
+              "size": "50г",
+              "priceCents": 35000,
+              "imageUrl": "https://img2.zakaz.ua/81801e01c37742b4a604fd8bcdd02b24/1740403876-s1350x1350.jpg"
+            },
+            {
+              "name": "Коньяк Hennessy",
+              "description": "Коньяк",
+              "size": "50г",
+              "priceCents": 25000,
+              "imageUrl": "https://drinktime.ua/files/resized/products/227-2277-0_0_orig.410x458.jpg"
+            },
+            {
+              "name": "Джин Bombay Sapphire",
+              "description": "Джин",
+              "size": "50г",
+              "priceCents": 14000,
+              "imageUrl": "https://img3.zakaz.ua/ac458cbc8ce54653a961a5c57a891b4b/1758695173-s1350x1350.jpg"
+            },
+            {
+              "name": "Джин Gordon's Premium Pink",
+              "description": "Джин",
+              "size": "50г",
+              "priceCents": 12000,
+              "imageUrl": "https://winetime.com.ua/uploads/symlink/52000-53000/1582014942_89293.jpg"
+            },
+            {
+              "name": "Коньяк Metaxa",
+              "description": "Коньяк",
+              "size": "50г",
+              "priceCents": 11000,
+              "imageUrl": "https://drinktime.ua/files/resized/products/brendi-metaksa-12-07l.410x458.jpg"
+            },
+            {
+              "name": "Коньяк Ararat",
+              "description": "Коньяк",
+              "size": "50г",
+              "priceCents": 8500,
+              "imageUrl": "https://content.okwine.ua/files/product/61b3453b6ebb0c2d53db72f4/500x666/669e9780-dfbb-11eb-8a24-1b9db47f5628.jpg"
+            },
+            {
+              "name": "Горілка Prime",
+              "description": "Горілка",
+              "size": "50г",
+              "priceCents": 6000,
+              "imageUrl": "https://shop.wineworld.com.ua/image/cache/catalog/art/C0000910-500x500.jpg"
+            },
+            {
+              "name": "Коньяк Alex",
+              "description": "Коньяк",
+              "size": "50г",
+              "priceCents": 9500,
+              "imageUrl": "https://drinktime.ua/files/resized/products/tavria_4820000621175_images_15380352534.600x800.jpg"
+            },
+            {
+              "name": "Джин Beefeater",
+              "description": "Джин",
+              "size": "50г",
+              "priceCents": 10500,
+              "imageUrl": "https://content.okwine.ua/files/product/61b3453a6ebb0c2d53db6fb4/500x666/651292d0-c43c-11eb-9655-93ae7abd4580.jpg"
+            },
+            {
+              "name": "Коньяк Areni",
+              "description": "Коньяк",
+              "size": "50г",
+              "priceCents": 7000,
+              "imageUrl": "https://img2.zakaz.ua/ff057d63672e4896964b7bb7be3f6b27/1757325049-s1350x1350.jpg"
+            },
+            {
+              "name": "Коньяк Old Kakheti 5",
+              "description": "Коньяк",
+              "size": "50г",
+              "priceCents": 6500,
+              "imageUrl": "https://content.okwine.ua/files/product/61b345376ebb0c2d53db6537/500x666/konyak-staryj-kakheti-5-let-40-0-5l_5.jpg"
+            },
+            {
+              "name": "Горілка Козацька рада",
+              "description": "Горілка",
+              "size": "50г",
+              "priceCents": 6000,
+              "imageUrl": "https://img2.zakaz.ua/1010711f3adb4dc493821467e1aa0364/1749463506-s1350x1350.jpg"
+            },
+            {
+              "name": "Коньяк Bolgrad",
+              "description": "Коньяк",
+              "size": "50г",
+              "priceCents": 7000,
+              "imageUrl": "https://img2.zakaz.ua/1f03ee891a844e58939b8311232219ff/1692684696-s1350x1350.jpg"
+            },
+            {
+              "name": "Горілка Nikita",
+              "description": "Горілка",
+              "size": "50г",
+              "priceCents": 9500,
+              "imageUrl": "https://shop.wineworld.com.ua/image/cache/catalog/art/%D0%AF00073679-500x500.jpg"
+            },
+            {
+              "name": "Горілка Перша Гільдія",
+              "description": "Горілка",
+              "size": "50г",
+              "priceCents": 6000,
+              "imageUrl": "https://img2.zakaz.ua/8a155c352beb45fb8c173741dcb909b7/1770811599-s1350x1350.jpg"
+            },
+            {
+              "name": "Коньяк Old Kakheti 5",
+              "description": "Коньяк",
+              "size": "50г",
+              "priceCents": 6500,
+              "imageUrl": "https://content.okwine.ua/files/product/61b345376ebb0c2d53db6537/500x666/konyak-staryj-kakheti-5-let-40-0-5l_5.jpg"
+            },
+            {
+              "name": "Лікер Baileys",
+              "description": "Лікер",
+              "size": "50г",
+              "priceCents": 15000,
+              "imageUrl": "https://img3.zakaz.ua/6deab41e7fcd4783aff88b71ee4437ee/1733577399-s1350x1350.jpg"
+            },
+            {
+              "name": "Лікер Sheridan's",
+              "description": "Лікер",
+              "size": "50г",
+              "priceCents": 15000,
+              "imageUrl": "https://viski-time.com.ua/image/cache/catalog/TOVAR/liker/sheridans/sheri2800-600x600.jpg"
+            },
+            {
+              "name": "Лікер Havana club 7 years",
+              "description": "Лікер",
+              "size": "50г",
+              "priceCents": 15000,
+              "imageUrl": "https://img2.zakaz.ua/fca8690f8ce240eda2cd1778d3ce7232/1778851841-s1350x1350.jpg"
+            },
+            {
+              "name": "Лікер Jagermeister",
+              "description": "Лікер",
+              "size": "50г",
+              "priceCents": 12000,
+              "imageUrl": "https://image.maudau.com.ua/webp/size/xl/products/40/db/eb/40dbeb1a3cdbc347015a567406255f8a.jpg"
+            },
+            {
+              "name": "Лікер Aperol",
+              "description": "Лікер",
+              "size": "50г",
+              "priceCents": 11000,
+              "imageUrl": "https://winetime.com.ua/uploads/symlink/51000-52000/51336997509_b3d6f19e42_b.jpg"
+            },
+            {
+              "name": "Лікер Hurricane blue",
+              "description": "Лікер",
+              "size": "50г",
+              "priceCents": 11000,
+              "imageUrl": "http://debug.vina-mira.com.ua/image/Data/vinamira/Ya00126127.jpg"
+            },
+            {
+              "name": "Лікер Malibu",
+              "description": "Лікер",
+              "size": "50г",
+              "priceCents": 11000,
+              "imageUrl": "https://img3.zakaz.ua/m.1626262049.ad72436478c_2021-07-14_Svetlana/m.1626262049.SNCPSG10.obj.0.1.jpg.oe.jpg.pf.jpg.1350nowm.jpg.1350x.jpg"
+            },
+            {
+              "name": "Лікер Triple Sec",
+              "description": "Лікер",
+              "size": "50г",
+              "priceCents": 11000,
+              "imageUrl": "https://content.okwine.ua/files/product/61b3453d6ebb0c2d53db74d5/500x666/e9baf030-bade-11ea-ba22-1d1c461bbfde.jpg.jpg"
+            },
+            {
+              "name": "Лікер Havana club 3 years",
+              "description": "Лікер",
+              "size": "50г",
+              "priceCents": 10000,
+              "imageUrl": "https://img2.zakaz.ua/novus20212611.1638186747.ad72436478c_2021-11-29_Alina/novus20212611.1638186747.SNCPSG10.obj.0.1.jpg.oe.jpg.pf.jpg.1350nowm.jpg.1350x.jpg"
+            },
+            {
+              "name": "Лікер Bardinet",
+              "description": "Лікер",
+              "size": "50г",
+              "priceCents": 9000,
+              "imageUrl": "https://img3.zakaz.ua/2de75f1b68d8405480d488d5da9f26b5/1735069021-s1350x1350.jpg"
+            },
+            {
+              "name": "Лікер Becherovka",
+              "description": "Лікер",
+              "size": "50г",
+              "priceCents": 9000,
+              "imageUrl": "https://img2.zakaz.ua/e95477c3dca747dc83d1f30a8bf2503e/1778851841-s1350x1350.jpg"
+            },
+            {
+              "name": "Лікер Sambuca",
+              "description": "Лікер",
+              "size": "50г",
+              "priceCents": 8000,
+              "imageUrl": "https://viski-time.com.ua/image/cache/catalog/TOVAR/liker/sambuca/sambuca-600x600.jpg"
+            },
+            {
+              "name": "Лікер Soberano orange",
+              "description": "Лікер",
+              "size": "50г",
+              "priceCents": 7500,
+              "imageUrl": "https://viski-time.com.ua/image/cache/catalog/TOVAR/brendi/soberano/soberano250-600x600.jpg"
+            },
+            {
+              "name": "Лікер Volare 'Green Melon'",
+              "description": "Лікер",
+              "size": "50г",
+              "priceCents": 6500,
+              "imageUrl": "https://viski-time.com.ua/image/cache/catalog/TOVAR/liker/volare/volaremelon3-600x600.jpg"
+            },
+            {
+              "name": "Лікер Volare 'Amaretto'",
+              "description": "Лікер",
+              "size": "50г",
+              "priceCents": 6000,
+              "imageUrl": "https://image.maudau.com.ua/webp/size/xl/products/da/55/1e/da551e05-a123-4fc5-9c42-ea21cd46c500.jpg"
+            },
+            {
+              "name": "Лікер Volare 'Pisang'",
+              "description": "Лікер",
+              "size": "50г",
+              "priceCents": 6000,
+              "imageUrl": "https://viski-time.com.ua/image/cache/catalog/TOVAR/liker/pisangg-600x600.jpg"
+            },
+            {
+              "name": "Коньяк Закарпатський",
+              "description": "Коньяк",
+              "size": "50г",
+              "priceCents": 7500,
+              "imageUrl": "https://img3.zakaz.ua/cba1aff57bd748908e6cf99db6d121c9/1778687401-s1350x1350.jpg"
+            },
+            {
+              "name": "Коньяк легенда Вірменії",
+              "description": "Коньяк",
+              "size": "50г",
+              "priceCents": 7500,
+              "imageUrl": "https://content.rozetka.com.ua/goods/images/big/10843672.jpg"
+            },
+            {
+              "name": "Коньяк Old Kakheti 3",
+              "description": "Коньяк",
+              "size": "50г",
+              "priceCents": 6500,
+              "imageUrl": "https://content.okwine.ua/files/product/61b3453a6ebb0c2d53db6fb9/500x666/konyak-staryj-kakheti-3-goda-40-0-5l_5.1.jpg"
+            },
+            {
+              "name": "Настоянка Абрикосовий бренді",
+              "description": "Настоянка",
+              "size": "50г",
+              "priceCents": 9000,
+              "imageUrl": "https://alcoprostir.ua/9384-thickbox_default/brendi-heresnyj-fundador-sherry-cask-07l-36-ispania-heres-tm-fundadorpn502947.jpg"
+            },
+            {
+              "name": "Настоянка Бурбон",
+              "description": "Настоянка",
+              "size": "50г",
+              "priceCents": 9000,
+              "imageUrl": "https://foody.ua/images/thumbnails/1956/1600/detailed/7/%D0%B8%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD7%D0%B8%D0%B5_viber_2021-04-26_20-13-11.jpg"
+            },
+            {
+              "name": "Настоянка Вишнева",
+              "description": "Настоянка",
+              "size": "50г",
+              "priceCents": 9000,
+              "imageUrl": "https://img2.zakaz.ua/263cdea1a21b44bd9d54d14c1523a976/1700026263-s1350x1350.jpg"
+            },
+            {
+              "name": "Настоянка Лимончелло",
+              "description": "Настоянка",
+              "size": "50г",
+              "priceCents": 9000,
+              "imageUrl": "https://viski-time.com.ua/image/cache/catalog/TOVAR/liker/casoni/casonilimonchello600-600x600.jpg"
+            },
+            {
+              "name": "Настоянка Малина",
+              "description": "Настоянка",
+              "size": "50г",
+              "priceCents": 9000,
+              "imageUrl": "https://smakui.ua/image/cache/catalog/malinovaya_nastoika_na_samogone-741942-1041x613.jpeg"
+            },
+            {
+              "name": "Настоянка Хреновуха",
+              "description": "Настоянка",
+              "size": "50г",
+              "priceCents": 9000,
+              "imageUrl": "https://image.maudau.com.ua/webp/size/xl/products/5c/6b/c6/5c6bc6e1a55d299a3f86d96ebe1bdf07.jpg"
+            },
+            {
+              "name": "Настоянка Односолодковий віскі",
+              "description": "Настоянка",
+              "size": "50г",
+              "priceCents": 9000,
+              "imageUrl": "https://image.maudau.com.ua/webp/size/xl/products/92/08/8b/92088bdc89984477cac09f2f5b3ac17b.jpg"
+            },
+            {
+              "name": "Ром Bacardi Oakheart",
+              "description": "Ром",
+              "size": "50г",
+              "priceCents": 11000,
+              "imageUrl": "https://viski-time.com.ua/image/cache/catalog/TOVAR/bacardi/oakheart/oak11-600x600.jpg"
+            },
+            {
+              "name": "Ром Botafogo",
+              "description": "Ром",
+              "size": "50г",
+              "priceCents": 11000,
+              "imageUrl": "https://content1.rozetka.com.ua/goods/images/big/613214967.jpg"
+            },
+            {
+              "name": "Ром Bacardi bianco",
+              "description": "Ром",
+              "size": "50г",
+              "priceCents": 9000,
+              "imageUrl": "https://viski-time.com.ua/image/cache/catalog/TOVAR/rom/IMG6a0954a68779614c1d784b7182b26ffa-600x600.jpg"
+            },
+            {
+              "name": "Ром Bacardi Negra",
+              "description": "Ром",
+              "size": "50г",
+              "priceCents": 9000,
+              "imageUrl": "https://alcomag.ua/upload/iblock/59f/ld1s3eswtt06u7ypurxl7lxhnrrwjw7p.jpeg"
+            },
+            {
+              "name": "Текіла Olmeca",
+              "description": "Текіла",
+              "size": "50г",
+              "priceCents": 12000,
+              "imageUrl": "https://viski-time.com.ua/image/cache/catalog/TOVAR/olmeca/olmecagold1l250-600x600.jpg"
+            },
+            {
+              "name": "Ром Captain Morgan",
+              "description": "Ром",
+              "size": "50г",
+              "priceCents": 9000,
+              "imageUrl": "https://viski-time.com.ua/image/cache/catalog/TOVAR/captain-morgan/IMG7e66e60d4f2ab080b45694475235b79f-600x600.jpg"
+            },
+            {
+              "name": "Ром Flor de santa",
+              "description": "Ром",
+              "size": "50г",
+              "priceCents": 8600,
+              "imageUrl": "https://img2.zakaz.ua/zakaz-HP-630-Notebook-PC.1421424671.ad72436478c_2015-01-21_Yana/zakaz-HP-630-Notebook-PC.1421424671.SNEC1788.obj.0.6.jpg.oe.jpg.pf.jpg.1350nowm.jpg.1350x.jpg"
+            },
+            {
+              "name": "Ром Flor de santa black",
+              "description": "Ром",
+              "size": "50г",
+              "priceCents": 8600,
+              "imageUrl": "https://img2.zakaz.ua/zakaz-HP-630-Notebook-PC.1421424671.ad72436478c_2015-01-21_Yana/zakaz-HP-630-Notebook-PC.1421424671.SNEC1788.obj.0.6.jpg.oe.jpg.pf.jpg.1350nowm.jpg.1350x.jpg"
+            },
+            {
+              "name": "Shake bora-bora",
+              "description": "Слабоалкогольний",
+              "size": "0.33л",
+              "priceCents": 10000,
+              "imageUrl": "https://img3.zakaz.ua/8b0fbc9ac8a34eb489648ac7432ef4de/1740657267-s1350x1350.jpg"
+            },
+            {
+              "name": "Shake Pornstar",
+              "description": "Слабоалкогольний",
+              "size": "0.33л",
+              "priceCents": 10000,
+              "imageUrl": "https://img.auchan.ua/rx/q_90,ofmt_webp,w_1200,h_743/auchan.ua/media/catalog/product/f/e/fe61699396f68d3996e3f5133d9500d3.jpeg"
+            },
+            {
+              "name": "Shake sexx on the beach",
+              "description": "Слабоалкогольний",
+              "size": "0.33л",
+              "priceCents": 10000,
+              "imageUrl": "https://content2.rozetka.com.ua/goods/images/big/316693078.jpg"
+            },
+            {
+              "name": "Бренді Кола",
+              "description": "Слабоалкогольний",
+              "size": "0.33л",
+              "priceCents": 10000,
+              "imageUrl": "https://img2.zakaz.ua/6c1a9074cde2491db8aca0e4fad701f5/1766738670-s1350x1350.jpg"
+            },
+            {
+              "name": "Пиво Germanarich",
+              "description": "Пиво",
+              "size": "0.5л",
+              "priceCents": 12000,
+              "imageUrl": "https://img2.zakaz.ua/fb19922ade9d40d7ac98b104439fd3d8/1732905896-s1350x1350.jpg"
+            },
+            {
+              "name": "Пиво Cartel",
+              "description": "Пиво",
+              "size": "0.33л",
+              "priceCents": 11000,
+              "imageUrl": "https://bilesuhe.com.ua/image/cache/catalog/openstore/000067646-product-850x850.jpg"
+            },
+            {
+              "name": "Пиво Corona",
+              "description": "Пиво",
+              "size": "0.33л",
+              "priceCents": 11000,
+              "imageUrl": "https://winetime.com.ua/uploads/symlink/45000-46000/1407328476_48897.jpg"
+            },
+            {
+              "name": "Пиво Leffe",
+              "description": "Пиво",
+              "size": "0.33л",
+              "priceCents": 9900,
+              "imageUrl": "https://content.okwine.ua/files/product/61b3453d6ebb0c2d53db76f6/500x666/f12a5f30-b881-11eb-9b46-099febffd1f3.jpg"
+            },
+            {
+              "name": "Пиво Blanche",
+              "description": "Пиво",
+              "size": "0.5л",
+              "priceCents": 9800,
+              "imageUrl": "https://content2.rozetka.com.ua/goods/images/big/422951789.jpg"
+            },
+            {
+              "name": "Пиво Hike 0%",
+              "description": "Безалкогольне пиво",
+              "size": "0.5л",
+              "priceCents": 9000,
+              "imageUrl": "https://bilesuhe.com.ua/image/cache/catalog/openstore/000085492-product-850x850.jpg"
+            },
+            {
+              "name": "Пиво Pabster God",
+              "description": "Пиво",
+              "size": "0.5л",
+              "priceCents": 9000,
+              "imageUrl": "https://src.zakaz.atbmarket.com/cache/photos/91503/catalog_product_gal_91503.jpg"
+            },
+            {
+              "name": "Пиво Zlata Brama",
+              "description": "Пиво",
+              "size": "0.5л",
+              "priceCents": 8600,
+              "imageUrl": "https://bilesuhe.com.ua/image/cache/catalog/openstore/000087020-product-850x850.jpg"
+            },
+            {
+              "name": "Пиво Марочне",
+              "description": "Пиво",
+              "size": "0.5л",
+              "priceCents": 7600,
+              "imageUrl": "https://www.beer-market.com.ua/upload/iblock/1f8/1f8993c96ed56cf22291875ff568d392.jpeg"
+            },
+            {
+              "name": "Пиво Blanche",
+              "description": "Пиво",
+              "size": "0.33л",
+              "priceCents": 7300,
+              "imageUrl": "https://hophey.ua/upload/iblock/b0d/w5ij7m1km2w0vy5ix3b66q8amay63zir/pyvo-fdb-blanche-0-33l.jpg"
+            },
+            {
+              "name": "Пиво Zlata Brama",
+              "description": "Пиво",
+              "size": "0.33л",
+              "priceCents": 6300,
+              "imageUrl": "https://bilesuhe.com.ua/image/cache/catalog/openstore/000087020-product-850x850.jpg"
+            },
+            {
+              "name": "Пиво Марочне",
+              "description": "Пиво",
+              "size": "0.33л",
+              "priceCents": 5300,
+              "imageUrl": "https://www.beer-market.com.ua/upload/iblock/1f8/1f8993c96ed56cf22291875ff568d392.jpeg"
+            },
+            {
+              "name": "Пиво Warsteiner",
+              "description": "Пиво",
+              "size": "0.33л",
+              "priceCents": 17500,
+              "imageUrl": "https://image.maudau.com.ua/webp/size/xl/products/7e/8a/79/7e8a797796e73bc7b65dc2b596589af3.jpg"
+            },
+            {
+              "name": "Пиво Miller",
+              "description": "Пиво",
+              "size": "0.5л",
+              "priceCents": 12900,
+              "imageUrl": "https://img2.zakaz.ua/a34eacb5d8da482c90f107b6d31e022d/1781081432-s1350x1350.jpg"
+            },
+            {
+              "name": "Garage Lemon",
+              "description": "Слабоалкогольний",
+              "size": "0.5л",
+              "priceCents": 11900,
+              "imageUrl": "https://img3.zakaz.ua/1ebed34d4376440fb2e9c908653fa968/1751275575-s1350x1350.jpg"
+            },
+            {
+              "name": "Пиво Carlsberg 0%",
+              "description": "Безалкогольне пиво",
+              "size": "0.5л",
+              "priceCents": 11500,
+              "imageUrl": "https://img3.zakaz.ua/8552684ab7de460cafe50120606eb49e/1716297164-s1350x1350.jpg"
+            },
+            {
+              "name": "Пиво Blanck",
+              "description": "Пиво",
+              "size": "0.45л",
+              "priceCents": 13900,
+              "imageUrl": "https://img3.zakaz.ua/bb179fa8708e4d0ba066ea0998036d9e/1712561483-s1350x1350.jpg"
+            },
+            {
+              "name": "Ром кола",
+              "description": "Слабоалкогольний",
+              "size": "0.33л",
+              "priceCents": 10000,
+              "imageUrl": "https://bilesuhe.com.ua/image/cache/catalog/openstore/000085482-product-850x850.jpg"
+            },
+            {
+              "name": "Вино Conte Alexandre Black",
+              "description": "Вино",
+              "size": "150г",
+              "priceCents": 4500,
+              "imageUrl": "https://img3.zakaz.ua/fbdcdc9a6d6147158b6c4e06dc60e46a/1708002371-s1350x1350.jpg"
+            },
+            {
+              "name": "Вино Conte Alexandre",
+              "description": "Вино",
+              "size": "150г",
+              "priceCents": 4500,
+              "imageUrl": "https://img3.zakaz.ua/fbdcdc9a6d6147158b6c4e06dc60e46a/1708002371-s1350x1350.jpg"
+            },
+            {
+              "name": "Вино Geo Tsinandali",
+              "description": "Біле, сухе",
+              "size": "150г",
+              "priceCents": 4000,
+              "imageUrl": "https://image.maudau.com.ua/webp/size/xl/products/c3/46/b8/c346b80f-f7cc-4a85-a919-50ac30a57b3c.jpg"
+            },
+            {
+              "name": "Вино Koblevo Bordo Bastardo",
+              "description": "Вино",
+              "size": "150г",
+              "priceCents": 3000,
+              "imageUrl": "https://bilesuhe.com.ua/image/cache/catalog/openstore/000001359-product-850x850.jpg"
+            },
+            {
+              "name": "Вино Koblevo Cabernet",
+              "description": "Вино",
+              "size": "150г",
+              "priceCents": 3500,
+              "imageUrl": "https://img.auchan.ua/rx/q_90,ofmt_webp,w_1200,h_743/auchan.ua/media/catalog/product/7/5/75d044ad7f94f039efddc280027d56e0a6a7f3d065cb248d2ccb65cd00a00698.jpeg"
+            },
+            {
+              "name": "Вино Marengo",
+              "description": "Н/солодке, біле",
+              "size": "150г",
+              "priceCents": 3000,
+              "imageUrl": "https://img3.zakaz.ua/upload.version_1.0.3cb673c0c464ccaf4b577d01047881c8.1350x1350.jpeg"
+            },
+            {
+              "name": "Вино 'Morio Muskat'",
+              "description": "Вино",
+              "size": "150г",
+              "priceCents": 3500,
+              "imageUrl": "https://content.okwine.ua/files/product/61b3453d6ebb0c2d53db7525/500x666/8973a590-bac6-11ea-8ad2-8d014ff0bf41.jpg.jpg"
+            },
+            {
+              "name": "Вино Lambrusco",
+              "description": "Біле, солодке",
+              "size": "150г",
+              "priceCents": 4000,
+              "imageUrl": "https://shop.wineworld.com.ua/image/cache/catalog/art/%D0%AF00036082-500x500.jpg"
+            },
+            {
+              "name": "Вино Lambrusco",
+              "description": "Вино",
+              "size": "150г",
+              "priceCents": 5000,
+              "imageUrl": "https://shop.wineworld.com.ua/image/cache/catalog/art/%D0%AF00038864-500x500.jpg"
+            },
+            {
+              "name": "Вино Marengo",
+              "description": "Брют, біле",
+              "size": "150г",
+              "priceCents": 3000,
+              "imageUrl": "https://img3.zakaz.ua/upload.version_1.0.3cb673c0c464ccaf4b577d01047881c8.1350x1350.jpeg"
+            },
+            {
+              "name": "Вино Prosecco",
+              "description": "Біле, сухе",
+              "size": "150г",
+              "priceCents": 7500,
+              "imageUrl": "https://content.okwine.ua/files/product/61b345366ebb0c2d53db63d2/500x666/d7c7acd4-7f06-46c4-ac69-af58fd2af601.prosecco-spumante-cuvee-oro.jpg"
+            },
+            {
+              "name": "Вино Asti Dolce",
+              "description": "Ігристе, біле, солодке",
+              "size": "150г",
+              "priceCents": 6000,
+              "imageUrl": "https://shop.wineworld.com.ua/image/cache/catalog/art/%D0%AF00118109-500x500.jpg"
+            },
+            {
+              "name": "Шампанське Bolgrad",
+              "description": "Біле, сухе",
+              "size": "150г",
+              "priceCents": 10000,
+              "imageUrl": "https://img2.zakaz.ua/41b5972ce5e24abe8055e12ac1fc6472/1755774673-s1350x1350.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "citadel",
+      "name": "Citadel",
+      "address": "Вулиця Короленко 4",
+      "tagline": "Бар та напої",
+      "accentColor": "#C9A86A",
+      "heroImageUrl": null,
+      "categories": [
+        {
+          "title": "Безалкогольні коктейлі",
+          "group": "Бар",
+          "dishes": [
+            {
+              "name": "Піна-кола",
+              "description": "Кокос та ананас",
+              "size": null,
+              "priceCents": 13000,
+              "imageUrl": "https://alcomag.ua/upload/iblock/c84/m4dh4gukv2kynjdk5sufnqg940lmc9c3.jpg"
+            },
+            {
+              "name": "Фруточино грейпфрутовий",
+              "description": "Безалкогольний",
+              "size": null,
+              "priceCents": 13000,
+              "imageUrl": "https://ua.inshaker.com/uploads/cocktail/promo/924/medium_1542205516-Grapefruit-Frutochino-_promo.jpg"
+            },
+            {
+              "name": "Джміль",
+              "description": "Безалкогольний",
+              "size": null,
+              "priceCents": 13000,
+              "imageUrl": "https://ua.inshaker.com/uploads/cocktail/promo/924/medium_1542205516-Grapefruit-Frutochino-_promo.jpg"
+            },
+            {
+              "name": "Мохіто",
+              "description": "Безалкогольний",
+              "size": null,
+              "priceCents": 11500,
+              "imageUrl": "https://ua.inshaker.com/uploads/cocktail/hires/679/1557242757-Mojito-image-final.jpg"
+            },
+            {
+              "name": "Лимонад",
+              "description": "Безалкогольний",
+              "size": null,
+              "priceCents": 11500,
+              "imageUrl": "https://lasunka.com/s143-1.jpg"
+            },
+            {
+              "name": "Кава-Аршат",
+              "description": "Безалкогольний",
+              "size": null,
+              "priceCents": 13000,
+              "imageUrl": "https://ua.inshaker.com/uploads/cocktail/hires/933/1556113577-Almond-Coffee__highres.jpg"
+            },
+            {
+              "name": "Айс-лате",
+              "description": "Безалкогольний",
+              "size": null,
+              "priceCents": 13000,
+              "imageUrl": "https://lh3.googleusercontent.com/sitesv/AA5AbUDiAH6XnAFUR83R_QlzGOrH0LGTmWWmEjFBGacXLHGZM7-nrc7CK8M7VpLJX0Rq_2eMCMMyGnSGoTpIGado50Rb-S7_xqeJy9zRX-FTxEOOdSnaCSF1piQ8lSAP667fv7agpmojB80OGyOfTJ2xuehohxU-MAos1bgDD2QZVYQQX6xfFcAbRssE31XWHDRcT_NLtTGk0grxxmqFW-Zv5pnJnCTA2Xvwa9Gjv1FRKdY=w1280"
+            },
+            {
+              "name": "Айс-капучино",
+              "description": "Безалкогольний",
+              "size": null,
+              "priceCents": 11500,
+              "imageUrl": "https://shuba.life/static/content/thumbs/1824x912/4/1a/jmupbk---c2x1x50px50p-up--3fef9a4858228db69a29423ea1de01a4.jpg"
+            }
+          ]
+        },
+        {
+          "title": "Фреші",
+          "group": "Бар",
+          "dishes": [
+            {
+              "name": "Апельсиновий фреш",
+              "description": "Свіжовичавлений",
+              "size": "250мл",
+              "priceCents": 14000,
+              "imageUrl": "https://i.obozrevatel.com/food/recipemain/2019/9/11/apelsinovyj-sok5-1.jpg?size=636x424"
+            },
+            {
+              "name": "Лаймовий фреш",
+              "description": "Свіжовичавлений",
+              "size": "250мл",
+              "priceCents": 14000,
+              "imageUrl": "https://freshmart.com.ua/storage/web/cache/product/590/laymoviy-sok-fresh-05l.jpeg?w=1024&h=768&fit=resize&q=80&fm=pjpg&t=1571622277&s=487a8b12b24e2c5eb81884070706893b"
+            },
+            {
+              "name": "Яблучно-морквяний фреш",
+              "description": "Свіжовичавлений",
+              "size": "250мл",
+              "priceCents": 13500,
+              "imageUrl": "https://briscola.com.ua/wp-content/uploads/2021/07/yablochno-morkovnyj3-1024x683.jpg"
+            },
+            {
+              "name": "Яблучний фреш",
+              "description": "Свіжовичавлений",
+              "size": "250мл",
+              "priceCents": 12000,
+              "imageUrl": "https://pizzadicasa.com.ua/upload/products/90a81afb5538a2557587c34f7725481a.jpg"
+            },
+            {
+              "name": "Яблуко-ківі",
+              "description": "Свіжовичавлений",
+              "size": "250мл",
+              "priceCents": 9000,
+              "imageUrl": "https://pesto-italy.com.ua/image/cache/catalog/products/u31481-700x700.jpg"
+            },
+            {
+              "name": "Лимонний фреш",
+              "description": "Свіжовичавлений",
+              "size": "250мл",
+              "priceCents": 8000,
+              "imageUrl": "https://freshmart.com.ua/storage/web/cache/product/566/limonniy-sok-fresh-05l.jpeg?w=1024&h=768&fit=resize&q=80&fm=pjpg&t=1571622274&s=dda9e801effb99895c1e91b5c552217a"
+            }
+          ]
+        },
+        {
+          "title": "Соки",
+          "group": "Бар",
+          "dishes": [
+            {
+              "name": "Cappy «Яблуко»",
+              "description": "Сік",
+              "size": null,
+              "priceCents": 6600,
+              "imageUrl": "https://content2.rozetka.com.ua/goods/images/big/531907425.jpg"
+            },
+            {
+              "name": "Cappy «Апельсин»",
+              "description": "Сік",
+              "size": null,
+              "priceCents": 6600,
+              "imageUrl": "https://img3.zakaz.ua/fb2026269d2a423a94ffb0591ded8375/1751433929-s350x350.jpg"
+            },
+            {
+              "name": "Cappy «Томат»",
+              "description": "Сік",
+              "size": null,
+              "priceCents": 6600,
+              "imageUrl": "https://img3.zakaz.ua/84de7f2f96014634bfedfeeac5954615/1751433929-s1350x1350.jpg"
+            },
+            {
+              "name": "Sandora «Бананово-яблучно-полуничний»",
+              "description": "Сік",
+              "size": null,
+              "priceCents": 7000,
+              "imageUrl": "https://img3.zakaz.ua/6ea342a24234408ba9ad0040a07a8888/1777023912-s1350x1350.jpg"
+            },
+            {
+              "name": "Sandora «Ананас»",
+              "description": "Сік",
+              "size": null,
+              "priceCents": 6600,
+              "imageUrl": "https://img2.zakaz.ua/upload.version_1.0.ae7b4dc2703832d6fb5e3724d78370cb.1350x1350.jpeg"
+            },
+            {
+              "name": "Sandora «Latina America»",
+              "description": "Сік",
+              "size": null,
+              "priceCents": 7800,
+              "imageUrl": "https://img2.zakaz.ua/ce3d919208df40b88193567eb970853f/1777023912-s1350x1350.jpg"
+            },
+            {
+              "name": "Sandora «Банан»",
+              "description": "Сік",
+              "size": null,
+              "priceCents": 6600,
+              "imageUrl": "https://img2.zakaz.ua/12.1672222817.ad72436478c_2022-12-28_Yulia_T/12.1672222817.SNCPSG10.obj.0.1.jpg.oe.jpg.pf.jpg.1350nowm.jpg.1350x.jpg"
+            },
+            {
+              "name": "Sandora «Виноград»",
+              "description": "Сік",
+              "size": null,
+              "priceCents": 6600,
+              "imageUrl": "https://img3.zakaz.ua/eeee1a768e7e4193bd632a4eeb02cfc5/1777023912-s1350x1350.jpg"
+            },
+            {
+              "name": "Sandora «Вишня»",
+              "description": "Сік",
+              "size": null,
+              "priceCents": 6600,
+              "imageUrl": "https://img3.zakaz.ua/3751db9d004146a89f690178ad162646/1777023912-s1350x1350.jpg"
+            },
+            {
+              "name": "Sandora «Гранат»",
+              "description": "Сік",
+              "size": null,
+              "priceCents": 6600,
+              "imageUrl": "https://img2.zakaz.ua/2.1613032001.ad72436478c_2021-02-11_Tatyana_L/2.1613032001.SNCPSG10.obj.0.1.jpg.oe.jpg.pf.jpg.1350nowm.jpg.1350x.jpg"
+            },
+            {
+              "name": "Sandora «Грейпфрут»",
+              "description": "Сік",
+              "size": null,
+              "priceCents": 8400,
+              "imageUrl": "https://img3.zakaz.ua/07a10080a7f5438ca064e3d8fd44be4b/1777023912-s1350x1350.jpg"
+            },
+            {
+              "name": "Sandora «Манго»",
+              "description": "Сік",
+              "size": null,
+              "priceCents": 8400,
+              "imageUrl": "https://img2.zakaz.ua/2.1633536792.ad72436478c_2021-10-07_Tatyana_L/2.1633536792.SNCPSG10.obj.0.1.jpg.oe.jpg.pf.jpg.1350nowm.jpg.1350x.jpg"
+            },
+            {
+              "name": "Sandora «Мультифрукт»",
+              "description": "Сік",
+              "size": null,
+              "priceCents": 6600,
+              "imageUrl": "https://img2.zakaz.ua/05092022.1662313529.ad72436478c_2022-09-05_Tatyana_L/05092022.1662313529.SNCPSG10.obj.0.1.jpg.oe.jpg.pf.jpg.1350nowm.jpg.1350x.jpg"
+            },
+            {
+              "name": "Sandora «Сицилійський апельсин»",
+              "description": "Сік",
+              "size": null,
+              "priceCents": 7800,
+              "imageUrl": "https://img2.zakaz.ua/0d40972205c34539a2f673862c73adb5/1777023912-s1350x1350.jpg"
+            },
+            {
+              "name": "Sandora «Персик»",
+              "description": "Сік",
+              "size": null,
+              "priceCents": 6600,
+              "imageUrl": "https://safari-cafe.com.ua/uploads/position/safari_779534287.jpg"
+            },
+            {
+              "name": "Sandora «Яблуко-виноград»",
+              "description": "Сік",
+              "size": null,
+              "priceCents": 6600,
+              "imageUrl": "https://content2.rozetka.com.ua/goods/images/big/11084632.jpgs"
+            },
+            {
+              "name": "Сік прямого віджиму",
+              "description": "Сік",
+              "size": null,
+              "priceCents": 7400,
+              "imageUrl": "https://shumer.club/wp-content/uploads/2023/02/Sok-yshodnyk-1.jpg"
+            }
+          ]
+        },
+        {
+          "title": "Безалкогольні напої",
+          "group": "Бар",
+          "dishes": [
+            {
+              "name": "7up",
+              "description": "Напій",
+              "size": "0.5л",
+              "priceCents": 8400,
+              "imageUrl": "https://jojo.ua/wp-content/uploads/2022/09/7up.jpg"
+            },
+            {
+              "name": "Coca-cola",
+              "description": "Напій",
+              "size": "0.5л",
+              "priceCents": 8400,
+              "imageUrl": "https://aquamarket.ua/90902-large_default/coca-cola-05-l-napitok-gazirovannyj-koka-kola-pet.jpg"
+            },
+            {
+              "name": "Coca-cola",
+              "description": "Ж/б",
+              "size": "0.33л",
+              "priceCents": 8400,
+              "imageUrl": "https://mrgrill.ua/storage/products/images/medium/SCwjafdOw1lt91BnGBD6vks9lYFEy9PrzzP89uXl.jpg?v=1722513508"
+            },
+            {
+              "name": "Fanta",
+              "description": "Ж/б",
+              "size": "0.33л",
+              "priceCents": 4700,
+              "imageUrl": "https://mrgrill.ua/storage/products/images/medium/bZtoaaFVQQUyFf4K4vYYnlecH3BBTllNI7B4nkih.jpg?v=1722513221"
+            },
+            {
+              "name": "Coca-cola zero",
+              "description": "Напій",
+              "size": "0.5л",
+              "priceCents": 8400,
+              "imageUrl": "https://amici.pl.ua/content/images/7/480x480l50nn0/koka-kola-zero-voda-solodka-plastykova-butilka-05-l-34811901028718.jpg"
+            },
+            {
+              "name": "Fanta",
+              "description": "Напій",
+              "size": "0.5л",
+              "priceCents": 7000,
+              "imageUrl": "https://pizzaplace.com.ua/wp-content/uploads/2021/04/fanta-05.jpg"
+            },
+            {
+              "name": "Coca-cola",
+              "description": "Скло",
+              "size": "250мл",
+              "priceCents": 8000,
+              "imageUrl": "https://pizza-leonardo.com.ua/wp-content/uploads/2017/01/coca-cola-800x800.jpg"
+            },
+            {
+              "name": "Burn",
+              "description": "Енергетик ж/б",
+              "size": "0.25л",
+              "priceCents": 15600,
+              "imageUrl": "https://aquamarket.ua/94622-large_default/burn-original-05-l-napitok-energeticheskij-byorn-oridzhinal.jpg"
+            },
+            {
+              "name": "Mirinda",
+              "description": "Напій",
+              "size": "0.5л",
+              "priceCents": 8400,
+              "imageUrl": "https://images.prom.ua/7192495032_w1280_h640_7192495032.jpg"
+            },
+            {
+              "name": "Mojo",
+              "description": "Напій",
+              "size": "0.5л",
+              "priceCents": 9600,
+              "imageUrl": "https://img2.zakaz.ua/white-1001PXD.1341242143.84269c41@120409_2012-07-05/white-1001PXD.1341242143.SNB4C4B9.obj.0.11.jpg.oe.jpg.pf.jpg.1350nowm.jpg.1350x.jpg"
+            },
+            {
+              "name": "Pepsi",
+              "description": "Напій",
+              "size": "0.5л",
+              "priceCents": 8400,
+              "imageUrl": "https://hophey.ua/upload/iblock/bbc/waxnlf7r1oz20bdzxeopqdzuqllt4ihf/napitok-pepsi-cola-bezalkogolnyy-silnogazirovannyy-0-5l.jpg"
+            },
+            {
+              "name": "Pepsi zero",
+              "description": "Напій",
+              "size": "0.5л",
+              "priceCents": 8400,
+              "imageUrl": "https://trademaster.ua/im/pics/3502271-pepsi.jpg"
+            },
+            {
+              "name": "Sprite",
+              "description": "Напій",
+              "size": "0.5л",
+              "priceCents": 8400,
+              "imageUrl": "https://mrgrill.ua/storage/products/images/big/RzGlX70VYBkKMqTzFiMuXKv0KrrctxPm9Sr6Hfi5.jpg?v=1722513502"
+            },
+            {
+              "name": "Schweppes",
+              "description": "Ж/б",
+              "size": "0.33л",
+              "priceCents": 9600,
+              "imageUrl": "https://okwine.ua/files/product/61b345346ebb0c2d53db5d6d/94eff110-11f3-11eb-9c76-b10d7e4f3d92.jpg.jpg"
+            },
+            {
+              "name": "Pepsi",
+              "description": "Ж/б",
+              "size": "0.33л",
+              "priceCents": 8400,
+              "imageUrl": "https://market.rukavychka.ua/image/cache/catalog/products/0204010410/0204010410-700x500.jpg"
+            },
+            {
+              "name": "Sprite",
+              "description": "Ж/б",
+              "size": "0.33л",
+              "priceCents": 7200,
+              "imageUrl": "https://mrgrill.ua/storage/products/images/big/h5a5L3k9Gefjl9hAhSirxIEuEfe86bV04gyteiUF.jpg?v=1722513312"
+            },
+            {
+              "name": "Red Bull",
+              "description": "Енергетик ж/б",
+              "size": "0.25л",
+              "priceCents": 15600,
+              "imageUrl": "https://content.okwine.ua/files/product/61b345366ebb0c2d53db63af/350x470/energeticheski-napitok-red-bull-red-bull-0355l_1.jpg"
+            },
+            {
+              "name": "Pit Bull",
+              "description": "Енергетик ж/б",
+              "size": "0.25л",
+              "priceCents": 8400,
+              "imageUrl": "https://market.rukavychka.ua/image/catalog/products/0207000032/0207000032.jpg"
+            },
+            {
+              "name": "Боржомі",
+              "description": "Вода скло",
+              "size": "0.5л",
+              "priceCents": 16200,
+              "imageUrl": "https://aquamarket.ua/98905-large_default/borjomi-voda-mineralnaya-silnogazirovannaya-033-l-steklo.jpg"
+            },
+            {
+              "name": "Вода Detox",
+              "description": "Детокс вода",
+              "size": "0.33л",
+              "priceCents": 13000,
+              "imageUrl": "https://bi.ua/uploaded-images/products/size_650/622416_1.jpg"
+            },
+            {
+              "name": "Вода Detox",
+              "description": "Детокс вода",
+              "size": "0.5л",
+              "priceCents": 14400,
+              "imageUrl": "https://aquamarket.ua/99084-large_default/detox-aqua-mirgorod-05-l-detoks-akva-voda-mineralnaya-silnogazirovannaya-lechebno-stolovaya-pet.jpg"
+            },
+            {
+              "name": "Вода Detox",
+              "description": "Детокс вода",
+              "size": "1л",
+              "priceCents": 21600,
+              "imageUrl": "https://producto.com.ua/image/cache/catalog/Aqua%20%D0%9C%D0%B8%D1%80%D0%B3%D0%BE%D1%80%D0%BE%D0%B4/Detox%204820010772607-1000x1000.jpg"
+            },
+            {
+              "name": "Живчик",
+              "description": "Напій",
+              "size": "0.5л",
+              "priceCents": 6600,
+              "imageUrl": "https://market.rukavychka.ua/image/cache/catalog/products/0204010133/0204010133-700x500.jpg"
+            },
+            {
+              "name": "Вода Збручанська",
+              "description": "Вода мінеральна",
+              "size": "0.5л",
+              "priceCents": 7500,
+              "imageUrl": "https://aquamarket.ua/94781-large_default/zbruchanska-77-voda-mineralnaya-gazovana-likuvalno-stolova-05-l-sklo.jpg"
+            },
+            {
+              "name": "Квас тарас білий",
+              "description": "Квас",
+              "size": "0.5л",
+              "priceCents": 10200,
+              "imageUrl": "https://aquamarket.ua/77512-large_default/kvas-taras-05-l-kvas-khlibnij-bilij-zh-b.jpg"
+            },
+            {
+              "name": "Квас тарас чорний",
+              "description": "Квас",
+              "size": "0.5л",
+              "priceCents": 10200,
+              "imageUrl": "https://images.silpo.ua/v2/products/500x500/origin/153be7ff-ffe5-47ee-bb9b-655532bfb9f4.jpg"
+            },
+            {
+              "name": "Склянка води",
+              "description": "Вода",
+              "size": null,
+              "priceCents": 1000,
+              "imageUrl": "https://ukr.media/static/ba/aimg/4/3/7/437862_1.jpg"
+            },
+            {
+              "name": "Миргородська",
+              "description": "Вода газована",
+              "size": "0.5л",
+              "priceCents": 5400,
+              "imageUrl": "https://aquamarket.ua/5807-large_default/mirgorodska-05-l-voda-negazovana-mineralna-lagidna-sport-pet.jpg"
+            },
+            {
+              "name": "Моршинська Газована",
+              "description": "Вода газована",
+              "size": "0.5л",
+              "priceCents": 5400,
+              "imageUrl": "https://aquamarket.ua/78056-large_default/morshinska-voda-mineralna-slabogazovana-05-l.jpg"
+            },
+            {
+              "name": "Моршинська Негазована",
+              "description": "Вода негазована",
+              "size": "0.5л",
+              "priceCents": 5400,
+              "imageUrl": "https://aquamarket.ua/78052-large_default/morshinska-voda-mineralna-negazovana-05-l.jpg"
+            },
+            {
+              "name": "Non-stop",
+              "description": "Енергетик",
+              "size": "0.5л",
+              "priceCents": 8400,
+              "imageUrl": "https://image.maudau.com.ua/webp/size/xl/products/0f/c7/d7/0fc7d741205c25a158b5af6dafd07931.jpg"
+            },
+            {
+              "name": "Поляна квасова",
+              "description": "Вода мінеральна",
+              "size": "0.5л",
+              "priceCents": 16800,
+              "imageUrl": "https://aquamarket.ua/46413-large_default/polyana-kvasova-voda-mineralnaya-silnogazirovannaya-05-l.jpg"
+            },
+            {
+              "name": "Тархун Tarragon",
+              "description": "Напій",
+              "size": "0.5л",
+              "priceCents": 10100,
+              "imageUrl": "https://aquamarket.ua/27130-large_default/gruzinskij-buket-upakovka-12-sht-kh-05-l-napitok-gazirovannyj-tarkhun-steklo.jpg"
+            },
+            {
+              "name": "Lipton",
+              "description": "Холодний чай",
+              "size": "0.5л",
+              "priceCents": 8400,
+              "imageUrl": "https://aquamarket.ua/97321-large_default/lipton-05-l-chaj-kholodnyj-chernyj-limon-lipton-pet.jpg"
+            }
+          ]
+        },
+        {
+          "title": "Гарячі напої",
+          "group": "Бар",
+          "dishes": [
+            {
+              "name": "Флет-вайт",
+              "description": "Кремовий еспресо з молоком",
+              "size": null,
+              "priceCents": 12600,
+              "imageUrl": "https://luxcafe.com.ua/upload/resize_cache/iblock/f99/600_600_1/agy0n6xyu15mb1g8h4zgzlpn058rqt73.jpg"
+            },
+            {
+              "name": "Допіо",
+              "description": "Подвійний еспресо",
+              "size": null,
+              "priceCents": 11000,
+              "imageUrl": "https://fastivnews.city/upload/article/o_1hrlh13of2jqgip124obv215bd2p.jpg"
+            },
+            {
+              "name": "Лате",
+              "description": "Еспресо з молоком",
+              "size": null,
+              "priceCents": 10200,
+              "imageUrl": "https://ua2.jura.com/-/media/global/images/coffee-recipes/images-redesign-2020/latte_macchiato_2000x1400px.jpg"
+            },
+            {
+              "name": "Еспресо з вершками",
+              "description": "Еспресо",
+              "size": null,
+              "priceCents": 8200,
+              "imageUrl": "https://img.postershop.me/12427/4c03b91e-4404-4d1c-bebc-95f9fb17836e_image.jpeg"
+            },
+            {
+              "name": "Капучино",
+              "description": "Еспресо з молоком",
+              "size": null,
+              "priceCents": 7800,
+              "imageUrl": "https://www.nescafe.kz/sites/default/files/2024-09/GettyImages-1466623971.jpg"
+            },
+            {
+              "name": "Американо з молоком",
+              "description": "Американо",
+              "size": null,
+              "priceCents": 7200,
+              "imageUrl": "https://luxcafe.com.ua/upload/resize_cache/iblock/f51/600_600_1/5fptijvd0d4jbf0wzs9sx6v0vxhue6k1.jpg"
+            },
+            {
+              "name": "Лунго",
+              "description": "Еспресо",
+              "size": null,
+              "priceCents": 7200,
+              "imageUrl": "https://zavari.ua/wp-content/uploads/2025/03/kofe-ristretto.jpg"
+            },
+            {
+              "name": "Американо",
+              "description": "Американо",
+              "size": null,
+              "priceCents": 6000,
+              "imageUrl": "https://coffee-lux.com.ua/image/cache/catalog/blog/americano-1200x900.jpg"
+            },
+            {
+              "name": "Еспресо",
+              "description": "Еспресо",
+              "size": null,
+              "priceCents": 7200,
+              "imageUrl": "https://westcupgroup.com/wp-content/uploads/2020/06/1_4FzJWow3qJOV_O-3iKgBOw.jpeg"
+            },
+            {
+              "name": "Чай (асортимент) Чайник",
+              "description": "Чай",
+              "size": "600мл",
+              "priceCents": 12000,
+              "imageUrl": "https://teaisland.com.ua/wp-content/uploads/2017/04/chaynyk_greckyy_1-300x300.jpg"
+            },
+            {
+              "name": "Чай (асортимент) Чашка",
+              "description": "Чай",
+              "size": null,
+              "priceCents": 5400,
+              "imageUrl": "https://www.zavarka.net.ua/image/cache/catalog/posuda-iz-stekla/chashka-400ml/18746232_3-800x800.jpg"
+            }
+          ]
+        },
+        {
+          "title": "Алкогольні напої",
+          "group": "Бар",
+          "dishes": [
+            {
+              "name": "Горілка Absolut",
+              "description": "Горілка",
+              "size": "50г",
+              "priceCents": 8800,
+              "imageUrl": "https://market.rukavychka.ua/image/cache/catalog/products/0101030103/0101030103-700x500.jpg"
+            },
+            {
+              "name": "Горілка Finlandia",
+              "description": "Горілка",
+              "size": "50г",
+              "priceCents": 7700,
+              "imageUrl": "https://alcomag.ua/upload/iblock/ab2/43o333rqnef2dpu68whg9hptans70hu3.jpeg"
+            },
+            {
+              "name": "Горілка GoyGol",
+              "description": "Горілка",
+              "size": "50г",
+              "priceCents": 7700,
+              "imageUrl": "https://img3.zakaz.ua/e30e0c22cd1841b592a5a6604a48ab95/1768980783-s1350x1350.jpg"
+            },
+            {
+              "name": "Горілка Lvivska",
+              "description": "Горілка",
+              "size": "50г",
+              "priceCents": 7200,
+              "imageUrl": "https://img2.zakaz.ua/828f21205d824ffb8f025741445277d6/1698845866-s1350x1350.jpg"
+            },
+            {
+              "name": "Горілка Nemiroff",
+              "description": "Горілка",
+              "size": "50г",
+              "priceCents": 6600,
+              "imageUrl": "https://img2.zakaz.ua/8c57d5232bb841888e028b709d56bcfe/1767696130-s1350x1350.jpg"
+            },
+            {
+              "name": "Горілка Prime",
+              "description": "Горілка",
+              "size": "50г",
+              "priceCents": 5500,
+              "imageUrl": "https://shop.wineworld.com.ua/image/cache/catalog/art/C0000910-500x500.jpg"
+            },
+            {
+              "name": "Горілка перша Гільдія",
+              "description": "Горілка",
+              "size": "50г",
+              "priceCents": 4400,
+              "imageUrl": "https://img2.zakaz.ua/8a155c352beb45fb8c173741dcb909b7/1770811599-s1350x1350.jpg"
+            },
+            {
+              "name": "Віскі Ballantine's",
+              "description": "Віскі",
+              "size": "50г",
+              "priceCents": 13200,
+              "imageUrl": "https://img3.zakaz.ua/7cf38b3ae04a43a3a865f5a4df8de7a0/1763450280-s1350x1350.jpg"
+            },
+            {
+              "name": "Віскі Chivas original",
+              "description": "Віскі",
+              "size": "50г",
+              "priceCents": 19800,
+              "imageUrl": "https://image.maudau.com.ua/webp/size/xl/products/66/dc/2c/66dc2cbed1ded97bb25fbcc2dec56c70.jpg"
+            },
+            {
+              "name": "Віскі Hankey Bannister",
+              "description": "Віскі",
+              "size": "50г",
+              "priceCents": 15400,
+              "imageUrl": "https://img3.zakaz.ua/6776abdaed994d3cb1dacead9e3645d4/1723305033-s1350x1350.jpg"
+            },
+            {
+              "name": "Віскі Jack Daniel's",
+              "description": "Віскі",
+              "size": "50г",
+              "priceCents": 13200,
+              "imageUrl": "https://okwine.ua/files/product/61b345376ebb0c2d53db64f1/viski-dzhek-deniels-jack-daniels-40-0-0-7l_18.jpg"
+            },
+            {
+              "name": "Віскі Jack Daniel's Honey",
+              "description": "Віскі",
+              "size": "50г",
+              "priceCents": 15400,
+              "imageUrl": "https://content.okwine.ua/files/product/61b345376ebb0c2d53db65aa/500x666/viski-dzhek-deniels-tennessi-khani-jack-daniels-tennessee-honey-35-0-7l_65.jpg"
+            },
+            {
+              "name": "Віскі Jameson",
+              "description": "Віскі",
+              "size": "50г",
+              "priceCents": 13800,
+              "imageUrl": "https://shop.wineworld.com.ua/image/cache/catalog/art/F0003006-470x470.jpg"
+            },
+            {
+              "name": "Віскі Monkey Shoulder",
+              "description": "Віскі",
+              "size": "50г",
+              "priceCents": 25300,
+              "imageUrl": "https://img3.zakaz.ua/upload.version_1.0.8387078859291d624de98231d912d816.1350x1350.jpeg"
+            },
+            {
+              "name": "Віскі Penderyn",
+              "description": "Віскі",
+              "size": "50г",
+              "priceCents": 35200,
+              "imageUrl": "https://alcoprostir.ua/7229-thickbox_default/kupit-viski-penderyn-madeira-07l-korobka2-stakana.jpg"
+            },
+            {
+              "name": "Віскі Red Label",
+              "description": "Віскі",
+              "size": "50г",
+              "priceCents": 13200,
+              "imageUrl": "https://content.okwine.ua/files/product/61b3453d6ebb0c2d53db743f/500x666/b72728d0-559f-11eb-beb5-9da5f17bf4af.jpg.jpg"
+            },
+            {
+              "name": "Віскі Sir Edward's",
+              "description": "Віскі",
+              "size": "50г",
+              "priceCents": 7700,
+              "imageUrl": "https://okwine.ua/files/product/61b345306ebb0c2d53db5214/4a8eb900-af3f-11eb-b90b-f96e2602f068.jpg"
+            },
+            {
+              "name": "Коньяк Alex",
+              "description": "Коньяк",
+              "size": "50г",
+              "priceCents": 10500,
+              "imageUrl": "https://drinktime.ua/files/resized/products/tavria_4820000621175_images_15380352534.600x800.jpg"
+            },
+            {
+              "name": "Коньяк Ararat",
+              "description": "Коньяк",
+              "size": "50г",
+              "priceCents": 9500,
+              "imageUrl": "https://content.okwine.ua/files/product/61b3453b6ebb0c2d53db72f4/500x666/669e9780-dfbb-11eb-8a24-1b9db47f5628.jpg"
+            },
+            {
+              "name": "Коньяк Areni",
+              "description": "Коньяк",
+              "size": "50г",
+              "priceCents": 7700,
+              "imageUrl": "https://img2.zakaz.ua/ff057d63672e4896964b7bb7be3f6b27/1757325049-s1350x1350.jpg"
+            },
+            {
+              "name": "Коньяк Bolgrad",
+              "description": "Коньяк",
+              "size": "50г",
+              "priceCents": 7700,
+              "imageUrl": "https://img2.zakaz.ua/1f03ee891a844e58939b8311232219ff/1692684696-s1350x1350.jpg"
+            },
+            {
+              "name": "Коньяк Frapin VSOP",
+              "description": "Коньяк",
+              "size": "50г",
+              "priceCents": 38500,
+              "imageUrl": "https://img2.zakaz.ua/81801e01c37742b4a604fd8bcdd02b24/1740403876-s1350x1350.jpg"
+            },
+            {
+              "name": "Коньяк Hennessy",
+              "description": "Коньяк",
+              "size": "50г",
+              "priceCents": 27500,
+              "imageUrl": "https://drinktime.ua/files/resized/products/227-2277-0_0_orig.410x458.jpg"
+            },
+            {
+              "name": "Коньяк Kvint 10 years",
+              "description": "Коньяк",
+              "size": "50г",
+              "priceCents": 21600,
+              "imageUrl": "https://shop.wineworld.com.ua/image/cache/catalog/art/%D0%AF00060404-500x500.jpg"
+            },
+            {
+              "name": "Коньяк Martell",
+              "description": "Коньяк",
+              "size": "50г",
+              "priceCents": 27500,
+              "imageUrl": "https://winetime.com.ua/storage/da9b582a0e2ff2ee9d6ad4c11d20e443.jpeg"
+            },
+            {
+              "name": "Коньяк Napoleon",
+              "description": "Коньяк",
+              "size": "50г",
+              "priceCents": 26400,
+              "imageUrl": "https://winetime.com.ua/uploads/symlink/46000-47000/70054.jpg"
+            },
+            {
+              "name": "Коньяк Old Kakheti 5",
+              "description": "Коньяк",
+              "size": "50г",
+              "priceCents": 7200,
+              "imageUrl": "https://content.okwine.ua/files/product/61b345376ebb0c2d53db6537/500x666/konyak-staryj-kakheti-5-let-40-0-5l_5.jpg"
+            },
+            {
+              "name": "Коньяк Old Kakheti 3",
+              "description": "Коньяк",
+              "size": "50г",
+              "priceCents": 7200,
+              "imageUrl": "https://content.okwine.ua/files/product/61b3453a6ebb0c2d53db6fb9/500x666/konyak-staryj-kakheti-3-goda-40-0-5l_5.1.jpg"
+            },
+            {
+              "name": "Коньяк «Закарпатський»",
+              "description": "Коньяк",
+              "size": "50г",
+              "priceCents": 8300,
+              "imageUrl": "https://img3.zakaz.ua/cba1aff57bd748908e6cf99db6d121c9/1778687401-s1350x1350.jpg"
+            },
+            {
+              "name": "Коньяк «легенда Вірменії»",
+              "description": "Коньяк",
+              "size": "50г",
+              "priceCents": 8300,
+              "imageUrl": "https://content.rozetka.com.ua/goods/images/big/10843672.jpg"
+            },
+            {
+              "name": "Вермут Martini",
+              "description": "Вермут",
+              "size": "50г",
+              "priceCents": 6600,
+              "imageUrl": "https://img3.zakaz.ua/53d500816ed34d4e83f70693bd615905/1758553832-s1350x1350.jpg"
+            },
+            {
+              "name": "Абсент Brandbar Vincent",
+              "description": "Абсент",
+              "size": "50г",
+              "priceCents": 13200,
+              "imageUrl": "https://img2.zakaz.ua/08112021.1636380648.ad72436478c_2021-11-08_Tatyana_L/08112021.1636380648.SNCPSG10.obj.0.1.jpg.oe.jpg.pf.jpg.1350nowm.jpg.1350x.jpg"
+            },
+            {
+              "name": "Джин Beefeater",
+              "description": "Джин",
+              "size": "50г",
+              "priceCents": 11600,
+              "imageUrl": "https://content.okwine.ua/files/product/61b3453a6ebb0c2d53db6fb4/500x666/651292d0-c43c-11eb-9655-93ae7abd4580.jpg"
+            },
+            {
+              "name": "Джин Boombay Sapphire",
+              "description": "Джин",
+              "size": "50г",
+              "priceCents": 15400,
+              "imageUrl": "https://img3.zakaz.ua/ac458cbc8ce54653a961a5c57a891b4b/1758695173-s1350x1350.jpg"
+            },
+            {
+              "name": "Джин Scented London Dry",
+              "description": "Джин",
+              "size": "50г",
+              "priceCents": 11000,
+              "imageUrl": "https://img2.zakaz.ua/c40e316ebd09434baa12d4384c5f3baf/1752377580-s1350x1350.jpg"
+            },
+            {
+              "name": "Текіла Olmeca",
+              "description": "Текіла",
+              "size": "50г",
+              "priceCents": 13200,
+              "imageUrl": "https://viski-time.com.ua/image/cache/catalog/TOVAR/olmeca/olmecagold1l250-600x600.jpg"
+            },
+            {
+              "name": "Ром Bacardi bianco",
+              "description": "Ром",
+              "size": "50г",
+              "priceCents": 9900,
+              "imageUrl": "https://viski-time.com.ua/image/cache/catalog/TOVAR/rom/IMG6a0954a68779614c1d784b7182b26ffa-600x600.jpg"
+            },
+            {
+              "name": "Ром Bacardi Negra",
+              "description": "Ром",
+              "size": "50г",
+              "priceCents": 9900,
+              "imageUrl": "https://alcomag.ua/upload/iblock/59f/ld1s3eswtt06u7ypurxl7lxhnrrwjw7p.jpeg"
+            },
+            {
+              "name": "Ром Bacardi Oakheart",
+              "description": "Ром",
+              "size": "50г",
+              "priceCents": 12000,
+              "imageUrl": "https://viski-time.com.ua/image/cache/catalog/TOVAR/bacardi/oakheart/oak11-600x600.jpg"
+            },
+            {
+              "name": "Ром Botafogo",
+              "description": "Ром",
+              "size": "50г",
+              "priceCents": 12000,
+              "imageUrl": "https://content1.rozetka.com.ua/goods/images/big/613214967.jpg"
+            },
+            {
+              "name": "Ром Captain Morgan",
+              "description": "Ром",
+              "size": "50г",
+              "priceCents": 9900,
+              "imageUrl": "https://viski-time.com.ua/image/cache/catalog/TOVAR/captain-morgan/IMG7e66e60d4f2ab080b45694475235b79f-600x600.jpg"
+            },
+            {
+              "name": "Ром Flor de santa",
+              "description": "Ром",
+              "size": "50г",
+              "priceCents": 9500,
+              "imageUrl": "https://img2.zakaz.ua/zakaz-HP-630-Notebook-PC.1421424671.ad72436478c_2015-01-21_Yana/zakaz-HP-630-Notebook-PC.1421424671.SNEC1788.obj.0.6.jpg.oe.jpg.pf.jpg.1350nowm.jpg.1350x.jpg"
+            },
+            {
+              "name": "Ром Flor de santa black",
+              "description": "Ром",
+              "size": "50г",
+              "priceCents": 9500,
+              "imageUrl": "https://img2.zakaz.ua/zakaz-HP-630-Notebook-PC.1421424671.ad72436478c_2015-01-21_Yana/zakaz-HP-630-Notebook-PC.1421424671.SNEC1788.obj.0.6.jpg.oe.jpg.pf.jpg.1350nowm.jpg.1350x.jpg"
+            },
+            {
+              "name": "Лікер Aperol",
+              "description": "Лікер",
+              "size": "50г",
+              "priceCents": 12100,
+              "imageUrl": "https://winetime.com.ua/uploads/symlink/51000-52000/51336997509_b3d6f19e42_b.jpg"
+            },
+            {
+              "name": "Лікер Bardinet",
+              "description": "Лікер",
+              "size": "50г",
+              "priceCents": 9900,
+              "imageUrl": "https://img3.zakaz.ua/2de75f1b68d8405480d488d5da9f26b5/1735069021-s1350x1350.jpg"
+            },
+            {
+              "name": "Лікер Becherovka",
+              "description": "Лікер",
+              "size": "50г",
+              "priceCents": 13200,
+              "imageUrl": "https://img2.zakaz.ua/e95477c3dca747dc83d1f30a8bf2503e/1778851841-s1350x1350.jpg"
+            },
+            {
+              "name": "Лікер Havana club 3 years",
+              "description": "Лікер",
+              "size": "50г",
+              "priceCents": 11000,
+              "imageUrl": "https://img2.zakaz.ua/novus20212611.1638186747.ad72436478c_2021-11-29_Alina/novus20212611.1638186747.SNCPSG10.obj.0.1.jpg.oe.jpg.pf.jpg.1350nowm.jpg.1350x.jpg"
+            },
+            {
+              "name": "Лікер Havana club 7 years",
+              "description": "Лікер",
+              "size": "50г",
+              "priceCents": 16500,
+              "imageUrl": "https://img2.zakaz.ua/fca8690f8ce240eda2cd1778d3ce7232/1778851841-s1350x1350.jpg"
+            },
+            {
+              "name": "Лікер Hurricane blue",
+              "description": "Лікер",
+              "size": "50г",
+              "priceCents": 12100,
+              "imageUrl": "https://exportprodotti.it/cdn/shop/files/ARCA_8007253906136-jpg.jpg?v=1744287004"
+            },
+            {
+              "name": "Лікер Jägermeister",
+              "description": "Лікер",
+              "size": "50г",
+              "priceCents": 13200,
+              "imageUrl": "https://image.maudau.com.ua/webp/size/xl/products/40/db/eb/40dbeb1a3cdbc347015a567406255f8a.jpg"
+            },
+            {
+              "name": "Лікер Malibu",
+              "description": "Лікер",
+              "size": "50г",
+              "priceCents": 12100,
+              "imageUrl": "https://img3.zakaz.ua/m.1626262049.ad72436478c_2021-07-14_Svetlana/m.1626262049.SNCPSG10.obj.0.1.jpg.oe.jpg.pf.jpg.1350nowm.jpg.1350x.jpg"
+            },
+            {
+              "name": "Лікер Sambuca",
+              "description": "Лікер",
+              "size": "50г",
+              "priceCents": 8800,
+              "imageUrl": "https://viski-time.com.ua/image/cache/catalog/TOVAR/liker/sambuca/sambuca-600x600.jpg"
+            },
+            {
+              "name": "Лікер Sheridan's",
+              "description": "Лікер",
+              "size": "50г",
+              "priceCents": 16500,
+              "imageUrl": "https://viski-time.com.ua/image/cache/catalog/TOVAR/liker/sheridans/sheri2800-600x600.jpg"
+            },
+            {
+              "name": "Лікер Soberano orange",
+              "description": "Лікер",
+              "size": "50г",
+              "priceCents": 8300,
+              "imageUrl": "https://viski-time.com.ua/image/cache/catalog/TOVAR/brendi/soberano/soberano250-600x600.jpg"
+            },
+            {
+              "name": "Лікер Triple Sec",
+              "description": "Лікер",
+              "size": "50г",
+              "priceCents": 12100,
+              "imageUrl": "https://content.okwine.ua/files/product/61b3453d6ebb0c2d53db74d5/500x666/e9baf030-bade-11ea-ba22-1d1c461bbfde.jpg.jpg"
+            },
+            {
+              "name": "Настоянка Абрикосовий бренді",
+              "description": "Настоянка",
+              "size": "50г",
+              "priceCents": 9900,
+              "imageUrl": "https://alcoprostir.ua/9384-thickbox_default/brendi-heresnyj-fundador-sherry-cask-07l-36-ispania-heres-tm-fundadorpn502947.jpg"
+            },
+            {
+              "name": "Настоянка Бурбон",
+              "description": "Настоянка",
+              "size": "50г",
+              "priceCents": 9900,
+              "imageUrl": "https://foody.ua/images/thumbnails/1956/1600/detailed/7/%D0%B8%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD7%D0%B8%D0%B5_viber_2021-04-26_20-13-11.jpg"
+            },
+            {
+              "name": "Настоянка Вишнева",
+              "description": "Настоянка",
+              "size": "50г",
+              "priceCents": 9900,
+              "imageUrl": "https://img2.zakaz.ua/263cdea1a21b44bd9d54d14c1523a976/1700026263-s1350x1350.jpg"
+            },
+            {
+              "name": "Настоянка Лимончелло",
+              "description": "Настоянка",
+              "size": "50г",
+              "priceCents": 9900,
+              "imageUrl": "https://viski-time.com.ua/image/cache/catalog/TOVAR/liker/casoni/casonilimonchello600-600x600.jpg"
+            },
+            {
+              "name": "Настоянка Малина",
+              "description": "Настоянка",
+              "size": "50г",
+              "priceCents": 9900,
+              "imageUrl": "https://viski-time.com.ua/image/cache/catalog/TOVAR/liker/casoni/casonilimonchello600-600x600.jpg"
+            },
+            {
+              "name": "Настоянка Хреновуха",
+              "description": "Настоянка",
+              "size": "50г",
+              "priceCents": 9900,
+              "imageUrl": "https://image.maudau.com.ua/webp/size/xl/products/5c/6b/c6/5c6bc6e1a55d299a3f86d96ebe1bdf07.jpg"
+            },
+            {
+              "name": "Shake bora-bora",
+              "description": "Слабоалкогольний",
+              "size": "0.33л",
+              "priceCents": 11000,
+              "imageUrl": "https://img3.zakaz.ua/8b0fbc9ac8a34eb489648ac7432ef4de/1740657267-s1350x1350.jpg"
+            },
+            {
+              "name": "Shake Pornstar",
+              "description": "Слабоалкогольний",
+              "size": "0.33л",
+              "priceCents": 11000,
+              "imageUrl": "https://img.auchan.ua/rx/q_90,ofmt_webp,w_1200,h_743/auchan.ua/media/catalog/product/f/e/fe61699396f68d3996e3f5133d9500d3.jpeg"
+            },
+            {
+              "name": "Shake sexx on the beach",
+              "description": "Слабоалкогольний",
+              "size": "0.33л",
+              "priceCents": 11000,
+              "imageUrl": "https://content2.rozetka.com.ua/goods/images/big/316693078.jpg"
+            },
+            {
+              "name": "Бренді Кола",
+              "description": "Слабоалкогольний",
+              "size": "0.33л",
+              "priceCents": 11000,
+              "imageUrl": "https://img2.zakaz.ua/6c1a9074cde2491db8aca0e4fad701f5/1766738670-s1350x1350.jpg"
+            },
+            {
+              "name": "Джин тонік",
+              "description": "Слабоалкогольний",
+              "size": "0.33л",
+              "priceCents": 11000,
+              "imageUrl": "https://image.maudau.com.ua/webp/size/xl/products/b6/4c/a4/b64ca499fdeac1589822b8a5192cb8d4.jpg"
+            },
+            {
+              "name": "Ром кола",
+              "description": "Слабоалкогольний",
+              "size": "0.33л",
+              "priceCents": 11000,
+              "imageUrl": "https://bilesuhe.com.ua/image/cache/catalog/openstore/000085482-product-850x850.jpg"
+            },
+            {
+              "name": "Пиво Blanche",
+              "description": "Пиво",
+              "size": "0.5л",
+              "priceCents": 11000,
+              "imageUrl": "https://content2.rozetka.com.ua/goods/images/big/422951789.jpg"
+            },
+            {
+              "name": "Пиво Cartel",
+              "description": "Пиво",
+              "size": "0.33л",
+              "priceCents": 12000,
+              "imageUrl": "https://bilesuhe.com.ua/image/cache/catalog/openstore/000067646-product-850x850.jpg"
+            },
+            {
+              "name": "Пиво Leffe",
+              "description": "Пиво",
+              "size": "0.33л",
+              "priceCents": 10900,
+              "imageUrl": "https://content.okwine.ua/files/product/61b3453d6ebb0c2d53db76f6/500x666/f12a5f30-b881-11eb-9b46-099febffd1f3.jpg"
+            },
+            {
+              "name": "Пиво Hike 0%",
+              "description": "Безалкогольне пиво",
+              "size": "0.33л",
+              "priceCents": 10000,
+              "imageUrl": "https://bilesuhe.com.ua/image/cache/catalog/openstore/000085492-product-850x850.jpg"
+            },
+            {
+              "name": "Пиво Germanarich",
+              "description": "Пиво",
+              "size": "0.5л",
+              "priceCents": 12900,
+              "imageUrl": "https://img2.zakaz.ua/fb19922ade9d40d7ac98b104439fd3d8/1732905896-s1350x1350.jpg"
+            },
+            {
+              "name": "Пиво Corona",
+              "description": "Пиво",
+              "size": "0.33л",
+              "priceCents": 12000,
+              "imageUrl": "https://winetime.com.ua/uploads/symlink/45000-46000/1407328476_48897.jpg"
+            },
+            {
+              "name": "Пиво Pabster God",
+              "description": "Пиво",
+              "size": "0.33л",
+              "priceCents": 9900,
+              "imageUrl": "https://src.zakaz.atbmarket.com/cache/photos/91503/catalog_product_gal_91503.jpg"
+            },
+            {
+              "name": "Пиво Zlata Brama",
+              "description": "Пиво",
+              "size": "0.33л",
+              "priceCents": 9500,
+              "imageUrl": "https://bilesuhe.com.ua/image/cache/catalog/openstore/000087020-product-850x850.jpg"
+            },
+            {
+              "name": "Пиво Марочне",
+              "description": "Пиво",
+              "size": "0.5л",
+              "priceCents": 8400,
+              "imageUrl": "https://www.beer-market.com.ua/upload/iblock/1f8/1f8993c96ed56cf22291875ff568d392.jpeg"
+            },
+            {
+              "name": "Вино Conte Alexandre Black",
+              "description": "Вино",
+              "size": "150г",
+              "priceCents": 5000,
+              "imageUrl": "https://img3.zakaz.ua/fbdcdc9a6d6147158b6c4e06dc60e46a/1708002371-s1350x1350.jpg"
+            },
+            {
+              "name": "Вино Conte Alexandre",
+              "description": "Вино",
+              "size": "150г",
+              "priceCents": 5000,
+              "imageUrl": "https://img3.zakaz.ua/fbdcdc9a6d6147158b6c4e06dc60e46a/1708002371-s1350x1350.jpg"
+            },
+            {
+              "name": "Вино Lambrusco",
+              "description": "Вино",
+              "size": "150г",
+              "priceCents": 5500,
+              "imageUrl": "https://shop.wineworld.com.ua/image/cache/catalog/art/%D0%AF00036082-500x500.jpg"
+            },
+            {
+              "name": "Шампанське Bolgrad",
+              "description": "Біле сухе",
+              "size": "150г",
+              "priceCents": 5000,
+              "imageUrl": "https://img2.zakaz.ua/41b5972ce5e24abe8055e12ac1fc6472/1755774673-s1350x1350.jpg"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

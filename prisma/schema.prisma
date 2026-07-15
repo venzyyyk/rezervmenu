@@ -1,0 +1,190 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ─────────────────────── ENUMS ───────────────────────
+enum OrderType {
+  DELIVERY
+  PICKUP
+  DINE_IN
+}
+
+enum OrderStatus {
+  NEW
+  PREPARING
+  READY
+  CLOSED
+  CANCELLED
+}
+
+enum PayStatus {
+  PENDING
+  PAID
+  FAILED
+  REFUNDED
+}
+
+enum PayMethod {
+  CARD
+  GOOGLE_PAY
+  APPLE_PAY
+  CASH
+}
+
+enum ResStatus {
+  NEW
+  CONFIRMED
+  CANCELLED
+}
+
+enum Role {
+  ADMIN
+  MANAGER
+}
+
+// ─────────────────────── MODELS ───────────────────────
+model Venue {
+  id           String        @id @default(cuid())
+  slug         String        @unique
+  name         String
+  address      String
+  tagline      String? // короткий підпис на картці закладу (напр. "Кухня та бар")
+  accentColor  String        @default("#A8B89A")
+  heroImageUrl String?
+  schedule     Json?
+  categories   Category[]
+  dishes       Dish[]
+  tables       Table[]
+  orders       Order[]
+  reservations Reservation[]
+  createdAt    DateTime      @default(now())
+}
+
+model Category {
+  id        String  @id @default(cuid())
+  venueId   String
+  venue     Venue   @relation(fields: [venueId], references: [id], onDelete: Cascade)
+  name      String
+  group     String? // "Кухня" | "Бар"
+  sortOrder Int     @default(0)
+  dishes    Dish[]
+
+  @@index([venueId])
+}
+
+model Dish {
+  id          String      @id @default(cuid())
+  venueId     String
+  venue       Venue       @relation(fields: [venueId], references: [id], onDelete: Cascade)
+  categoryId  String
+  category    Category    @relation(fields: [categoryId], references: [id])
+  name        String
+  description String?
+  composition String?
+  size        String? // порція, напр. "400г" / "300мл"
+  allergens   String[]
+  priceCents  Int
+  currency    String      @default("UAH")
+  imageUrl    String?
+  isAvailable Boolean     @default(true)
+  sortOrder   Int         @default(0)
+  orderItems  OrderItem[]
+
+  @@index([venueId])
+  @@index([categoryId])
+}
+
+model Table {
+  id       String  @id @default(cuid())
+  venueId  String
+  venue    Venue   @relation(fields: [venueId], references: [id], onDelete: Cascade)
+  number   Int
+  code     String  @unique
+  seats    Int     @default(4)
+  isActive Boolean @default(false)
+  orders   Order[]
+
+  @@unique([venueId, number])
+  @@index([venueId])
+}
+
+model Order {
+  id            String      @id @default(cuid())
+  venueId       String
+  venue         Venue       @relation(fields: [venueId], references: [id])
+  type          OrderType
+  status        OrderStatus @default(NEW)
+  tableId       String?
+  table         Table?      @relation(fields: [tableId], references: [id])
+  customerName  String?
+  customerPhone String?
+  address       String?
+  comment       String?
+  items         OrderItem[]
+  payment       Payment?
+  totalCents    Int
+  currency      String      @default("UAH")
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+
+  @@index([venueId, status])
+  @@index([createdAt])
+}
+
+model OrderItem {
+  id           String  @id @default(cuid())
+  orderId      String
+  order        Order   @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  dishId       String
+  dish         Dish    @relation(fields: [dishId], references: [id])
+  nameSnapshot String
+  priceCents   Int
+  quantity     Int     @default(1)
+  comment      String?
+
+  @@index([orderId])
+}
+
+model Payment {
+  id             String    @id @default(cuid())
+  orderId        String    @unique
+  order          Order     @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  method         PayMethod
+  status         PayStatus @default(PENDING)
+  amountCents    Int
+  currency       String    @default("UAH")
+  stripeIntentId String?   @unique
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+model Reservation {
+  id        String    @id @default(cuid())
+  venueId   String
+  venue     Venue     @relation(fields: [venueId], references: [id])
+  name      String
+  phone     String
+  guests    Int
+  date      DateTime
+  time      String
+  comment   String?
+  status    ResStatus @default(NEW)
+  createdAt DateTime  @default(now())
+
+  @@index([venueId, status])
+  @@index([date])
+}
+
+model AdminUser {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  passwordHash String
+  name         String?
+  role         Role     @default(MANAGER)
+  createdAt    DateTime @default(now())
+}

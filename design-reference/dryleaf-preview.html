@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dry Leaf — Preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+:root{
+  --base:#0E0F0C;--surface:#16180F;--elevated:#1E211A;--line:#2A2E24;
+  --sage:#A8B89A;--gold:#C9A86A;--graphite:#7E8794;
+  --cream:#F2F1EA;--muted:#9A9B90;--danger:#C5705D;
+  --serif:'Cormorant Garamond',serif;--sans:'Inter',system-ui,sans-serif;
+  --ease-out-expo:cubic-bezier(0.22,1,0.36,1);
+  --spring:cubic-bezier(0.34,1.56,0.64,1);
+}
+html,body{height:100%;background:var(--base);color:var(--cream);font-family:var(--sans);overflow:hidden;font-size:14px}
+img{display:block;width:100%;height:100%;object-fit:cover}
+button{cursor:pointer;border:none;background:none;color:inherit;font:inherit;outline:none}
+input,textarea{font:inherit;color:inherit;background:none;border:none;outline:none}
+::-webkit-scrollbar{width:3px;height:3px}
+::-webkit-scrollbar-thumb{background:var(--line);border-radius:9px}
+.app{position:fixed;inset:0;overflow:hidden}
+/* SCREENS */
+.screen{position:absolute;inset:0;overflow-y:auto;overflow-x:hidden;opacity:0;pointer-events:none;transform:translateY(14px);transition:opacity .4s var(--ease-out-expo),transform .4s var(--ease-out-expo)}
+.screen.active{opacity:1;pointer-events:all;transform:translateY(0)}
+/* HERO */
+#hero{background:var(--base);display:flex;flex-direction:column}
+.hero-bg{position:absolute;inset:0;pointer-events:none}
+.hero-bg::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 90% 55% at 50% 0%,rgba(168,184,154,.13) 0%,transparent 65%)}
+.hero-line{position:absolute;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--line),transparent)}
+.hero-line-1{top:28%}.hero-line-2{bottom:30%}
+.hero-header{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;padding:clamp(18px,5vw,40px) clamp(18px,6vw,48px)}
+.hero-header span{font-family:var(--serif);font-size:14px;letter-spacing:.22em;color:var(--muted);text-transform:uppercase}
+.hero-header em{font-size:10px;letter-spacing:.4em;color:rgba(154,155,144,.45);font-style:normal;text-transform:uppercase}
+.hero-center{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;z-index:1;padding:12px 20px 36px;text-align:center}
+.hero-eyebrow{font-size:9px;letter-spacing:.45em;text-transform:uppercase;color:var(--sage);margin-bottom:14px;animation:fadeUp .7s .3s both}
+.hero-title{font-family:var(--serif);font-size:clamp(56px,14vw,110px);font-weight:300;line-height:.9;letter-spacing:-.01em;color:var(--cream);animation:fadeUp .9s .15s var(--ease-out-expo) both}
+.hero-rule{width:80px;height:1px;margin:18px auto 0;background:linear-gradient(90deg,transparent,var(--sage),transparent);animation:expand .8s .6s both}
+.hero-sub{margin-top:18px;font-size:12px;color:var(--muted);letter-spacing:.04em;animation:fadeUp .6s .7s both}
+.venue-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;width:100%;max-width:580px;margin-top:36px;animation:fadeUp .7s .85s both}
+@media(max-width:380px){.venue-grid{grid-template-columns:1fr}}
+.venue-card{border-radius:18px;overflow:hidden;background:var(--surface);border:1px solid var(--line);cursor:pointer;transition:transform .35s var(--ease-out-expo),box-shadow .35s}
+.venue-card:hover{transform:translateY(-5px);box-shadow:0 24px 56px -18px rgba(0,0,0,.7)}
+.venue-card:active{transform:scale(.97) !important}
+.vc-img{position:relative;height:150px;overflow:hidden;background:var(--elevated)}
+.vc-img img{transition:transform .7s var(--ease-out-expo)}
+.venue-card:hover .vc-img img{transform:scale(1.06)}
+.vc-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(22,24,15,.88) 0%,rgba(22,24,15,.1) 50%,transparent 100%)}
+.vc-dot{position:absolute;top:10px;right:10px;width:6px;height:6px;border-radius:50%;opacity:.8}
+.vc-info{padding:14px}
+.vc-name{font-family:var(--serif);font-size:20px;font-weight:400;letter-spacing:.02em;color:var(--cream)}
+.vc-addr{margin-top:5px;font-size:10px;color:var(--muted);letter-spacing:.04em;line-height:1.5}
+.vc-cta{margin-top:14px;display:flex;align-items:center;gap:6px;font-size:8px;letter-spacing:.3em;text-transform:uppercase;transition:gap .25s}
+.venue-card:hover .vc-cta{gap:10px}
+.vc-cta svg{width:11px;height:11px;transition:transform .25s;flex-shrink:0}
+.venue-card:hover .vc-cta svg{transform:translateX(3px)}
+.hero-foot{position:relative;z-index:1;padding-bottom:24px;text-align:center;font-size:9px;color:rgba(154,155,144,.3);letter-spacing:.18em;animation:fadeIn 1s 1.2s both}
+/* MENU */
+#menu{display:flex;flex-direction:column}
+.menu-header{position:sticky;top:0;z-index:40;display:flex;align-items:center;gap:10px;padding:9px 14px;background:rgba(14,15,12,.9);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--line)}
+.back-btn{width:30px;height:30px;border-radius:50%;background:var(--elevated);color:var(--muted);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:color .2s,background .2s}
+.back-btn:hover{color:var(--cream);background:var(--line)}
+.back-btn svg{width:14px;height:14px;stroke:currentColor;stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.header-info{flex:1;min-width:0}
+.header-name{font-family:var(--serif);font-size:17px;font-weight:400;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.header-addr{font-size:9px;color:var(--muted);letter-spacing:.04em;margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.header-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;opacity:.7}
+/* CAT NAV */
+.cat-nav{position:sticky;top:52px;z-index:30;background:rgba(14,15,12,.9);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--line);padding:8px 14px;overflow-x:auto;white-space:nowrap;scrollbar-width:none;display:flex;gap:4px}
+.cat-nav::-webkit-scrollbar{display:none}
+.cat-btn{display:inline-flex;align-items:center;padding:5px 12px;border-radius:99px;font-size:12px;letter-spacing:.01em;color:var(--muted);white-space:nowrap;cursor:pointer;transition:color .25s;position:relative;flex-shrink:0}
+.cat-pill{position:absolute;inset:0;border-radius:99px;opacity:0;transition:opacity .25s}
+.cat-btn.active{color:var(--cream)}
+.cat-btn:hover:not(.active){color:var(--cream)}
+/* CONTENT */
+.menu-content{padding:14px 14px 110px}
+.cat-section{margin-bottom:36px;scroll-margin-top:104px}
+.cat-title{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+.cat-title h2{font-family:var(--serif);font-size:20px;font-weight:400;color:var(--cream);white-space:nowrap}
+.cat-title-line{flex:1;height:1px;background:linear-gradient(90deg,var(--line),transparent)}
+.dish-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}
+@media(min-width:600px){.dish-grid{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:900px){.dish-grid{grid-template-columns:repeat(4,1fr)}}
+/* DISH CARD */
+.dish-card{border-radius:13px;overflow:hidden;background:var(--surface);border:1px solid var(--line);cursor:pointer;transition:transform .3s var(--ease-out-expo),box-shadow .3s,border-color .3s;animation:fadeUp .5s both}
+.dish-card:hover{transform:translateY(-3px);box-shadow:0 14px 36px -14px rgba(0,0,0,.6);border-color:rgba(255,255,255,.06)}
+.dish-card:active{transform:scale(.97) !important}
+.dc-img{position:relative;padding-top:75%;overflow:hidden;background:var(--elevated)}
+.dc-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease-out-expo)}
+.dish-card:hover .dc-img img{transform:scale(1.06)}
+.dc-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(22,24,15,.55) 0%,transparent 55%)}
+.dc-add{position:absolute;bottom:7px;right:7px;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--base);transition:transform .2s var(--spring),opacity .2s;opacity:0}
+.dish-card:hover .dc-add,.dc-add.in{opacity:1}
+.dc-add:active{transform:scale(.82)}
+.dc-add svg{width:13px;height:13px;stroke:var(--base);stroke-width:2.5;fill:none;stroke-linecap:round}
+.dc-body{padding:10px}
+.dc-name{font-family:var(--serif);font-size:14px;font-weight:500;line-height:1.3;color:var(--cream);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.dc-desc{margin-top:4px;font-size:10px;line-height:1.5;color:var(--muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.dc-tags{margin-top:5px;display:flex;flex-wrap:wrap;gap:2px}
+.dc-tag{font-size:7px;letter-spacing:.05em;text-transform:uppercase;color:rgba(154,155,144,.65);background:var(--elevated);padding:2px 4px;border-radius:3px}
+.dc-price{margin-top:8px;font-family:var(--serif);font-size:17px;font-weight:300}
+/* FAB */
+.cart-fab{position:fixed;bottom:18px;left:14px;right:14px;border-radius:15px;padding:13px 16px;display:flex;align-items:center;gap:9px;box-shadow:0 12px 40px -10px rgba(0,0,0,.7);transition:transform .4s var(--spring),opacity .3s;transform:translateY(120px);opacity:0;z-index:30;cursor:pointer}
+.cart-fab.visible{transform:translateY(0);opacity:1}
+.cart-fab:active{transform:scale(.97) !important}
+.fab-icon{position:relative;flex-shrink:0}
+.fab-icon svg{width:16px;height:16px;stroke:var(--base);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.fab-badge{position:absolute;top:-6px;right:-6px;width:15px;height:15px;border-radius:50%;background:var(--base);font-size:8px;font-weight:700;color:var(--cream);display:flex;align-items:center;justify-content:center;transition:transform .25s var(--spring)}
+.fab-label{flex:1;font-size:12px;font-weight:500;color:var(--base);text-align:left}
+.fab-total{font-family:var(--serif);font-size:15px;font-weight:300;color:var(--base)}
+/* BACKDROPS */
+.overlay-backdrop{position:fixed;inset:0;z-index:50;background:rgba(14,15,12,.82);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);opacity:0;pointer-events:none;transition:opacity .25s}
+.overlay-backdrop.open{opacity:1;pointer-events:all}
+/* DISH MODAL */
+.dish-modal{position:fixed;inset-x:0;bottom:0;z-index:60;max-height:91svh;display:flex;flex-direction:column;background:var(--surface);border-top:1px solid var(--line);border-radius:22px 22px 0 0;overflow:hidden;transform:translateY(100%);transition:transform .45s var(--ease-out-expo)}
+.dish-modal.open{transform:translateY(0)}
+.dm-handle{display:flex;justify-content:center;padding:10px 0 3px;flex-shrink:0}
+.dm-handle-bar{width:38px;height:4px;border-radius:2px;background:var(--line)}
+.dm-close{position:absolute;top:10px;right:14px;width:28px;height:28px;border-radius:50%;background:var(--elevated);color:var(--muted);display:flex;align-items:center;justify-content:center;transition:color .2s;z-index:1}
+.dm-close:hover{color:var(--cream)}
+.dm-close svg{width:13px;height:13px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.dm-scroll{overflow-y:auto;overflow-x:hidden;flex:1;overscroll-behavior:contain}
+.dm-img{position:relative;height:200px;background:var(--elevated);flex-shrink:0}
+.dm-img-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(22,24,15,.78) 0%,transparent 50%)}
+.dm-body{padding:18px 18px 6px}
+.dm-title{font-family:var(--serif);font-size:24px;font-weight:300;line-height:1.2;color:var(--cream)}
+.dm-price{font-family:var(--serif);font-size:22px;font-weight:300;margin-top:3px}
+.dm-desc{margin-top:10px;font-size:12px;line-height:1.7;color:var(--muted)}
+.dm-allergens{display:flex;flex-wrap:wrap;gap:5px;margin-top:14px}
+.dm-allergen-tag{display:flex;align-items:center;gap:3px;background:var(--elevated);border-radius:7px;padding:4px 9px;font-size:10px;color:var(--muted)}
+.dm-comp-toggle{display:flex;align-items:center;justify-content:space-between;width:100%;padding:12px 0;border-top:1px solid var(--line);margin-top:14px;font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);transition:color .2s}
+.dm-comp-toggle:hover{color:var(--cream)}
+.dm-arrow{display:flex;transition:transform .25s}
+.dm-arrow svg{width:13px;height:13px;stroke:currentColor;stroke-width:1.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.dm-comp-text{font-size:11px;color:var(--muted);line-height:1.65;overflow:hidden;max-height:0;transition:max-height .3s,padding .3s}
+.dm-comp-text.open{max-height:200px;padding-bottom:12px}
+.dm-comment-wrap{margin:12px 0 14px}
+.dm-clabel{font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:rgba(154,155,144,.5);margin-bottom:7px}
+.dm-comment{width:100%;resize:none;border-radius:11px;background:var(--elevated);border:1px solid var(--line);padding:10px 12px;font-size:11px;line-height:1.5;transition:border-color .2s}
+.dm-comment:focus{border-color:rgba(168,184,154,.35);outline:none}
+.dm-comment::placeholder{color:rgba(154,155,144,.35)}
+.dm-footer{flex-shrink:0;padding:12px 18px 18px;border-top:1px solid var(--line);background:var(--surface)}
+.dm-footer-row{display:flex;gap:9px}
+.qty-control{display:flex;align-items:center;gap:9px;background:var(--elevated);border-radius:11px;padding:0 11px}
+.qty-btn{width:26px;height:44px;display:flex;align-items:center;justify-content:center;color:var(--muted);transition:color .2s}
+.qty-btn:hover{color:var(--cream)}
+.qty-btn svg{width:13px;height:13px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round}
+.qty-num{font-size:14px;font-weight:500;color:var(--cream);min-width:16px;text-align:center}
+.dm-add-btn{flex:1;border-radius:11px;padding:0 16px;height:46px;display:flex;align-items:center;justify-content:space-between;font-size:12px;font-weight:500;color:var(--base);cursor:pointer;transition:opacity .2s,transform .15s}
+.dm-add-btn:active{transform:scale(.97)}
+/* CART SHEET */
+.cart-sheet{position:fixed;inset-y:0;right:0;z-index:60;width:min(100vw,400px);background:var(--surface);border-left:1px solid var(--line);display:flex;flex-direction:column;transform:translateX(100%);transition:transform .4s var(--ease-out-expo)}
+.cart-sheet.open{transform:translateX(0)}
+.cs-header{display:flex;align-items:center;justify-content:space-between;padding:16px 18px;border-bottom:1px solid var(--line);flex-shrink:0}
+.cs-title{font-family:var(--serif);font-size:20px;font-weight:300}
+.cs-count{font-size:10px;color:var(--muted);margin-top:2px}
+.cs-close{width:28px;height:28px;border-radius:50%;background:var(--elevated);color:var(--muted);display:flex;align-items:center;justify-content:center;transition:color .2s}
+.cs-close:hover{color:var(--cream)}
+.cs-close svg{width:13px;height:13px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.cs-items{flex:1;overflow-y:auto;overscroll-behavior:contain}
+.cs-item{padding:14px 18px;border-bottom:1px solid var(--line);display:flex;gap:10px}
+.cs-item-img{width:56px;height:56px;border-radius:9px;overflow:hidden;background:var(--elevated);flex-shrink:0}
+.cs-item-info{flex:1;min-width:0}
+.cs-item-row{display:flex;align-items:flex-start;justify-content:space-between;gap:6px}
+.cs-item-name{font-size:12px;font-weight:500;color:var(--cream);line-height:1.3}
+.cs-item-del{color:rgba(154,155,144,.35);flex-shrink:0;transition:color .2s;padding:2px}
+.cs-item-del:hover{color:var(--danger)}
+.cs-item-del svg{width:12px;height:12px;stroke:currentColor;stroke-width:1.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.cs-item-price{font-family:var(--serif);font-size:15px;font-weight:300;margin-top:3px}
+.cs-item-qty{display:flex;align-items:center;gap:7px;margin-top:7px}
+.cs-qty-ctrl{display:flex;align-items:center;gap:7px;background:var(--elevated);border-radius:7px;padding:0 7px;height:26px}
+.cs-qty-btn{display:flex;align-items:center;justify-content:center;color:var(--muted);transition:color .2s;padding:3px}
+.cs-qty-btn:hover{color:var(--cream)}
+.cs-qty-btn svg{width:10px;height:10px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round}
+.cs-qty-n{font-size:11px;font-weight:500;color:var(--cream);min-width:13px;text-align:center}
+.cs-unit{font-size:9px;color:var(--muted)}
+.cs-empty{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:40px}
+.cs-empty-icon{font-size:44px;opacity:.12}
+.cs-empty-text{font-size:12px;color:var(--muted)}
+.cs-footer{flex-shrink:0;padding:14px 18px;border-top:1px solid var(--line)}
+.cs-total-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px}
+.cs-total-label{font-size:12px;color:var(--muted)}
+.cs-total-val{font-family:var(--serif);font-size:22px;font-weight:300}
+.cs-checkout-btn{width:100%;border-radius:13px;padding:15px;display:flex;align-items:center;justify-content:space-between;font-size:13px;font-weight:500;color:var(--base);cursor:pointer;transition:opacity .2s,transform .15s}
+.cs-checkout-btn:active{transform:scale(.98)}
+.cs-checkout-btn svg{width:15px;height:15px;stroke:var(--base);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+/* CHECKOUT TOAST */
+.checkout-overlay{position:fixed;inset:0;z-index:70;background:rgba(14,15,12,.97);display:flex;flex-direction:column;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .35s}
+.checkout-overlay.open{opacity:1;pointer-events:all}
+.checkout-inner{text-align:center;padding:32px}
+.checkout-icon{font-size:56px;margin-bottom:20px;animation:popIn .5s .1s both}
+.checkout-title{font-family:var(--serif);font-size:32px;font-weight:300;color:var(--cream);margin-bottom:8px}
+.checkout-sub{font-size:13px;color:var(--muted);margin-bottom:32px;line-height:1.6}
+.pay-options{display:grid;gap:10px;width:100%;max-width:320px}
+.pay-btn{border-radius:14px;padding:16px 20px;display:flex;align-items:center;gap:12px;cursor:pointer;transition:transform .2s,opacity .2s;font-size:13px;font-weight:500}
+.pay-btn:hover{opacity:.9}
+.pay-btn:active{transform:scale(.97)}
+.pay-apple{background:var(--cream);color:var(--base)}
+.pay-google{background:var(--cream);color:var(--base)}
+.pay-card{background:var(--elevated);color:var(--cream);border:1px solid var(--line)}
+.pay-icon{font-size:20px}
+.pay-back{margin-top:20px;font-size:11px;letter-spacing:.08em;color:var(--muted);cursor:pointer;padding:8px;transition:color .2s}
+.pay-back:hover{color:var(--cream)}
+/* ANIMS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes expand{from{width:0}to{width:80px}}
+@keyframes popIn{from{transform:scale(.6);opacity:0}to{transform:scale(1);opacity:1}}
+/* TOAST */
+.toast{position:fixed;bottom:88px;left:50%;transform:translateX(-50%) translateY(18px);background:var(--elevated);border:1px solid var(--line);border-radius:10px;padding:9px 16px;font-size:12px;color:var(--cream);white-space:nowrap;z-index:100;opacity:0;pointer-events:none;transition:all .3s var(--ease-out-expo)}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.demo-hint{position:fixed;top:10px;left:50%;transform:translateX(-50%);background:rgba(30,33,26,.92);border:1px solid var(--line);border-radius:99px;padding:5px 12px;font-size:9px;color:var(--muted);letter-spacing:.08em;pointer-events:none;z-index:200;animation:fadeIn .5s 2.5s both;white-space:nowrap}
+</style>
+</head>
+<body>
+<div class="app">
+  <!-- HERO -->
+  <div id="hero" class="screen active">
+    <div class="hero-bg"><div class="hero-line hero-line-1"></div><div class="hero-line hero-line-2"></div></div>
+    <header class="hero-header"><span>Menu</span><em>Харків</em></header>
+    <div class="hero-center">
+      <p class="hero-eyebrow">Digital Menu</p>
+      <h1 class="hero-title">Dry Leaf</h1>
+      <div class="hero-rule"></div>
+      <p class="hero-sub">Оберіть заклад, щоб переглянути меню</p>
+      <div class="venue-grid">
+        <div class="venue-card" onclick="openMenu('dryleaf')">
+          <div class="vc-img">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=70" alt="Dry Leaf" loading="eager">
+            <div class="vc-overlay"></div><div class="vc-dot" style="background:var(--sage)"></div>
+          </div>
+          <div class="vc-info">
+            <div class="vc-name">Dry Leaf</div>
+            <div class="vc-addr">Проспект Героїв Харкова, 74</div>
+            <div class="vc-cta" style="color:var(--sage)">
+              <span>Переглянути меню</span>
+              <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 6h10M7 2l4 4-4 4"/></svg>
+            </div>
+          </div>
+        </div>
+        <div class="venue-card" onclick="openMenu('citadel')">
+          <div class="vc-img">
+            <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=600&q=70" alt="Citadel" loading="eager">
+            <div class="vc-overlay"></div><div class="vc-dot" style="background:var(--graphite)"></div>
+          </div>
+          <div class="vc-info">
+            <div class="vc-name">Citadel</div>
+            <div class="vc-addr">Вулиця Короленко, 4</div>
+            <div class="vc-cta" style="color:var(--graphite)">
+              <span>Переглянути меню</span>
+              <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 6h10M7 2l4 4-4 4"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="hero-foot">© 2025 Dry Leaf</footer>
+  </div>
+  <!-- MENU -->
+  <div id="menu" class="screen">
+    <header class="menu-header">
+      <button class="back-btn" onclick="goBack()"><svg viewBox="0 0 16 16"><path d="M10 3L5 8l5 5"/></svg></button>
+      <div class="header-info">
+        <div class="header-name" id="hdrName">Dry Leaf</div>
+        <div class="header-addr" id="hdrAddr">Проспект Героїв Харкова, 74</div>
+      </div>
+      <div class="header-dot" id="hdrDot" style="background:var(--sage)"></div>
+    </header>
+    <nav class="cat-nav" id="catNav"></nav>
+    <main class="menu-content" id="menuContent"></main>
+    <button class="cart-fab" id="cartFab" onclick="openCart()">
+      <div class="fab-icon">
+        <svg viewBox="0 0 20 20"><circle cx="7" cy="17" r="1.5" fill="none"/><circle cx="15" cy="17" r="1.5" fill="none"/><path d="M1 1h2l2.5 11h9.5l2-7H5" fill="none"/></svg>
+        <div class="fab-badge" id="fabBadge">0</div>
+      </div>
+      <span class="fab-label">Переглянути кошик</span>
+      <span class="fab-total" id="fabTotal">0 ₴</span>
+    </button>
+  </div>
+</div>
+<!-- BACKDROP -->
+<div class="overlay-backdrop" id="backdrop" onclick="closeOverlays()"></div>
+<!-- DISH MODAL -->
+<div class="dish-modal" id="dishModal">
+  <div class="dm-handle"><div class="dm-handle-bar"></div></div>
+  <button class="dm-close" onclick="closeDishModal()"><svg viewBox="0 0 14 14"><path d="M2 2l10 10M12 2L2 12"/></svg></button>
+  <div class="dm-scroll">
+    <div class="dm-img" id="dmImgWrap"><img id="dmImgEl" src="" alt=""><div class="dm-img-overlay"></div></div>
+    <div class="dm-body">
+      <div class="dm-title" id="dmTitle"></div>
+      <div class="dm-price" id="dmPrice"></div>
+      <div class="dm-desc" id="dmDesc"></div>
+      <div class="dm-allergens" id="dmAllergens"></div>
+      <button class="dm-comp-toggle" id="dmCompToggle" onclick="toggleComp()">
+        <span>Склад</span>
+        <span class="dm-arrow" id="dmArrow"><svg viewBox="0 0 14 14"><path d="M2 5l5 5 5-5"/></svg></span>
+      </button>
+      <div class="dm-comp-text" id="dmComp"></div>
+      <div class="dm-comment-wrap">
+        <div class="dm-clabel">Коментар</div>
+        <textarea class="dm-comment" rows="2" placeholder="Наприклад: без цибулі..."></textarea>
+      </div>
+    </div>
+  </div>
+  <div class="dm-footer">
+    <div class="dm-footer-row">
+      <div class="qty-control">
+        <button class="qty-btn" onclick="changeQty(-1)"><svg viewBox="0 0 14 14"><path d="M2 7h10"/></svg></button>
+        <span class="qty-num" id="dmQty">1</span>
+        <button class="qty-btn" onclick="changeQty(1)"><svg viewBox="0 0 14 14"><path d="M7 2v10M2 7h10"/></svg></button>
+      </div>
+      <button class="dm-add-btn" id="dmAddBtn" onclick="addToCart()">
+        <span>Додати до кошика</span><span id="dmAddPrice"></span>
+      </button>
+    </div>
+  </div>
+</div>
+<!-- CART SHEET -->
+<div class="cart-sheet" id="cartSheet">
+  <div class="cs-header">
+    <div><div class="cs-title">Кошик</div><div class="cs-count" id="csCount">0 позицій</div></div>
+    <button class="cs-close" onclick="closeCart()"><svg viewBox="0 0 14 14"><path d="M2 2l10 10M12 2L2 12"/></svg></button>
+  </div>
+  <div class="cs-items" id="csItems"></div>
+  <div class="cs-footer" id="csFooter" style="display:none">
+    <div class="cs-total-row">
+      <span class="cs-total-label">Разом</span>
+      <span class="cs-total-val" id="csTotal"></span>
+    </div>
+    <button class="cs-checkout-btn" id="csBtn" onclick="openCheckout()">
+      <span>Оформити замовлення</span>
+      <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+    </button>
+  </div>
+</div>
+<!-- CHECKOUT -->
+<div class="checkout-overlay" id="checkoutOverlay">
+  <div class="checkout-inner">
+    <div class="checkout-icon">🧾</div>
+    <div class="checkout-title">Оформлення</div>
+    <div class="checkout-sub" id="checkoutSub">Загальна сума: <strong id="checkoutTotal" style="color:var(--sage)"></strong><br>Оберіть спосіб оплати</div>
+    <div class="pay-options">
+      <button class="pay-btn pay-apple" onclick="fakePayment('Apple Pay')"><span class="pay-icon"></span>Apple Pay</button>
+      <button class="pay-btn pay-google" onclick="fakePayment('Google Pay')"><span class="pay-icon">G</span> Google Pay</button>
+      <button class="pay-btn pay-card" onclick="fakePayment('Картою')"><span class="pay-icon">💳</span> Банківська карта</button>
+    </div>
+    <div class="pay-back" onclick="closeCheckout()">← Повернутись до кошика</div>
+  </div>
+</div>
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+<div class="demo-hint">Натисніть на заклад, щоб відкрити меню</div>
+
+<script>
+const ALLERGEN_EMOJI={глютен:'🌾',лактоза:'🥛',яйце:'🥚',риба:'🐟',горіхи:'🥜',сульфіти:'🍷'};
+const VENUES={
+  dryleaf:{name:'Dry Leaf',addr:'Проспект Героїв Харкова, 74',accent:'#A8B89A',categories:[
+    {id:'soups',name:'Перші страви',dishes:[
+      {id:'d1',name:'Борщ український',desc:'Наваристий борщ із телятиною, зі сметаною та пампушками',comp:'Буряк, капуста, телятина, картопля, сметана, квасоля',allergens:['глютен','лактоза'],price:185,img:'photo-1547592166-23ac45744acd'},
+      {id:'d2',name:'Крем-суп грибний',desc:'Оксамитовий крем-суп із білих грибів та печериць',comp:'Білі гриби, печериці, вершки, цибуля, часник, тим\'ян',allergens:['лактоза'],price:160,img:'photo-1547592180-85f173990554'},
+    ]},
+    {id:'salads',name:'Салати',dishes:[
+      {id:'d3',name:'Цезар із куркою',desc:'Класика з хрусткими грінками та пармезаном',comp:'Куряче філе, романо, пармезан, соус цезар, грінки',allergens:['глютен','лактоза','яйце'],price:210,img:'photo-1550304943-4f24f54ddde9'},
+      {id:'d4',name:'Грецький салат',desc:'Соковиті овочі з фетою та маслинами',comp:'Томати, огірки, фета, маслини, червона цибуля, оливкова олія',allergens:['лактоза'],price:175,img:'photo-1540420773420-3366772f4999'},
+    ]},
+    {id:'meat',name:"М'ясні страви",dishes:[
+      {id:'d5',name:'Стейк Рібай',desc:'Мармуровий рібай medium із трав\'яним маслом та картоплею',comp:'Яловичина рібай, тим\'ян, часник, вершкове масло, розмарин',allergens:['лактоза'],price:490,img:'photo-1546964124-0cce460f38ef'},
+      {id:'d6',name:'Курячі крильця BBQ',desc:'Запечені крильця у фірмовому соусі барбекю',comp:'Курячі крила, соус BBQ, спеції, часник, мед',allergens:[],price:195,img:'photo-1527477396000-e27163b481c2'},
+    ]},
+    {id:'pasta',name:'Другі страви',dishes:[
+      {id:'d7',name:'Паста Карбонара',desc:'Спагеті з беконом, яйцем та пармезаном',comp:'Спагеті, бекон, яйце, пармезан, вершки, чорний перець',allergens:['глютен','лактоза','яйце'],price:220,img:'photo-1612874742237-6526221588e3'},
+      {id:'d8',name:'Лосось на грилі',desc:'Філе лосося з овочами гриль та лимонним маслом',comp:'Лосось, цукіні, перець болгарський, лимон, зелень',allergens:['риба'],price:380,img:'photo-1467003909585-2f8a72700288'},
+    ]},
+    {id:'burger',name:'Фастфуд',dishes:[
+      {id:'d9',name:'Бургер Dry Leaf',desc:'Яловича котлета, чеддер, бекон, фірмовий соус',comp:'Булочка бріош, яловичина 180г, чеддер, бекон, соус, мариновані огірки, томат',allergens:['глютен','лактоза'],price:235,img:'photo-1568901346375-23c9450c58cd'},
+    ]},
+    {id:'dessert',name:'Солодощі',dishes:[
+      {id:'d10',name:'Чізкейк Нью-Йорк',desc:'Ніжний класичний чізкейк із ягідним соусом',comp:'Крем-сир Philadelphia, печиво, вершкове масло, ягоди, цукор',allergens:['лактоза','глютен','яйце'],price:145,img:'photo-1533134242443-d4fd215305ad'},
+      {id:'d11',name:'Тірамісу',desc:'Класичний десерт із маскарпоне та кавою',comp:'Маскарпоне, савоярді, еспресо, яйце, цукор, какао',allergens:['лактоза','глютен','яйце'],price:150,img:'photo-1571877227200-a0d98ea607e9'},
+    ]},
+    {id:'cocktails',name:'Коктейлі та шоти',dishes:[
+      {id:'d12',name:'Aperol Spritz',desc:'Освіжаючий коктейль з апероль та просекко',comp:'Aperol 60мл, просекко 90мл, содова 30мл, апельсин',allergens:[],price:180,img:'photo-1560512823-829485b8bf24'},
+      {id:'d13',name:'Негроні',desc:'Класика на основі джину, кампарі та вермуту',comp:'Джин 30мл, Campari 30мл, червоний вермут 30мл, апельсинова шкірка',allergens:[],price:190,img:'photo-1514362545857-3bc16c4c7d1b'},
+    ]},
+    {id:'hot',name:'Гарячі напої',dishes:[
+      {id:'d14',name:'Капучино',desc:'Подвійний еспресо з оксамитовою молочною піною',comp:'Кава арабіка 100%, молоко незбиране',allergens:['лактоза'],price:70,img:'photo-1572442388796-11668a67e53d'},
+    ]},
+  ]},
+  citadel:{name:'Citadel',addr:'Вулиця Короленко, 4',accent:'#7E8794',categories:[
+    {id:'alc',name:'Алкогольні напої',dishes:[
+      {id:'c1',name:'Віскі Single Malt',desc:'Витриманий односолодовий 50 мл',comp:'Односолодовий шотландський віскі, витримка 12 років',allergens:[],price:220,img:'photo-1527281400683-1aae777175f8'},
+      {id:'c2',name:'Келих вина',desc:'Червоне сухе на вибір сомельє, 150 мл',comp:'Вино сухе червоне, купаж сезону',allergens:['сульфіти'],price:130,img:'photo-1510812431401-41d2bd2722f3'},
+    ]},
+    {id:'nalc',name:'Безалкогольні коктейлі',dishes:[
+      {id:'c3',name:'Mojito Virgin',desc:'Безалкогольний мохіто з лаймом та м\'ятою',comp:'Лайм свіжий, м\'ята, sodastream, тростинний сироп',allergens:[],price:110,img:'photo-1551538827-9c037cb4f32a'},
+      {id:'c4',name:'Лимонад цитрусовий',desc:'Авторський лимонад на основі цитрусів',comp:'Лимон, апельсин, грейпфрут, м\'ята, содова',allergens:[],price:95,img:'photo-1621263764928-df1444c5e859'},
+    ]},
+    {id:'chot',name:'Гарячі напої',dishes:[
+      {id:'c5',name:'Еспресо',desc:'Міцна класична кава, 30 мл',comp:'Кава арабіка 100%, свіжий помел',allergens:[],price:55,img:'photo-1510707577719-ae7c14805e3a'},
+      {id:'c6',name:'Флет Уайт',desc:'Подвійний еспресо з мікропіною молока',comp:'Кава арабіка, незбиране молоко',allergens:['лактоза'],price:80,img:'photo-1572442388796-11668a67e53d'},
+    ]},
+  ]},
+};
+
+// STATE
+let currentVenue=null,cart={},modalDish=null,modalQty=1,compOpen=false;
+
+// NAV
+function openMenu(k){
+  currentVenue=k;const v=VENUES[k];
+  document.getElementById('hdrName').textContent=v.name;
+  document.getElementById('hdrAddr').textContent=v.addr;
+  document.getElementById('hdrDot').style.background=v.accent;
+  document.getElementById('cartFab').style.background=v.accent;
+  document.getElementById('csBtn').style.background=v.accent;
+  renderMenu(v);switchScreen('menu');
+}
+function goBack(){switchScreen('hero')}
+function switchScreen(id){
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  const el=document.getElementById(id);el.classList.add('active');el.scrollTop=0;
+}
+
+// RENDER MENU
+function renderMenu(v){
+  const acc=v.accent;
+  document.getElementById('catNav').innerHTML=v.categories.map((c,i)=>`
+    <button class="cat-btn${i===0?' active':''}" id="cn-${c.id}" onclick="scrollToCat('${c.id}')">
+      <div class="cat-pill" style="background:${acc}20;border:1px solid ${acc}40;opacity:${i===0?1:0}"></div>
+      <span style="position:relative;z-index:1;${i===0?'color:'+acc:''}">${c.name}</span>
+    </button>`).join('');
+  document.getElementById('menuContent').innerHTML=v.categories.map(c=>`
+    <section class="cat-section" id="cat-${c.id}">
+      <div class="cat-title"><h2>${c.name}</h2><div class="cat-title-line"></div></div>
+      <div class="dish-grid">${c.dishes.map((d,i)=>renderCard(d,acc,i)).join('')}</div>
+    </section>`).join('');
+  document.querySelectorAll('.dish-card').forEach((el,i)=>{el.style.animationDelay=`${(i%4)*.07}s`});
+  updateFab();setupScrollSpy();
+}
+function renderCard(d,acc,idx){
+  const qty=cart[d.id]?.qty??0;
+  return`<div class="dish-card" onclick="openDishModal('${d.id}')">
+    <div class="dc-img">
+      <img src="https://images.unsplash.com/${d.img}?auto=format&fit=crop&w=500&q=70" alt="${d.name}" loading="lazy">
+      <div class="dc-overlay"></div>
+      <button class="dc-add${qty>0?' in':''}" id="add-${d.id}" style="background:${acc}" onclick="quickAdd(event,'${d.id}')">
+        ${qty>0?`<span>${qty}</span>`:`<svg viewBox="0 0 14 14" fill="none" stroke="${'#0E0F0C'}" stroke-width="2.5" stroke-linecap="round"><path d="M7 2v10M2 7h10"/></svg>`}
+      </button>
+    </div>
+    <div class="dc-body">
+      <div class="dc-name">${d.name}</div>
+      ${d.desc?`<div class="dc-desc">${d.desc}</div>`:''}
+      ${d.allergens.length?`<div class="dc-tags">${d.allergens.slice(0,3).map(a=>`<span class="dc-tag">${a}</span>`).join('')}</div>`:''}
+      <div class="dc-price" style="color:${acc}">${d.price} ₴</div>
+    </div></div>`;
+}
+
+// SCROLL SPY
+function setupScrollSpy(){
+  const v=VENUES[currentVenue];const menuEl=document.getElementById('menu');
+  const obs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting)setActiveNav(e.target.id.replace('cat-',''))});
+  },{root:menuEl,rootMargin:'-28% 0px -60% 0px',threshold:0});
+  v.categories.forEach(c=>{const el=document.getElementById('cat-'+c.id);if(el)obs.observe(el)});
+}
+function setActiveNav(catId){
+  const v=VENUES[currentVenue];const acc=v.accent;
+  document.querySelectorAll('.cat-btn').forEach(btn=>{
+    const id=btn.id.replace('cn-','');const isA=id===catId;
+    btn.classList.toggle('active',isA);
+    const pill=btn.querySelector('.cat-pill');const span=btn.querySelector('span:last-child');
+    if(pill)pill.style.opacity=isA?1:0;
+    if(span)span.style.color=isA?acc:'';
+  });
+  const ab=document.getElementById('cn-'+catId);
+  if(ab)ab.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+}
+function scrollToCat(catId){
+  const el=document.getElementById('cat-'+catId);const menu=document.getElementById('menu');
+  if(el)menu.scrollTo({top:el.offsetTop-104,behavior:'smooth'});
+  setActiveNav(catId);
+}
+
+// DISH MODAL
+function getAllDishes(){return VENUES[currentVenue]?.categories.flatMap(c=>c.dishes)??[]}
+function openDishModal(dishId){
+  const dish=getAllDishes().find(d=>d.id===dishId);if(!dish)return;
+  modalDish=dish;modalQty=1;compOpen=false;
+  const acc=VENUES[currentVenue].accent;
+  document.getElementById('dmImgEl').src=`https://images.unsplash.com/${dish.img}?auto=format&fit=crop&w=800&q=75`;
+  document.getElementById('dmImgEl').alt=dish.name;
+  document.getElementById('dmTitle').textContent=dish.name;
+  document.getElementById('dmPrice').textContent=dish.price+' ₴';
+  document.getElementById('dmPrice').style.color=acc;
+  document.getElementById('dmDesc').textContent=dish.desc||'';
+  document.getElementById('dmQty').textContent=1;
+  document.getElementById('dmAddBtn').style.background=acc;
+  document.getElementById('dmAddPrice').textContent=dish.price+' ₴';
+  const allEl=document.getElementById('dmAllergens');
+  if(dish.allergens.length){
+    allEl.style.display='flex';
+    allEl.innerHTML=dish.allergens.map(a=>`<div class="dm-allergen-tag">${ALLERGEN_EMOJI[a]??'⚠️'} ${a}</div>`).join('');
+  }else{allEl.style.display='none';allEl.innerHTML=''}
+  const compEl=document.getElementById('dmComp');
+  compEl.textContent=dish.comp||'';compEl.classList.remove('open');
+  document.getElementById('dmArrow').style.transform='';
+  document.getElementById('dmCompToggle').style.display=dish.comp?'flex':'none';
+  document.getElementById('backdrop').classList.add('open');
+  document.getElementById('dishModal').classList.add('open');
+}
+function closeDishModal(){document.getElementById('dishModal').classList.remove('open');document.getElementById('backdrop').classList.remove('open');modalDish=null}
+function toggleComp(){compOpen=!compOpen;document.getElementById('dmComp').classList.toggle('open',compOpen);document.getElementById('dmArrow').style.transform=compOpen?'rotate(180deg)':''}
+function changeQty(d){modalQty=Math.max(1,modalQty+d);document.getElementById('dmQty').textContent=modalQty;if(modalDish)document.getElementById('dmAddPrice').textContent=(modalDish.price*modalQty)+' ₴'}
+function addToCart(){
+  if(!modalDish)return;
+  if(!cart[modalDish.id])cart[modalDish.id]={dish:modalDish,qty:0};
+  cart[modalDish.id].qty+=modalQty;
+  updateFab();refreshBadge(modalDish.id);showToast(`${modalDish.name} × ${modalQty} додано`);closeDishModal();
+}
+function quickAdd(e,dishId){
+  e.stopPropagation();
+  const dish=getAllDishes().find(d=>d.id===dishId);if(!dish)return;
+  if(!cart[dishId])cart[dishId]={dish,qty:0};
+  cart[dishId].qty+=1;updateFab();refreshBadge(dishId);showToast(`${dish.name} додано`);
+}
+function refreshBadge(dishId){
+  const btn=document.getElementById('add-'+dishId);if(!btn)return;
+  const qty=cart[dishId]?.qty??0;
+  btn.classList.toggle('in',qty>0);
+  btn.innerHTML=qty>0?`<span>${qty}</span>`:`<svg viewBox="0 0 14 14" fill="none" stroke="#0E0F0C" stroke-width="2.5" stroke-linecap="round"><path d="M7 2v10M2 7h10"/></svg>`;
+}
+
+// CART
+function getItems(){return Object.values(cart).filter(x=>x.qty>0)}
+function cartTotal(){return getItems().reduce((s,x)=>s+x.dish.price*x.qty,0)}
+function cartCount(){return getItems().reduce((s,x)=>s+x.qty,0)}
+function updateFab(){
+  const cnt=cartCount();const acc=VENUES[currentVenue]?.accent??'#A8B89A';
+  document.getElementById('cartFab').classList.toggle('visible',cnt>0);
+  document.getElementById('fabBadge').textContent=cnt;
+  document.getElementById('fabTotal').textContent=cartTotal()+' ₴';
+}
+function openCart(){renderCartSheet();document.getElementById('cartSheet').classList.add('open');document.getElementById('backdrop').classList.add('open')}
+function closeCart(){document.getElementById('cartSheet').classList.remove('open');document.getElementById('backdrop').classList.remove('open')}
+function closeOverlays(){
+  if(document.getElementById('dishModal').classList.contains('open'))closeDishModal();
+  else if(document.getElementById('cartSheet').classList.contains('open'))closeCart();
+}
+function renderCartSheet(){
+  const items=getItems();const acc=VENUES[currentVenue]?.accent??'#A8B89A';
+  const cnt=cartCount();
+  document.getElementById('csCount').textContent=`${cnt} позиці${cnt===1?'я':cnt<5?'ї':'й'}`;
+  document.getElementById('csTotal').textContent=cartTotal()+' ₴';
+  document.getElementById('csTotal').style.color=acc;
+  document.getElementById('csFooter').style.display=items.length?'block':'none';
+  const el=document.getElementById('csItems');
+  if(!items.length){el.innerHTML=`<div class="cs-empty"><div class="cs-empty-icon">🛒</div><div class="cs-empty-text">Кошик порожній</div></div>`;return}
+  el.innerHTML=items.map(({dish,qty})=>`
+    <div class="cs-item">
+      <div class="cs-item-img"><img src="https://images.unsplash.com/${dish.img}?auto=format&fit=crop&w=120&q=70" alt="${dish.name}"></div>
+      <div class="cs-item-info">
+        <div class="cs-item-row">
+          <div class="cs-item-name">${dish.name}</div>
+          <button class="cs-item-del" onclick="removeFromCart('${dish.id}')">
+            <svg viewBox="0 0 14 14"><path d="M2 4h10M5 4V2h4v2M6 7v4M8 7v4M3 4l.5 8h7l.5-8" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+          </button>
+        </div>
+        <div class="cs-item-price" style="color:${acc}">${dish.price*qty} ₴</div>
+        <div class="cs-item-qty">
+          <div class="cs-qty-ctrl">
+            <button class="cs-qty-btn" onclick="updateCartQty('${dish.id}',-1)"><svg viewBox="0 0 12 12"><path d="M2 6h8" fill="none"/></svg></button>
+            <span class="cs-qty-n">${qty}</span>
+            <button class="cs-qty-btn" onclick="updateCartQty('${dish.id}',1)"><svg viewBox="0 0 12 12"><path d="M6 2v8M2 6h8" fill="none"/></svg></button>
+          </div>
+          <span class="cs-unit">${dish.price} ₴/шт</span>
+        </div>
+      </div>
+    </div>`).join('');
+}
+function updateCartQty(dishId,d){
+  if(!cart[dishId])return;
+  cart[dishId].qty=Math.max(0,cart[dishId].qty+d);
+  if(cart[dishId].qty===0)delete cart[dishId];
+  updateFab();refreshBadge(dishId);renderCartSheet();
+}
+function removeFromCart(dishId){delete cart[dishId];updateFab();refreshBadge(dishId);renderCartSheet()}
+
+// CHECKOUT
+function openCheckout(){
+  closeCart();
+  document.getElementById('checkoutTotal').textContent=cartTotal()+' ₴';
+  document.getElementById('checkoutOverlay').classList.add('open');
+}
+function closeCheckout(){document.getElementById('checkoutOverlay').classList.remove('open');openCart()}
+function fakePayment(method){
+  document.getElementById('checkoutOverlay').classList.remove('open');
+  cart={};
+  document.querySelectorAll('[id^="add-"]').forEach(btn=>{
+    const id=btn.id.replace('add-','');refreshBadge(id);
+  });
+  updateFab();
+  setTimeout(()=>{
+    document.getElementById('checkoutOverlay').innerHTML=`
+      <div class="checkout-inner">
+        <div class="checkout-icon" style="animation:popIn .5s both">✅</div>
+        <div class="checkout-title">Замовлення прийнято!</div>
+        <div class="checkout-sub">Оплачено через ${method}<br>Очікуйте підтвердження від закладу</div>
+        <div style="margin-top:28px;padding:16px 20px;background:var(--elevated);border-radius:14px;font-size:12px;color:var(--muted);text-align:left;width:100%;max-width:300px">
+          <div style="font-size:9px;letter-spacing:.3em;text-transform:uppercase;margin-bottom:10px;color:rgba(154,155,144,.5)">Статус замовлення</div>
+          <div style="display:flex;align-items:center;gap:8px;color:var(--sage)">
+            <span>●</span> Нове замовлення
+          </div>
+        </div>
+        <button class="pay-back" onclick="document.getElementById('checkoutOverlay').classList.remove('open');document.getElementById('checkoutOverlay').innerHTML=originalCheckoutHTML">← Повернутись до меню</button>
+      </div>`;
+    document.getElementById('checkoutOverlay').classList.add('open');
+  },400);
+}
+
+// TOAST
+let toastTimer;
+function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove('show'),2000)}
+
+// Remove hint
+document.querySelector('.app').addEventListener('click',()=>{const h=document.querySelector('.demo-hint');if(h)h.style.opacity='0'},{once:true});
+</script>
+</body>
+</html>

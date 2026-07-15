@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-serif: "Cormorant Garamond", serif;
+    --font-sans: "Inter", system-ui, sans-serif;
+  }
+
+  * {
+    @apply border-line;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-base text-cream font-sans antialiased;
+    font-feature-settings: "kern" 1, "liga" 1;
+  }
+
+  ::selection {
+    @apply bg-sage/30 text-cream;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-line rounded-full;
+  }
+
+  /* Скрыть стрелки у number input */
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+  }
+}
+
+@layer components {
+  .skeleton {
+    @apply relative overflow-hidden bg-elevated rounded-lg;
+  }
+  .skeleton::after {
+    content: "";
+    @apply absolute inset-0;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.04) 50%,
+      transparent 100%
+    );
+    animation: shimmer 1.6s infinite;
+    transform: translateX(-100%);
+  }
+
+  .glass {
+    background: rgba(22, 24, 15, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .dish-card-image {
+    @apply relative overflow-hidden;
+  }
+  .dish-card-image img {
+    @apply transition-transform duration-700 ease-out;
+  }
+  .dish-card-image:hover img {
+    transform: scale(1.05);
+  }
+}
+
+/* Plyr / rich text сброс не нужен — используем собственные элементы */

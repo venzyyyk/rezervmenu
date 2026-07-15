@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dry Leaf — Меню</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+
+    <div id="hero" class="screen active">
+      <div class="hero-bg">
+        <div class="hero-line hero-line-1"></div>
+        <div class="hero-line hero-line-2"></div>
+      </div>
+      <div class="header">
+        <img src="image-removebg-preview.png" alt="Логотип" class="logo">
+        <img src="2.png" alt="Логотип" class="logo2">
+      </div>
+      <div class="hero-center">
+        <div class="hero-eyebrow">Меню закладу</div>
+        <h1 class="hero-title">Dry&nbsp;Leaf</h1>
+        <div class="hero-rule"></div>
+        <div class="hero-sub">Оберіть локацію, щоб переглянути меню</div>
+        <div class="venue-grid">
+          <div class="venue-card" onclick="openVenue('dry-leaf')">
+            <div class="vc-img">
+              <img src="1.png" alt="Dry Leaf">
+              <div class="vc-overlay"></div>
+              <div class="vc-dot" style="background:#A8B89A"></div>
+            </div>
+            <div class="vc-info">
+              <div class="vc-name">Dry Leaf</div>
+              <div class="vc-addr">Проспект Героїв Харкова 74</div>
+              <div class="vc-tag">Кухня та бар</div>
+              <div class="vc-cta">
+                Переглянути меню
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="venue-card" onclick="openVenue('citadel')">
+            <div class="vc-img">
+              <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAELwGcse3LdpTVboISIZltZY96K8oqb2QlNcLmLBgZJW6JcmhGk5Jj68GRAhLxMiXu-TuewqS0O8I1OeZyAwgYtk7Fu1p_FpD_UojsiBkI1b6h8BwViW4et8BjBU84OvSZYf5sMxE6eM5Mx=s680-w680-h510-rw" alt="Citadel">
+              <div class="vc-overlay"></div>
+              <div class="vc-dot" style="background:#C9A86A"></div>
+            </div>
+            <div class="vc-info">
+              <div class="vc-name">Citadel</div>
+              <div class="vc-addr">Вулиця Короленко 4</div>
+              <div class="vc-tag" style="color:#C9A86A">Бар та напої</div>
+              <div class="vc-cta">
+                Переглянути меню
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-foot">Доставляємо прямо до ваших дверей </div>
+      <div class="hero-foot">Фото в меню не відповідають дійсності </div>
+    </div>
+
+    <div id="menu" class="screen">
+      <div class="menu-header">
+        <button class="back-btn" onclick="goHome()" aria-label="Назад">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+        <div class="header-info">
+          <div class="header-name" id="venueName">Dry Leaf</div>
+          <div class="header-addr" id="venueAddr">Проспект Героїв Харкова 74</div>
+        </div>
+        <div class="header-dot" id="venueDot" style="background:#A8B89A"></div>
+      </div>
+      <div class="menu-content" id="menuContent"></div>
+    </div>
+
+    <div class="backdrop" id="backdrop" onclick="closeModal()"></div>
+    <div class="dish-modal" id="dishModal">
+      <div class="dm-content">
+        <button class="dm-close" onclick="closeModal()" aria-label="Закрити">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+        <div class="dm-img" id="dmImgWrap"></div>
+        <div class="dm-handle"></div>
+        <div class="dm-body">
+          <div class="dm-cat" id="dmCat"></div>
+          <div class="dm-title" id="dmTitle"></div>
+          <div class="dm-desc" id="dmDesc"></div>
+          <div class="dm-meta">
+            <div class="dm-price" id="dmPrice"></div>
+            <div class="dm-size" id="dmSize"></div>
+          </div>
+          <div class="dm-contact">
+            <b>Замовлення та доставка</b><br>
+            <span id="dmPhone">+380 73 239 2950</span><br>
+            Доставляємо прямо до ваших дверей
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
