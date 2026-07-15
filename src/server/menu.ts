@@ -1,7 +1,9 @@
 import { prisma } from "@/lib/prisma";
 import { cache } from "react";
 
-export type VenueWithCategories = Awaited<ReturnType<typeof getVenueWithMenu>>;
+export type VenueWithCategories = NonNullable<
+  Awaited<ReturnType<typeof getVenueWithMenu>>
+>;
 export type CategoryWithDishes = VenueWithCategories["categories"][number];
 export type DishFull = CategoryWithDishes["dishes"][number];
 
