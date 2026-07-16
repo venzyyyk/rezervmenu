@@ -24,6 +24,7 @@ interface CartState {
   updateQuantity: (dishId: string, delta: number) => void;
   updateComment: (dishId: string, comment: string) => void;
   setTable: (code: string) => void;
+  clearTable: () => void;
   clearCart: () => void;
   openCart: () => void;
   closeCart: () => void;
@@ -92,6 +93,10 @@ export const useCart = create<CartState>()(
 
       setTable(code) {
         set({ tableCode: code });
+      },
+
+      clearTable() {
+        set({ tableCode: null });
       },
 
       clearCart() {

@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { CategoryNav } from "@/components/client/CategoryNav";
 import { DishCard } from "@/components/client/DishCard";
 import type { DishData } from "@/components/client/DishCard";
+import { TableSync } from "./TableSync";
 
 interface Props {
   params: { venueSlug: string };
@@ -23,6 +24,9 @@ export default async function VenueMenuPage({ params, searchParams }: Props) {
 
   return (
     <div className="pb-32">
+      {/* Привязка к столу живёт только в рамках визита по QR */}
+      <TableSync tableCode={searchParams.table ?? null} />
+
       {/* QR-уведомление о столике */}
       {searchParams.table && (
         <TableBadge tableCode={searchParams.table} accentColor={venue.accentColor} />
