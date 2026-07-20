@@ -129,9 +129,9 @@ export default function AdminReservationsPage() {
                   <p className="mt-1.5 text-xs text-muted/70 italic">"{r.comment}"</p>
                 )}
 
-                {/* Кнопки (только для NEW) */}
-                {r.status === "NEW" && (
-                  <div className="mt-3 flex gap-2">
+                {/* Кнопки смены статуса — доступны всегда */}
+                <div className="mt-3 flex gap-2 flex-wrap">
+                  {r.status !== "CONFIRMED" && (
                     <button
                       disabled={isPending}
                       onClick={() => handleStatus(r.id, "CONFIRMED")}
@@ -140,16 +140,28 @@ export default function AdminReservationsPage() {
                       <Check className="h-3 w-3" />
                       Підтвердити
                     </button>
+                  )}
+                  {r.status !== "CANCELLED" && (
                     <button
                       disabled={isPending}
                       onClick={() => handleStatus(r.id, "CANCELLED")}
                       className="flex items-center gap-1.5 rounded-xl bg-danger/10 border border-danger/25 px-3 py-1.5 text-xs text-danger hover:bg-danger/20 transition-colors disabled:opacity-50"
                     >
                       <X className="h-3 w-3" />
-                      Відхилити
+                      Скасувати (звільнити стіл)
                     </button>
-                  </div>
-                )}
+                  )}
+                  {r.status === "CANCELLED" && (
+                    <button
+                      disabled={isPending}
+                      onClick={() => handleStatus(r.id, "NEW")}
+                      className="flex items-center gap-1.5 rounded-xl border border-line px-3 py-1.5 text-xs text-muted hover:text-cream transition-colors disabled:opacity-50"
+                    >
+                      <RefreshCw className="h-3 w-3" />
+                      Повернути в нові
+                    </button>
+                  )}
+                </div>
               </div>
 
               {/* Время создания + удаление */}

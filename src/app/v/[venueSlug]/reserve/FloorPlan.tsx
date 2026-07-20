@@ -136,9 +136,7 @@ export function FloorPlan({ tables, selectedId, accentColor, onSelect }: Props) 
         <Legend color="#5A6050" label="Звичайні столи" />
       </div>
 
-      {unplaced.length > 0 && (
-        <TableChips tables={unplaced} selectedId={selectedId} accentColor={accentColor} onSelect={onSelect} />
-      )}
+      {/* Столы вне схемы не показываем — на схеме есть всё, что можно бронировать */}
     </div>
   );
 }
