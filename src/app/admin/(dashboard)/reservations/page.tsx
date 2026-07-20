@@ -111,7 +111,7 @@ export default function AdminReservationsPage() {
                     {new Date(r.date).toLocaleDateString("uk-UA", {
                       day: "numeric", month: "short",
                     })} · {r.time}
-                    {r.hours > 1 && ` (${r.hours} год)`}
+                    {r.table && r.table.kind !== "DINING" && r.hours > 1 && ` (${r.hours} год)`}
                   </span>
                   {r.table && (
                     <span className="text-xs" style={{ color: r.venue.accentColor }}>

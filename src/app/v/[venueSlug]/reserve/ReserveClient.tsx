@@ -60,11 +60,15 @@ export function ReserveClient({ venueId, venueSlug, venueName, accentColor, tabl
   }, [table, date]);
 
   const isBilliard = table?.kind === "BILLIARD_SMALL" || table?.kind === "BILLIARD_LARGE";
+  // Обычный стол: бронь без длительности, просто время прихода.
+  // В базе резервируем стандартные 2 часа, чтобы стол не забронировали дважды впритык.
+  const effectiveDuration = isBilliard ? duration : 2;
 
   // Час недоступен, если хоть один час брони занят или выходит за закрытие
   function slotDisabled(h: number) {
-    if (h + duration > CLOSE_HOUR) return true;
-    for (let i = h; i < h + duration; i++) {
+    if (isBilliard && h + effectiveDuration > CLOSE_HOUR) return true;
+    const span = isBilliard ? effectiveDuration : 1; // за обычным столом смотрим только сам час прихода
+    for (let i = h; i < h + span; i++) {
       if (busy.includes(i)) return true;
     }
     // Сегодняшние прошедшие часы
@@ -89,7 +93,7 @@ export function ReserveClient({ venueId, venueSlug, venueName, accentColor, tabl
         guests,
         date,
         time: hourLabel(startHour),
-        hours: duration,
+        hours: Math.min(effectiveDuration, CLOSE_HOUR - startHour),
         comment: comment || undefined,
       });
       setSuccess(true);
@@ -127,7 +131,11 @@ export function ReserveClient({ venueId, venueSlug, venueName, accentColor, tabl
             <Row label="Дата" value={formatDateLabel(date)} />
             <Row
               label="Час"
-              value={`${hourLabel(startHour)} – ${hourLabel(startHour + duration)}`}
+              value={
+                isBilliard
+                  ? `${hourLabel(startHour)} – ${hourLabel(startHour + duration)}`
+                  : hourLabel(startHour)
+              }
             />
             <Row label="Гостей" value={String(guests)} />
             <Row label="Ім'я" value={name} />
@@ -198,32 +206,34 @@ export function ReserveClient({ venueId, venueSlug, venueName, accentColor, tabl
           )}
         </Section>
 
-        {/* Длительность + время (после выбора стола) */}
+        {/* Длительность (только бильярд) + время */}
         {table && (
           <>
-            <Section label="Тривалість">
-              <div className="flex gap-2">
-                {[1, 2, 3, 4].map((h) => (
-                  <button
-                    key={h}
-                    onClick={() => { setDuration(h); setStartHour(null); }}
-                    className={cn(
-                      "rounded-xl px-4 py-2.5 text-sm border transition-all",
-                      duration === h ? "font-medium" : "text-muted border-line hover:text-cream"
-                    )}
-                    style={
-                      duration === h
-                        ? { background: accentColor + "20", borderColor: accentColor + "60", color: accentColor }
-                        : {}
-                    }
-                  >
-                    {h} год
-                  </button>
-                ))}
-              </div>
-            </Section>
+            {isBilliard && (
+              <Section label="Тривалість гри">
+                <div className="flex gap-2">
+                  {[1, 2, 3, 4].map((h) => (
+                    <button
+                      key={h}
+                      onClick={() => { setDuration(h); setStartHour(null); }}
+                      className={cn(
+                        "rounded-xl px-4 py-2.5 text-sm border transition-all",
+                        duration === h ? "font-medium" : "text-muted border-line hover:text-cream"
+                      )}
+                      style={
+                        duration === h
+                          ? { background: accentColor + "20", borderColor: accentColor + "60", color: accentColor }
+                          : {}
+                      }
+                    >
+                      {h} год
+                    </button>
+                  ))}
+                </div>
+              </Section>
+            )}
 
-            <Section label="Час початку" icon={<Clock className="h-3.5 w-3.5" />}>
+            <Section label={isBilliard ? "Час початку" : "Час приходу"} icon={<Clock className="h-3.5 w-3.5" />}>
               {busyLoading ? (
                 <div className="grid grid-cols-4 gap-2 sm:grid-cols-6">
                   {RESERVE_HOURS.map((h) => (
@@ -262,7 +272,9 @@ export function ReserveClient({ venueId, venueSlug, venueName, accentColor, tabl
               )}
               {startHour !== null && (
                 <p className="mt-2 text-xs text-muted">
-                  {hourLabel(startHour)} – {hourLabel(startHour + duration)}
+                  {isBilliard
+                    ? `${hourLabel(startHour)} – ${hourLabel(startHour + duration)}`
+                    : `Чекаємо вас о ${hourLabel(startHour)}`}
                 </p>
               )}
             </Section>
@@ -324,7 +336,14 @@ export function ReserveClient({ venueId, venueSlug, venueName, accentColor, tabl
               <Row label="Заклад" value={venueName} />
               <Row label="Стіл" value={`${TABLE_KIND_SHORT[table.kind]} №${table.number}`} />
               <Row label="Дата" value={formatDateLabel(date)} />
-              <Row label="Час" value={`${hourLabel(startHour)} – ${hourLabel(startHour + duration)}`} />
+              <Row
+                label="Час"
+                value={
+                  isBilliard
+                    ? `${hourLabel(startHour)} – ${hourLabel(startHour + duration)}`
+                    : hourLabel(startHour)
+                }
+              />
               <Row label="Гостей" value={`${guests} ос.`} />
             </div>
           </motion.div>
