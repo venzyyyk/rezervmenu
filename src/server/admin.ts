@@ -171,7 +171,10 @@ export async function getOrderFormData() {
       id: true,
       name: true,
       accentColor: true,
-      tables: { orderBy: { number: "asc" }, select: { id: true, number: true } },
+      tables: {
+        orderBy: [{ kind: "asc" }, { number: "asc" }],
+        select: { id: true, number: true, kind: true },
+      },
       categories: {
         orderBy: { sortOrder: "asc" },
         select: {
@@ -268,11 +271,16 @@ export async function getVenuesAdmin() {
   });
 }
 
-export async function addTable(venueId: string, number: number, seats: number) {
+export async function addTable(
+  venueId: string,
+  number: number,
+  seats: number,
+  kind: "DINING" | "BILLIARD_SMALL" | "BILLIARD_LARGE" = "DINING"
+) {
   await requireAdmin();
   const { randomUUID } = await import("crypto");
   const code = randomUUID().slice(0, 8);
-  await prisma.table.create({ data: { venueId, number, seats, code } });
+  await prisma.table.create({ data: { venueId, number, seats, code, kind } });
   revalidatePath("/admin/venues");
 }
 

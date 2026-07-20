@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import { Minus, Plus, ChevronLeft } from "lucide-react";
 import { adminCreateOrder, getOrderFormData } from "@/server/admin";
 import { formatPrice } from "@/lib/money";
+import { TABLE_KIND_SHORT } from "@/lib/reserve";
 import { cn } from "@/lib/utils";
 
 type Venues = Awaited<ReturnType<typeof getOrderFormData>>;
@@ -152,7 +153,7 @@ export default function NewOrderClient({ venues }: Props) {
                     : {}
                 }
               >
-                №{t.number}
+                {t.kind === "DINING" ? `№${t.number}` : `${TABLE_KIND_SHORT[t.kind]} №${t.number}`}
               </button>
             ))}
           </div>

@@ -1,9 +1,11 @@
 "use client";
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
-import { ChevronLeft, Calendar, Clock, Users, CheckCircle2 } from "lucide-react";
-import { createReservation } from "@/server/reservations";
+import { ChevronLeft, Calendar, Clock, Users, CheckCircle2, LayoutGrid } from "lucide-react";
+import { createReservation, getTableBusyHours } from "@/server/reservations";
+import { RESERVE_HOURS, hourLabel, TABLE_KIND_LABELS, TABLE_KIND_SHORT } from "@/lib/reserve";
+import { FloorPlan, type ReserveTable } from "./FloorPlan";
 import { cn } from "@/lib/utils";
 
 interface Props {
@@ -11,14 +13,10 @@ interface Props {
   venueSlug: string;
   venueName: string;
   accentColor: string;
+  tables: ReserveTable[];
 }
 
-const TIME_SLOTS = [
-  "12:00","12:30","13:00","13:30","14:00","14:30",
-  "15:00","15:30","16:00","16:30","17:00","17:30",
-  "18:00","18:30","19:00","19:30","20:00","20:30",
-  "21:00","21:30","22:00",
-];
+const CLOSE_HOUR = 23; // до скольки работаем
 
 function toDateString(d: Date) {
   return d.toISOString().slice(0, 10);
@@ -30,41 +28,81 @@ function formatDateLabel(dateStr: string) {
   });
 }
 
-export function ReserveClient({ venueId, venueSlug, venueName, accentColor }: Props) {
+export function ReserveClient({ venueId, venueSlug, venueName, accentColor, tables }: Props) {
   const router = useRouter();
 
-  // Завтра — минимальная дата
-  const tomorrow = new Date();
-  tomorrow.setDate(tomorrow.getDate() + 1);
+  const today = new Date();
+
+  const [table, setTable] = useState<ReserveTable | null>(null);
+  const [date, setDate] = useState(toDateString(today));
+  const [duration, setDuration] = useState(1);
+  const [startHour, setStartHour] = useState<number | null>(null);
+  const [busy, setBusy] = useState<number[]>([]);
+  const [busyLoading, setBusyLoading] = useState(false);
 
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [guests, setGuests] = useState(2);
-  const [date, setDate] = useState(toDateString(tomorrow));
-  const [time, setTime] = useState("");
   const [comment, setComment] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
 
+  // Подтягиваем занятость выбранного стола на дату
+  useEffect(() => {
+    if (!table) return;
+    setBusyLoading(true);
+    setStartHour(null);
+    getTableBusyHours(table.id, date)
+      .then(setBusy)
+      .catch(() => setBusy([]))
+      .finally(() => setBusyLoading(false));
+  }, [table, date]);
+
+  const isBilliard = table?.kind === "BILLIARD_SMALL" || table?.kind === "BILLIARD_LARGE";
+
+  // Час недоступен, если хоть один час брони занят или выходит за закрытие
+  function slotDisabled(h: number) {
+    if (h + duration > CLOSE_HOUR) return true;
+    for (let i = h; i < h + duration; i++) {
+      if (busy.includes(i)) return true;
+    }
+    // Сегодняшние прошедшие часы
+    if (date === toDateString(today) && h <= today.getHours()) return true;
+    return false;
+  }
+
   async function handleSubmit() {
     setError(null);
+    if (!table) return setError("Оберіть стіл на схемі");
+    if (startHour === null) return setError("Оберіть час");
     if (!name.trim()) return setError("Введіть ваше ім'я");
     if (!phone.trim()) return setError("Введіть номер телефону");
-    if (!time) return setError("Оберіть час");
 
     setLoading(true);
     try {
-      await createReservation({ venueId, name, phone, guests, date, time, comment: comment || undefined });
+      await createReservation({
+        venueId,
+        tableId: table.id,
+        name,
+        phone,
+        guests,
+        date,
+        time: hourLabel(startHour),
+        hours: duration,
+        comment: comment || undefined,
+      });
       setSuccess(true);
     } catch (e) {
       setError(e instanceof Error ? e.message : "Помилка бронювання");
+      // Обновляем занятость — вдруг слот увели
+      if (table) getTableBusyHours(table.id, date).then(setBusy).catch(() => {});
     } finally {
       setLoading(false);
     }
   }
 
-  if (success) {
+  if (success && table && startHour !== null) {
     return (
       <div className="min-h-screen bg-base flex flex-col items-center justify-center px-6">
         <motion.div
@@ -74,21 +112,26 @@ export function ReserveClient({ venueId, venueSlug, venueName, accentColor }: Pr
           className="text-center max-w-sm w-full"
         >
           <CheckCircle2 className="mx-auto h-20 w-20 mb-6" style={{ color: accentColor }} />
-          <h1 className="font-serif text-3xl font-light text-cream mb-3">Столик заброньовано!</h1>
-          <p className="text-sm text-muted mb-2">
-            {venueName} · {formatDateLabel(date)} · {time}
+          <h1 className="font-serif text-3xl font-light text-cream mb-3">
+            {isBilliard ? "Стіл заброньовано!" : "Столик заброньовано!"}
+          </h1>
+          <p className="text-sm text-muted mb-8">
+            {venueName} · {formatDateLabel(date)}
           </p>
-          <p className="text-sm text-muted mb-8">Гостей: {guests}</p>
           <div
             className="rounded-2xl p-5 mb-8 text-left space-y-2"
             style={{ background: accentColor + "0F", border: `1px solid ${accentColor}25` }}
           >
             <p className="text-xs text-muted/60 tracking-widest uppercase mb-3">Деталі</p>
+            <Row label="Стіл" value={`${TABLE_KIND_LABELS[table.kind]} №${table.number}`} />
+            <Row label="Дата" value={formatDateLabel(date)} />
+            <Row
+              label="Час"
+              value={`${hourLabel(startHour)} – ${hourLabel(startHour + duration)}`}
+            />
+            <Row label="Гостей" value={String(guests)} />
             <Row label="Ім'я" value={name} />
             <Row label="Телефон" value={phone} />
-            <Row label="Дата" value={formatDateLabel(date)} />
-            <Row label="Час" value={time} />
-            <Row label="Гостей" value={String(guests)} />
             {comment && <Row label="Коментар" value={comment} />}
           </div>
           <p className="text-xs text-muted mb-6">
@@ -123,12 +166,113 @@ export function ReserveClient({ venueId, venueSlug, venueName, accentColor }: Pr
         </div>
       </header>
 
-      <div className="px-4 py-6 pb-32 max-w-lg mx-auto space-y-7">
+      <div className="px-4 py-6 pb-32 max-w-2xl mx-auto space-y-7">
+
+        {/* Схема зала */}
+        <Section label="Оберіть стіл" icon={<LayoutGrid className="h-3.5 w-3.5" />}>
+          <FloorPlan
+            tables={tables}
+            selectedId={table?.id ?? null}
+            accentColor={accentColor}
+            onSelect={setTable}
+          />
+          {table && (
+            <p className="mt-3 text-xs" style={{ color: accentColor }}>
+              Обрано: {TABLE_KIND_LABELS[table.kind]} №{table.number} · {table.seats} місць
+            </p>
+          )}
+        </Section>
+
+        {/* Дата */}
+        <Section label="Дата" icon={<Calendar className="h-3.5 w-3.5" />}>
+          <input
+            type="date"
+            value={date}
+            min={toDateString(today)}
+            onChange={(e) => setDate(e.target.value)}
+            className="w-full rounded-xl bg-elevated border border-line px-4 py-3 text-sm text-cream outline-none focus:border-sage/40 transition-colors"
+            style={{ colorScheme: "dark" }}
+          />
+          {date && (
+            <p className="mt-2 text-xs text-muted capitalize">{formatDateLabel(date)}</p>
+          )}
+        </Section>
+
+        {/* Длительность + время (после выбора стола) */}
+        {table && (
+          <>
+            <Section label="Тривалість">
+              <div className="flex gap-2">
+                {[1, 2, 3, 4].map((h) => (
+                  <button
+                    key={h}
+                    onClick={() => { setDuration(h); setStartHour(null); }}
+                    className={cn(
+                      "rounded-xl px-4 py-2.5 text-sm border transition-all",
+                      duration === h ? "font-medium" : "text-muted border-line hover:text-cream"
+                    )}
+                    style={
+                      duration === h
+                        ? { background: accentColor + "20", borderColor: accentColor + "60", color: accentColor }
+                        : {}
+                    }
+                  >
+                    {h} год
+                  </button>
+                ))}
+              </div>
+            </Section>
+
+            <Section label="Час початку" icon={<Clock className="h-3.5 w-3.5" />}>
+              {busyLoading ? (
+                <div className="grid grid-cols-4 gap-2 sm:grid-cols-6">
+                  {RESERVE_HOURS.map((h) => (
+                    <div key={h} className="skeleton h-10 rounded-xl" />
+                  ))}
+                </div>
+              ) : (
+                <div className="grid grid-cols-4 gap-2 sm:grid-cols-6">
+                  {RESERVE_HOURS.map((h) => {
+                    const disabled = slotDisabled(h);
+                    const active = startHour === h;
+                    return (
+                      <button
+                        key={h}
+                        disabled={disabled}
+                        onClick={() => setStartHour(h)}
+                        className={cn(
+                          "rounded-xl py-2.5 text-sm border transition-all duration-200",
+                          disabled
+                            ? "text-muted/30 border-line/50 line-through cursor-not-allowed"
+                            : active
+                            ? "font-medium"
+                            : "text-muted border-line hover:text-cream hover:border-line/60"
+                        )}
+                        style={
+                          active
+                            ? { background: accentColor + "20", borderColor: accentColor + "60", color: accentColor }
+                            : {}
+                        }
+                      >
+                        {hourLabel(h)}
+                      </button>
+                    );
+                  })}
+                </div>
+              )}
+              {startHour !== null && (
+                <p className="mt-2 text-xs text-muted">
+                  {hourLabel(startHour)} – {hourLabel(startHour + duration)}
+                </p>
+              )}
+            </Section>
+          </>
+        )}
 
         {/* Гости */}
         <Section label="Кількість гостей" icon={<Users className="h-3.5 w-3.5" />}>
-          <div className="flex items-center gap-4">
-            {[1,2,3,4,5,6,7,8].map((n) => (
+          <div className="flex items-center gap-3 flex-wrap">
+            {[1, 2, 3, 4, 5, 6, 7, 8].map((n) => (
               <button
                 key={n}
                 onClick={() => setGuests(n)}
@@ -141,43 +285,6 @@ export function ReserveClient({ venueId, venueSlug, venueName, accentColor }: Pr
                 style={guests === n ? { background: accentColor, borderColor: accentColor } : {}}
               >
                 {n}
-              </button>
-            ))}
-            <span className="text-muted text-sm">+</span>
-          </div>
-        </Section>
-
-        {/* Дата */}
-        <Section label="Дата" icon={<Calendar className="h-3.5 w-3.5" />}>
-          <input
-            type="date"
-            value={date}
-            min={toDateString(tomorrow)}
-            onChange={(e) => { setDate(e.target.value); setTime(""); }}
-            className="w-full rounded-xl bg-elevated border border-line px-4 py-3 text-sm text-cream outline-none focus:border-sage/40 transition-colors"
-            style={{ colorScheme: "dark" }}
-          />
-          {date && (
-            <p className="mt-2 text-xs text-muted capitalize">{formatDateLabel(date)}</p>
-          )}
-        </Section>
-
-        {/* Время */}
-        <Section label="Час" icon={<Clock className="h-3.5 w-3.5" />}>
-          <div className="grid grid-cols-4 gap-2 sm:grid-cols-6">
-            {TIME_SLOTS.map((slot) => (
-              <button
-                key={slot}
-                onClick={() => setTime(slot)}
-                className={cn(
-                  "rounded-xl py-2.5 text-sm border transition-all duration-200",
-                  time === slot
-                    ? "text-base border-transparent font-medium"
-                    : "text-muted border-line hover:text-cream hover:border-line/60"
-                )}
-                style={time === slot ? { background: accentColor + "20", borderColor: accentColor + "60", color: accentColor } : {}}
-              >
-                {slot}
               </button>
             ))}
           </div>
@@ -197,13 +304,13 @@ export function ReserveClient({ venueId, venueSlug, venueName, accentColor }: Pr
             rows={2}
             value={comment}
             onChange={(e) => setComment(e.target.value)}
-            placeholder="Столик біля вікна, день народження..."
+            placeholder="День народження, кий свій..."
             className="w-full resize-none rounded-xl bg-elevated border border-line px-4 py-3 text-sm text-cream placeholder:text-muted/40 outline-none focus:border-sage/40 transition-colors"
           />
         </Section>
 
         {/* Превью */}
-        {time && (
+        {table && startHour !== null && (
           <motion.div
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
@@ -214,9 +321,10 @@ export function ReserveClient({ venueId, venueSlug, venueName, accentColor }: Pr
               Підсумок бронювання
             </p>
             <div className="space-y-1.5">
-              <Row label="Заклад" value={venueName} accent={accentColor} />
+              <Row label="Заклад" value={venueName} />
+              <Row label="Стіл" value={`${TABLE_KIND_SHORT[table.kind]} №${table.number}`} />
               <Row label="Дата" value={formatDateLabel(date)} />
-              <Row label="Час" value={time} />
+              <Row label="Час" value={`${hourLabel(startHour)} – ${hourLabel(startHour + duration)}`} />
               <Row label="Гостей" value={`${guests} ос.`} />
             </div>
           </motion.div>
@@ -235,7 +343,7 @@ export function ReserveClient({ venueId, venueSlug, venueName, accentColor }: Pr
           className="w-full rounded-xl py-4 font-medium text-sm text-base transition-opacity disabled:opacity-60"
           style={{ background: accentColor }}
         >
-          {loading ? "Бронюємо..." : "Забронювати столик"}
+          {loading ? "Бронюємо..." : "Забронювати"}
         </motion.button>
       </div>
     </div>
@@ -271,11 +379,11 @@ function InputField({ label, value, onChange, placeholder, type = "text", accent
   );
 }
 
-function Row({ label, value, accent }: { label: string; value: string; accent?: string }) {
+function Row({ label, value }: { label: string; value: string }) {
   return (
     <div className="flex justify-between">
       <span className="text-xs text-muted">{label}</span>
-      <span className="text-xs text-cream">{value}</span>
+      <span className="text-xs text-cream text-right max-w-[60%]">{value}</span>
     </div>
   );
 }

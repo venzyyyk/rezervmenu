@@ -47,6 +47,12 @@ enum Role {
   MANAGER
 }
 
+enum TableKind {
+  DINING          // обычный стол
+  BILLIARD_SMALL  // американка
+  BILLIARD_LARGE  // русский бильярд
+}
+
 // ─────────────────────── MODELS ───────────────────────
 model Venue {
   id           String        @id @default(cuid())
@@ -100,16 +106,18 @@ model Dish {
 }
 
 model Table {
-  id       String  @id @default(cuid())
-  venueId  String
-  venue    Venue   @relation(fields: [venueId], references: [id], onDelete: Cascade)
-  number   Int
-  code     String  @unique
-  seats    Int     @default(4)
-  isActive Boolean @default(false)
-  orders   Order[]
+  id           String        @id @default(cuid())
+  venueId      String
+  venue        Venue         @relation(fields: [venueId], references: [id], onDelete: Cascade)
+  number       Int
+  code         String        @unique
+  seats        Int           @default(4)
+  kind         TableKind     @default(DINING)
+  isActive     Boolean       @default(false)
+  orders       Order[]
+  reservations Reservation[]
 
-  @@unique([venueId, number])
+  @@unique([venueId, kind, number])
   @@index([venueId])
 }
 
@@ -167,16 +175,20 @@ model Reservation {
   id        String    @id @default(cuid())
   venueId   String
   venue     Venue     @relation(fields: [venueId], references: [id])
+  tableId   String?
+  table     Table?    @relation(fields: [tableId], references: [id], onDelete: SetNull)
   name      String
   phone     String
   guests    Int
   date      DateTime
-  time      String
+  time      String // начало, напр. "18:00"
+  hours     Int       @default(1) // длительность в часах
   comment   String?
   status    ResStatus @default(NEW)
   createdAt DateTime  @default(now())
 
   @@index([venueId, status])
+  @@index([tableId, date])
   @@index([date])
 }
 

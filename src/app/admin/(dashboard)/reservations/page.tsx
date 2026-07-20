@@ -4,6 +4,7 @@ import { getReservationsForAdmin, updateReservationStatus, deleteReservation } f
 import { ResStatusBadge } from "@/components/admin/StatusBadge";
 import { Check, X, RefreshCw, Users, Clock, Trash2 } from "lucide-react";
 import type { ResStatus } from "@prisma/client";
+import { TABLE_KIND_SHORT } from "@/lib/reserve";
 
 type Reservation = Awaited<ReturnType<typeof getReservationsForAdmin>>[number];
 
@@ -110,7 +111,13 @@ export default function AdminReservationsPage() {
                     {new Date(r.date).toLocaleDateString("uk-UA", {
                       day: "numeric", month: "short",
                     })} · {r.time}
+                    {r.hours > 1 && ` (${r.hours} год)`}
                   </span>
+                  {r.table && (
+                    <span className="text-xs" style={{ color: r.venue.accentColor }}>
+                      🎱 {TABLE_KIND_SHORT[r.table.kind]} №{r.table.number}
+                    </span>
+                  )}
                   <span className="flex items-center gap-1 text-xs text-muted">
                     <Users className="h-3 w-3" />
                     {r.guests} ос.

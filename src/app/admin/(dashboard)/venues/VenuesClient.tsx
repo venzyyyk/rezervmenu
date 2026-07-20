@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { Plus, Trash2, QrCode, Copy, Download } from "lucide-react";
 import QRCode from "qrcode";
 import { addTable, deleteTable, getVenuesAdmin } from "@/server/admin";
+import { TABLE_KIND_SHORT } from "@/lib/reserve";
+import type { TableKind } from "@prisma/client";
 import { toast } from "sonner";
 
 type VenueAdmin = Awaited<ReturnType<typeof getVenuesAdmin>>[number];
@@ -14,6 +16,7 @@ export function VenuesClient({ venues: initial }: Props) {
   const [venues, setVenues] = useState(initial);
   const [activeIdx, setActiveIdx] = useState(0);
   const [newSeats, setNewSeats] = useState(4);
+  const [newKind, setNewKind] = useState<TableKind>("DINING");
   const [isPending, startTransition] = useTransition();
 
   const venue = venues[activeIdx];
@@ -25,11 +28,13 @@ export function VenuesClient({ venues: initial }: Props) {
   }
 
   function handleAddTable() {
-    const nextNum = Math.max(0, ...venue.tables.map((t) => t.number)) + 1;
+    // Нумерация своя внутри каждого типа столов
+    const sameKind = venue.tables.filter((t) => t.kind === newKind);
+    const nextNum = Math.max(0, ...sameKind.map((t) => t.number)) + 1;
     startTransition(async () => {
-      await addTable(venue.id, nextNum, newSeats);
+      await addTable(venue.id, nextNum, newSeats, newKind);
       await refresh();
-      toast.success(`Стіл №${nextNum} додано`);
+      toast.success(`${TABLE_KIND_SHORT[newKind]} №${nextNum} додано`);
     });
   }
 
@@ -90,7 +95,16 @@ export function VenuesClient({ venues: initial }: Props) {
           </h2>
 
           {/* Добавить стол */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 flex-wrap">
+            <select
+              value={newKind}
+              onChange={(e) => setNewKind(e.target.value as TableKind)}
+              className="bg-elevated border border-line rounded-xl px-3 py-1.5 text-xs text-cream outline-none"
+            >
+              <option value="DINING">Звичайний стіл</option>
+              <option value="BILLIARD_LARGE">Російський більярд</option>
+              <option value="BILLIARD_SMALL">Американка</option>
+            </select>
             <div className="flex items-center gap-1.5 bg-elevated border border-line rounded-xl px-3 py-1.5">
               <span className="text-xs text-muted">місць:</span>
               <input
@@ -105,7 +119,7 @@ export function VenuesClient({ venues: initial }: Props) {
               className="flex items-center gap-1.5 rounded-xl bg-sage/15 border border-sage/30 px-3 py-1.5 text-xs text-sage hover:bg-sage/25 transition-all disabled:opacity-50"
             >
               <Plus className="h-3 w-3" />
-              Додати стіл
+              Додати
             </button>
           </div>
         </div>
@@ -122,7 +136,7 @@ export function VenuesClient({ venues: initial }: Props) {
                 <div className="flex items-start justify-between mb-3">
                   <div>
                     <p className="font-serif text-2xl font-light text-cream">
-                      Стіл №{table.number}
+                      {TABLE_KIND_SHORT[table.kind]} №{table.number}
                     </p>
                     <p className="text-xs text-muted mt-0.5">{table.seats} місць</p>
                   </div>

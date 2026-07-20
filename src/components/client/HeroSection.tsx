@@ -1,5 +1,6 @@
 "use client";
-import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { DishImage } from "./DishImage";
@@ -44,31 +45,6 @@ export function HeroSection({ venues }: Props) {
         <div className="absolute bottom-[30%] left-0 right-0 h-px bg-gradient-to-r from-transparent via-line to-transparent" />
       </div>
 
-      {/* Шапка з логотипами */}
-      <motion.header
-        initial={{ opacity: 0, y: -12 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="relative z-10 flex w-full items-center justify-between p-5"
-      >
-        <Image
-          src="/logo-left.png"
-          alt="Dry Leaf"
-          width={120}
-          height={48}
-          priority
-          className="h-12 w-auto max-w-[120px] object-contain"
-        />
-        <Image
-          src="/logo-right.png"
-          alt="Dry Leaf"
-          width={120}
-          height={48}
-          priority
-          className="h-12 w-auto max-w-[120px] object-contain"
-        />
-      </motion.header>
-
       {/* Центр */}
       <div className="relative z-[1] flex flex-1 flex-col items-center justify-center px-5 pb-9 pt-3 text-center">
         <motion.div
@@ -76,10 +52,8 @@ export function HeroSection({ venues }: Props) {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
         >
-          <p className="mb-3.5 text-[9px] uppercase tracking-[0.45em] text-sage">Меню закладу</p>
-          <h1 className="font-serif text-[clamp(3.5rem,14vw,7rem)] font-light leading-[0.9] tracking-tight text-cream">
-            Dry&nbsp;Leaf
-          </h1>
+          <p className="mb-5 text-[9px] uppercase tracking-[0.45em] text-sage">Меню закладу</p>
+          <LogoCycle />
           <div className="mx-auto mt-[18px] h-px w-20 bg-gradient-to-r from-transparent via-sage to-transparent" />
           <p className="mt-[18px] text-xs tracking-wide text-muted">
             Оберіть локацію, щоб переглянути меню
@@ -116,6 +90,42 @@ export function HeroSection({ venues }: Props) {
         </p>
       </motion.div>
     </main>
+  );
+}
+
+// ─── Логотипы по очереди: плавная смена каждые 3.5 сек ─────
+const LOGOS = ["/logo-left.png", "/logo-right.png"];
+
+function LogoCycle() {
+  const [idx, setIdx] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(() => setIdx((i) => (i + 1) % LOGOS.length), 3500);
+    return () => clearInterval(id);
+  }, []);
+
+  return (
+    <div className="relative mx-auto flex h-[130px] w-[min(78vw,420px)] items-center justify-center sm:h-[160px]">
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={idx}
+          initial={{ opacity: 0, scale: 0.92, filter: "blur(6px)" }}
+          animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+          exit={{ opacity: 0, scale: 1.05, filter: "blur(6px)" }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          className="absolute inset-0 flex items-center justify-center"
+        >
+          <Image
+            src={LOGOS[idx]}
+            alt="Dry Leaf"
+            width={420}
+            height={160}
+            priority
+            className="max-h-full w-auto object-contain"
+          />
+        </motion.div>
+      </AnimatePresence>
+    </div>
   );
 }
 
