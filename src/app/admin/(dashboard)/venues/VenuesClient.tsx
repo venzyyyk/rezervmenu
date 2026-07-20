@@ -102,8 +102,8 @@ export function VenuesClient({ venues: initial }: Props) {
               className="bg-elevated border border-line rounded-xl px-3 py-1.5 text-xs text-cream outline-none"
             >
               <option value="DINING">Звичайний стіл</option>
-              <option value="BILLIARD_LARGE">Російський більярд</option>
-              <option value="BILLIARD_SMALL">Американка</option>
+              <option value="BILLIARD_LARGE">Великий більярдний стіл</option>
+              <option value="BILLIARD_SMALL">Малий більярдний стіл</option>
             </select>
             <div className="flex items-center gap-1.5 bg-elevated border border-line rounded-xl px-3 py-1.5">
               <span className="text-xs text-muted">місць:</span>

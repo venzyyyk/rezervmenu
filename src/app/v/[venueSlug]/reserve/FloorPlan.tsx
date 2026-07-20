@@ -135,8 +135,8 @@ export function FloorPlan({ tables, selectedId, accentColor, onSelect }: Props) 
 
       {/* Легенда */}
       <div className="flex flex-wrap gap-x-4 gap-y-1.5 px-1">
-        <Legend color="#C9A86A" label="Російський більярд" />
-        <Legend color="#8DA888" label="Американка" />
+        <Legend color="#C9A86A" label="Великі більярдні столи" />
+        <Legend color="#8DA888" label="Малі більярдні столи" />
         <Legend color="#3A3F32" label="Звичайні столи" />
       </div>
 

@@ -7,12 +7,12 @@ export const hourLabel = (h: number) => `${String(h).padStart(2, "0")}:00`;
 
 export const TABLE_KIND_LABELS: Record<TableKind, string> = {
   DINING: "Звичайний стіл",
-  BILLIARD_SMALL: "Американка",
-  BILLIARD_LARGE: "Російський більярд",
+  BILLIARD_SMALL: "Малий більярдний стіл",
+  BILLIARD_LARGE: "Великий більярдний стіл",
 };
 
 export const TABLE_KIND_SHORT: Record<TableKind, string> = {
   DINING: "Стіл",
-  BILLIARD_SMALL: "Американка",
-  BILLIARD_LARGE: "Більярд",
+  BILLIARD_SMALL: "Малий більярд",
+  BILLIARD_LARGE: "Великий більярд",
 };
